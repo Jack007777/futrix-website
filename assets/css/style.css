@@ -533,19 +533,7 @@ a.card.card-click:hover .card-link {
  
   nav .logo{ order: 1; }
 
-   /* 1) hero 左右不要太“撑” */
-  .hero{
-    padding-left: 44px;
-    padding-right: 44px;
-    overflow-x: clip;   /* 防止横向溢出把页面撑宽 */
-  } 
   
-  .hero h1,
-  .hero .tagline,
-  .hero .slogan {
-    font-size: 16px;
-  }
-
 
   .lang-dropdown{
     order: 2;
@@ -611,5 +599,20 @@ a.card.card-click:hover .card-link {
 
   /* 2) container */
     .container{ padding: 0 16px; }
+
+
+     /* 1) hero 左右不要太“撑” */
+  .hero{
+    padding-left: 44px;
+    padding-right: 44px;
+    overflow-x: clip;   /* 防止横向溢出把页面撑宽 */
+  } 
+  
+  .hero h1,
+  .hero .tagline,
+  .hero .slogan {
+    font-size: 16px;
+  }
+
 }
 
