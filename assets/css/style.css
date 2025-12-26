@@ -530,8 +530,22 @@ a.card.card-click:hover .card-link {
     width: 100%;
     box-sizing: border-box;
   }
-
+ 
   nav .logo{ order: 1; }
+
+   /* 1) hero 左右不要太“撑” */
+  .hero{
+    padding-left: 44px;
+    padding-right: 44px;
+    overflow-x: clip;   /* 防止横向溢出把页面撑宽 */
+  } 
+  
+  .hero h1,
+  .hero .tagline,
+  .hero .slogan {
+    font-size: 16px;
+  }
+
 
   .lang-dropdown{
     order: 2;
