@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Standardroboter | Futrix Robotics</title>
+  <meta name="description" content="Standardisierte Robotiksysteme unter der Marke Futrix – bewährte Modelle für typische Einsatzumgebungen, inklusive Beratung, Integration und Service." />
+
+  <!-- Canonical (optional) -->
+  <link rel="canonical" href="https://www.futrix.eu/de/pages/standardroboter.html" />
+
+  <!-- Styles (keep English filenames) -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!-- Favicon (keep English filenames) -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+  <!-- Open Graph (optional) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Futrix" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Standardroboter | Futrix Robotics" />
+  <meta property="og:description" content="Standardisierte Robotiksysteme unter der Marke Futrix – bewährte Modelle für typische Einsatzumgebungen." />
+  <meta property="og:url" content="https://www.futrix.eu/de/pages/standardroboter.html" />
+  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png" />
+
+  <!-- Shared JS (keep English filenames) -->
+  <script src="/assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header (DE) -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        // allow site.js (dropdown/nav-active) to bind after header injection
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="hero" id="hero">
+      <h1>Standardroboter</h1>
+      <p class="tagline">
+        Bewährte Robotiklösungen für typische Einsatzumgebungen – mit Beratung,
+        Integration und Service.
+      </p>
+      <p class="slogan">
+        Futrix – inspiriert von Future und Matrix.
+      </p>
+    </section>
+
+    <!-- Intro (White-label safe statement) -->
+    <section class="intro">
+      <div class="container">
+        <p>
+          Neben individuellen Lösungen entwickeln und vertreiben wir auch
+          standardisierte Robotiksysteme unter eigener Marke.
+        </p>
+        <p style="opacity:.85;">
+          Die folgenden Modelle sind Beispiele für standardisierte Produktlinien. Spezifikation, Ausstattung
+          und Servicepakete können je nach Einsatzanforderung variieren.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2>Unsere Standardmodelle</h2>
+
+        <div class="grid">
+          <!-- Product 1 -->
+          <div class="card product-card" id="sr-100">
+            <img class="card-img card-svg" src="/assets/images/robot-service.svg" alt="Futrix SR-100 Reinigungsroboter" />
+            <h3>Futrix SR-100</h3>
+            <p class="product-subtitle">Reinigungsroboter</p>
+
+            <ul class="product-specs">
+              <li><strong>Einsatzbereiche:</strong> Büro, Klinik, Bildungseinrichtungen, Logistikflächen</li>
+              <li><strong>Navigation:</strong> LiDAR / SLAM (modellabhängig)</li>
+              <li><strong>Betriebszeit:</strong> bis zu 8 h</li>
+              <li><strong>Service:</strong> Inbetriebnahme, Mapping, Schulung, Wartung</li>
+            </ul>
+
+            <div class="product-actions">
+              <a class="btn" href="/de/pages/solutions.html#service">Technische Details</a>
+              <a class="btn btn-secondary" href="/de/pages/contact.html?topic=sr-100">Angebot anfordern</a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card product-card" id="lr-200">
+            <img class="card-img card-svg" src="/assets/images/robot-industry.svg" alt="Futrix LR-200 Logistikroboter" />
+            <h3>Futrix LR-200</h3>
+            <p class="product-subtitle">Logistik- &amp; Transportroboter</p>
+
+            <ul class="product-specs">
+              <li><strong>Einsatzbereiche:</strong> Lager, Produktion, Campus, Krankenhäuser</li>
+              <li><strong>Funktion:</strong> Autonomer Transport, Übergabepunkte, Flottenbetrieb</li>
+              <li><strong>Sicherheit:</strong> Hinderniserkennung, Not-Stopp, Zonenkonzept</li>
+              <li><strong>Integration:</strong> Schnittstellen zu Aufzug/Automatiktüren (optional)</li>
+            </ul>
+
+            <div class="product-actions">
+              <a class="btn" href="/de/pages/solutions.html#industry">Technische Details</a>
+              <a class="btn btn-secondary" href="/de/pages/contact.html?topic=lr-200">Angebot anfordern</a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card product-card" id="cr-300">
+            <img class="card-img card-svg" src="/assets/images/robot-care.svg" alt="Futrix CR-300 Care Robot" />
+            <h3>Futrix CR-300</h3>
+            <p class="product-subtitle">Care- &amp; Service-Robotersystem</p>
+
+            <ul class="product-specs">
+              <li><strong>Einsatzbereiche:</strong> Apotheke, Klinik, Pflege, Servicepunkte</li>
+              <li><strong>Interaktion:</strong> Display / Sprachoptionen (projektabhängig)</li>
+              <li><strong>Workflow:</strong> Zustellung, Begleitung, Informations- &amp; Empfangsdienste</li>
+              <li><strong>Compliance:</strong> Einsatzkonzept, Datenschutz- und Betriebsanforderungen</li>
+            </ul>
+
+            <div class="product-actions">
+              <a class="btn" href="/de/pages/solutions.html#care">Technische Details</a>
+              <a class="btn btn-secondary" href="/de/pages/contact.html?topic=cr-300">Angebot anfordern</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div style="margin-top: 22px; opacity: .85;">
+          <p>
+            Hinweis: Verfügbarkeit, Lieferzeit und Serviceumfang hängen von Region, Projektumfang und gewünschter Konfiguration ab.
+            Für Ausschreibungen und Integrationsprojekte erstellen wir gern ein individuelles Angebot.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <h2>Sie möchten ein Standardmodell evaluieren?</h2>
+        <p style="opacity:.9;">
+          Senden Sie uns kurz Einsatzort, Flächentyp und Anforderungen (z. B. Reinigung, Transport, Empfang). Wir melden uns mit
+          einer passenden Konfiguration, technischen Daten und einem Angebot.
+        </p>
+        <p>
+          <a class="btn" href="/de/pages/contact.html?topic=standardroboter">Kontakt aufnehmen</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (DE) -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.(); // footer inserted -> init cookie banner
+      })
+      .catch(err => console.error('Footer load failed:', err));
+  </script>
+
+  <!-- Cookie consent (keep English filename) -->
+  <script src="/assets/js/cookie-consent.js"></script>
+
+  <!-- Optional: tiny page-specific CSS if you don't want to touch global style.css -->
+  <style>
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .intro { padding: 28px 0 10px; }
+    .products { padding: 28px 0 40px; }
+    .product-card .product-subtitle { opacity: .85; margin-top: -6px; }
+    .product-specs { margin: 14px 0 18px; padding-left: 18px; }
+    .product-specs li { margin: 6px 0; }
+    .product-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; text-decoration: none; }
+    .btn-secondary { opacity: .92; }
+    .cta { padding: 34px 0 52px; }
+  </style>
+
+</body>
+</html>

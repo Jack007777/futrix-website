@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Futrix – Commercial Service Robots für öffentliche und industrielle Umgebungen</title>
+  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter für Flughäfen, Schulen, Krankenhäuser und industrielle Anwendungen in Europa.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.futrix.eu/de/">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Open Graph (optional but recommended) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Futrix">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Futrix - Commercial Service Robots">
+  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter für Flughäfen, Krankenhäuser, Schulen und Industrie.">
+  <meta property="og:url" content="https://www.futrix.eu/de/">
+  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
+
+  <!-- JS -->
+  <script src="/assets/js/beetleBot.js" defer></script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+
+        // ✅ 关键：通知 site.js 现在可以绑定事件了
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+
+   <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+          <h1>Futrix Robotics - Engineering in Deutschland.</h1>
+          <p class="tagline">
+            Professionelle Robotiklösungen
+            für reale Einsatzumgebungen.
+          </p>
+          <p class="slogan">
+            Futrix - inspiriert von Future und Matrix.
+          </p>
+        </div>
+      </div>  
+  </section>
+
+    <section id="solutions">
+      <div class="container">
+      <h2>Unsere Lösungen</h2>
+      <div class="grid">
+        <a class="card card-click" href="pages/solutions.html#care">
+          <img class="card-img card-svg" src="../assets/images/robot-care.svg" alt="Apothekenroboter">
+          <h3>Futrix Care</h3>
+          <p>
+            Roboterlösungen für Apotheke und Gesundheitswesen - für automatisierte Zustellung,
+            Nachtservice-Unterstützung und die ferngestützte Medikamentenübergabe.
+          </p>
+          <span class="card-link">Mehr erfahren →</span>
+        </a>
+
+        <a class="card card-click" href="pages/solutions.html#service">
+          <img class="card-img card-svg" src="../assets/images/robot-service.svg" alt="Serviceroboter">
+          <h3>Futrix Service</h3>
+          <p>
+            Kommerzielle Serviceroboter für Logistik, Reinigung und autonomen Transport – kombiniert mit
+            KI-gestützter Navigation, Begleitung sowie interaktiven Kundenservice-Lösungen für Flughäfen,
+            Krankenhäuser, Schulen, Campusgelände und weitere große öffentliche und private Einrichtungen.
+          </p>
+          <span class="card-link">Mehr erfahren →</span>
+        </a>
+
+        <a class="card card-click" href="pages/solutions.html#industry">
+          <img class="card-img card-svg" src="../assets/images/robot-industry.svg" alt="Industrieller Spezialroboter">
+          <h3>Futrix Industry</h3>
+          <p>
+            Industrielle Robotiklösungen für Automatisierung, Inspektion und intelligentes Materialhandling.
+          </p>
+          <span class="card-link">Mehr erfahren →</span>
+        </a>
+
+      </div>
+      </div>
+    </section>
+
+    <section id="standard-robots">
+        <div class="container">
+        <h2>Standardroboter</h2>
+
+        <p class="section-intro">
+          Neben individuellen Lösungen entwickeln und vertreiben wir auch
+          standardisierte Robotiksysteme unter eigener Marke.
+        </p>
+
+        <div class="grid">
+          <!-- Standard Robot 1 -->
+          <a class="card card-click" href="/de/index.html#sr-100">
+            <img class="card-img card-svg" src="/assets/images/robot-service.svg" alt="Futrix SR-100">
+            <h3>Futrix SR-100</h3>
+            <p>
+              Reinigungsroboter für typische Flächen in Gewerbe und öffentlichen Einrichtungen.
+            </p>
+            <span class="card-link">Details ansehen →</span>
+          </a>
+
+          <!-- Standard Robot 2 -->
+          <a class="card card-click" href="/de/index.html#lr-200">
+            <img class="card-img card-svg" src="/assets/images/robot-industry.svg" alt="Futrix LR-200">
+            <h3>Futrix LR-200</h3>
+            <p>
+              Logistik- und Transportroboter für Materialfluss, Übergabepunkte und Flottenbetrieb.
+            </p>
+            <span class="card-link">Details ansehen →</span>
+          </a>
+
+          <!-- Standard Robot 3 -->
+          <a class="card card-click" href="/de/index.html#cr-300">
+            <img class="card-img card-svg" src="/assets/images/robot-care.svg" alt="Futrix CR-300">
+            <h3>Futrix CR-300</h3>
+            <p>
+              Care- &amp; Service-Robotersystem für Apotheke, Klinik und Servicepunkte.
+            </p>
+            <span class="card-link">Details ansehen →</span>
+          </a>
+        </div>
+        </div>
+  </section>
+
+  
+
+    <section class="trust">
+      <div class="container">
+      <h2>Warum Futrix</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Branchen</h3>
+          <p>Gesundheitswesen · Gewerbe · Industrie</p>
+        </div>
+
+        <div class="card">
+          <h3>Unser Beitrag</h3>
+          <p>Systemintegration · Inbetriebnahme · Langfristiger Support</p>
+        </div>
+
+        <div class="card">
+          <h3>Standort Deutschland</h3>
+          <p>Engineering-getrieben · EU-Fokus · Compliance-bewusst</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section>
+       <div class="container">
+      <h2>Vision</h2>
+      <p>
+        Wir sind überzeugt, dass Robotik der Schlüssel zur Zukunft der Produktivität ist. Futrix verbindet
+        moderne Robotertechnologie mit den Anforderungen realer Einsatzumgebungen – für zuverlässige,
+        skalierbare und zukunftssichere Systeme.
+      </p>
+      </div>
+    </section>
+
+    <div id="beetleBot" class="active">
+      <!-- 外链机器人 SVG -->
+      <img class="botBody" src="/assets/robots/beetle-top.svg" alt="robot">
+
+      <!-- 扇形扫描（inline SVG） -->
+      <svg class="botScan" viewBox="0 0 120 120">
+        <defs>
+          <radialGradient id="scanGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"  stop-color="rgba(120,200,255,0.55)"/>
+            <stop offset="65%" stop-color="rgba(120,200,255,0.22)"/>
+            <stop offset="100%" stop-color="rgba(120,200,255,0)"/>
+          </radialGradient>
+
+          <mask id="sectorMask">
+            <rect width="120" height="120" fill="black"/>
+            <path d="
+              M60 60
+              L60 10
+              A50 50 0 0 1 95 25
+              Z" fill="white"/>
+          </mask>
+        </defs>
+
+        <g mask="url(#sectorMask)">
+          <circle cx="60" cy="60" r="50" fill="url(#scanGrad)"/>
+          <rect class="scanLine" x="58" y="10" width="4" height="50"
+                fill="rgba(120,200,255,0.9)"/>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
+      });
+  </script>
+
+  <script src="/assets/js/cookie-consent.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futrix Group</title>
+  <meta http-equiv="refresh" content="0; url=/en/index.html">
+      <script>
+    (function(){
+      var lang = (navigator.language || 'en').toLowerCase();
+      var base = location.protocol === 'file:' ? '' : '/';
+      var target = base + 'en/index.html';
+
+      if (lang.startsWith('de')) target = base + 'de/index.html';
+      else if (lang.startsWith('fr')) target = base + 'fr/index.html';
+      else if (lang.startsWith('es')) target = base + 'es/index.html';
+
+      window.location.replace(target);
+    })();
+    </script>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; padding: 40px;">
+  <p>Redirecting…</p>
+    <p>
+      <a href="/de/index.html">Deutsch</a> ·
+      <a href="/en/index.html">English</a> ·
+      <a href="/fr/index.html">Français</a> ·
+      <a href="/es/index.html">Español</a>
+    </p>
+
+</body>
+</html>

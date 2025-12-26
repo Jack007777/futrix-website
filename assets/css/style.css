@@ -1,0 +1,601 @@
+html, body { overflow-x: hidden; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+
+
+header h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+
+
+header p {
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+section {
+   padding: 60px clamp(16px, 4vw, 40px);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px); /* 比 -8 更“稳” */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.site-footer{
+  padding: 22px 18px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.15);
+}
+
+.footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand{
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-links{
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.site-footer a{
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.site-footer a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-right{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-right .social{
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.footer-right .social img{
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+}
+
+
+.hero h1,
+.hero .tagline,
+.hero .slogan {
+  font-size: 28px;     /* 你可以在 24–32px 之间微调 */
+  font-weight: 400;    /* 去掉营销感 */
+  line-height: 1.35;
+}
+
+.container{
+  max-width: 1360px;   /* 1280/1360 二选一 */
+  margin: 0 auto;
+  padding: 0 24px;     /* 桌面端左右留白更舒服 */
+  box-sizing: border-box;
+}
+@media (max-width: 768px){
+  .container{ padding: 0 16px; }
+}
+
+
+/* ===== Top Navigation ===== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 14px 40px;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-left: auto;   /* 菜单推到右侧 */
+  margin-right: 24px;  /* 和语言按钮拉开距离 */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  list-style: none;    /* ✅ 去掉圆点 */
+  padding: 0;
+
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+
+nav ul li{ margin: 0; padding: 0; }
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+nav ul li a.active {
+  opacity: 1;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+nav .logo img{
+  height: 42px;
+  width: auto;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.card-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.card-img{
+  width: 100%;
+  height: 180px;
+  object-fit: contain;   /* 不裁剪，完整显示机器人 */
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06); /* 给白底图片一个衬底 */
+  padding: 10px;         /* 让图片不贴边 */
+}
+
+/* ===== SVG 线稿专用修正 ===== */
+.card-img.card-svg {
+  background: transparent;     /* 去掉“照片式底色” */
+  padding: 0;                  /* 线稿不要 padding */
+  opacity: 0.6;                /* 让它像背景插画 */
+  filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.35));
+}
+
+/* 让 SVG 在卡片里更稳定 */
+.card-img.card-svg {
+  object-fit: contain;
+}
+
+/* ===== Language dropdown ===== */
+.lang-dropdown {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn{
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.lang-btn:hover{ background: rgba(255,255,255,0.10); }
+
+.lang-btn .chev{ margin-left: 6px; opacity: 0.85; }
+
+.lang-menu{
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 200px;
+  background: rgba(15, 32, 39, 0.95);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  display: none;
+  z-index: 999;
+}
+
+.lang-menu a{
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.lang-menu a:hover{
+  background: rgba(255,255,255,0.08);
+  opacity: 1;
+}
+
+.lang-menu a[aria-selected="true"]{
+  background: rgba(255,255,255,0.12);
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* open state */
+.lang-dropdown.open .lang-menu{ display: block; }
+.lang-dropdown.open .lang-btn{ background: rgba(255,255,255,0.10); }
+
+
+
+#beetleBot{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  will-change: transform;
+  z-index: 999;
+}
+.botBody{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.botScan{
+ position: absolute;
+  left: 50%;
+  top: 50%;
+
+  /* 雷达尺寸：你可以按效果微调 */
+  width: 170px;
+  height: 170px;
+
+  transform: translate3d(-50%, -50%, 0) rotate(157.5deg);
+  will-change: transform;
+
+  z-index: 1;
+  pointer-events: none;
+
+  /* 如果你发现 iOS 仍有“分层漂移”，先临时注释掉 filter 测试 */
+  filter: drop-shadow(0 0 12px rgba(120,200,255,.4));
+}
+
+.scanLine{
+  transform-origin: 60px 60px;
+  animation: scanSweep 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes scanSweep{
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(45deg); }
+}
+
+/* ===== Contact Form ===== */
+form{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label{
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+form input,
+form textarea{
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+  color: rgba(255,255,255,0.6);
+}
+
+form textarea{
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button,
+form input[type="submit"]{
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #0f2027;
+
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+  opacity: 0.9;
+}
+
+/* ===== Checkbox row (Datenschutz) ===== */
+.form-checkbox{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.form-checkbox input[type="checkbox"]{
+  width: 16px;
+  height: 16px;
+  margin: 0;              /* 去掉浏览器默认偏移 */
+  cursor: pointer;
+}
+
+.form-checkbox label{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hero{
+  position: relative;
+  padding: 120px 0 80px;   /* 左右交给 container */
+  text-align: center;
+}
+
+/* ===== Slim Cookie Banner (fixed) ===== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;        /* ⭐关键：防止按钮被挤出 */
+  padding: 10px 16px;
+
+  background: rgba(10, 25, 32, 0.96);
+  color: #ffffff;
+
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 9999;
+}
+
+.cookie-text {
+  flex: 1;
+  min-width: 0;                  /* ⭐防止挤压按钮 */
+}
+
+.cookie-text a {
+  color: #5cc8ff;
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;                /* ⭐按钮永不被压扁 */
+}
+
+/* Buttons */
+.btn-primary {
+  background: #5cc8ff;
+  color: #081218;
+  border: none;
+  padding: 6px 12px;             /* 矮按钮 */
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* 小屏兜底：不溢出 */
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-actions {
+    justify-content: flex-end;
+  }
+}
+
+a.card.card-click {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.card.card-click:hover .card-link {
+  text-decoration: underline;
+}
+
+.nav-toggle{
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+  /* 顶部一行：Logo + 语言在左，☰在右 */
+  nav{
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px 12px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav .logo{ order: 1; }
+
+  .lang-dropdown{
+    order: 2;
+    margin-left: 10px;     /* 语言紧挨logo */
+    flex: 0 0 auto;
+  }
+
+  /* ⭐关键：强制显示 ☰ */
+  .nav-toggle{
+    display: block !important;
+    order: 3;
+    margin-left: auto;     /* 推到最右 */
+    flex: 0 0 auto;
+
+    font-size: 22px;
+    background: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* header 背景必须全宽 */
+  .site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    z-index: 2000;
+    background: rgba(15,32,39,0.92);
+  }
+
+  /* 给页面让出 header 高度，避免遮住正文 */
+  body{
+    padding-top: 72px;   /* 64~80 之间按你导航高度微调 */
+  }
+
+  /* 菜单在手机端默认收起 */
+  .nav-links{
+    display: none !important;
+    order: 4;
+    flex-basis: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0 0;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* 打开状态显示 */
+  .nav.open .nav-links{
+    display: flex !important;
+  }
+  
+  form{
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* 2) container */
+    .container{ padding: 0 16px; }
+}
+

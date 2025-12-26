@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Futrix – Commercial Service Robots für öffentliche und industrielle Umgebungen</title>
+  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter für Flughäfen, Schulen, Krankenhäuser und industrielle Anwendungen in Europa.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.futrix.eu/de/">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Open Graph (optional but recommended) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Futrix">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Futrix - Commercial Service Robots">
+  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter für Flughäfen, Krankenhäuser, Schulen und Industrie.">
+  <meta property="og:url" content="https://www.futrix.eu/de/">
+  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
+  <script src="/assets/js/site.js" defer></script>
+
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+ <script>
+  fetch('/de/includes/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+
+      // ✅ 关键：通知 site.js 现在可以绑定事件了
+      document.dispatchEvent(new Event('header:loaded'));
+    })
+    .catch(err => console.error('Header load failed:', err));
+</script>
+
+  <section class="hero" id="hero">
+    <h1>Contact</h1>
+    <p class="tagline">Get in touch with Futrix</p>
+  </section>
+
+  <section>
+    <h2>Contact Information</h2>
+    <p>
+      If you are interested in our robotic solutions or would like to discuss a potential
+      cooperation or pilot project, please feel free to contact us.
+    </p>
+
+    <p>
+      <strong>Email:</strong> contact@futrix.com<br />
+      <strong>Phone:</strong> +49 (0) XXX XXXXXXX<br />
+      <strong>Location:</strong> Germany
+    </p>
+  </section>
+
+  <section>
+    <h2>Business Inquiries</h2>
+    <p>
+      We focus on robotics solutions for healthcare, commercial services, and industrial
+      automation. We welcome inquiries from pharmacies, companies, partners, and institutions.
+    </p>
+  </section>
+
+  <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
+
+  <div>
+    <label for="name">Name *</label>
+    <input id="name" name="name" type="text" required>
+  </div>
+
+  <div>
+    <label for="email">E-Mail *</label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div>
+    <label for="company">Firma</label>
+    <input id="company" name="company" type="text">
+  </div>
+
+  <div>
+    <label for="message">Nachricht *</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <!-- GDPR 同意 -->
+  <div class="form-checkbox">
+  <input type="checkbox" id="consent" name="consent" required>
+  <label for="consent">
+    Ich stimme der Verarbeitung meiner Daten gemäß der
+    <a href="/de/pages/datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.
+  </label>
+</div>
+
+  <!-- 蜜罐字段（反垃圾） -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit">Senden</button>
+</form>
+
+
+ <div id="footer-placeholder"></div>
+
+<script>
+  fetch('/de/includes/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+       window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
+    });
+</script>
+<script src="/assets/js/cookie-consent.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // 从 <html lang="de"> / <html lang="en"> 取语言
+    const lang = document.documentElement.lang || "en";
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(`/api/contact?lang=${lang}`, {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        alert(data.message);   // ✅ Worker 返回的德/英提示
+        form.reset();
+      } else {
+        alert(data.message || "Send failed");
+      }
+    } catch (err) {
+      alert(lang === "de"
+        ? "Netzwerkfehler. Bitte später erneut versuchen."
+        : "Network error. Please try again later."
+      );
+    }
+  });
+});
+</script>
+</body>
+</html>
