@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Root (default / EN) -->
+  <url>
+    <loc>https://futrix.eu/</loc>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://futrix.eu/en/</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/standardrobots.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/impressum.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/privacy-policy.html</loc>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://futrix.eu/de/</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/standardrobots.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/impressum.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/privacy-policy.html</loc>
+  </url>
+
+</urlset>
