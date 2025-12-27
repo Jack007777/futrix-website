@@ -1,41 +1,31 @@
-<!-- /includes/header.html -->
-
-<!-- 页面顶部可见区域：Logo / Navigation / Language Switch -->
-
-<!-- 不包含 <html> / <head> / <body> -->
-
+﻿<!-- /includes/header.html -->
 <header class="site-header">
   <nav class="nav">
-    <!-- Logo -->
     <div class="logo">
-      <a href="/de/index.html" aria-label="Futrix Home">
+      <a href="/en/index.html" aria-label="Futrix Home">
         <img src="/assets/images/logo.svg" alt="Futrix Logo">
       </a>
     </div>
-
-
-<!-- Main navigation -->
-<ul class="nav-links">
-  <li><a href="/de/index.html" class="active">Home</a></li>
-  <li><a href="/de/index.html#solutions">Solutions</a></li>
-  <li><a href="/de/pages/contact.html">Kontakt</a></li>
-  <li><a href="/de/pages/impressum.html">Impressum</a></li>
-</ul>
-
-<!-- Language dropdown -->
-<div class="lang-dropdown">
-  <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
-    DE <span class="chev">▾</span>
-  </button>
-
-  <div class="lang-menu" role="listbox" aria-label="Sprache wählen">
-    <a role="option" href="/de/index.html" aria-selected="true">Deutsch (DE)</a>
-    <a role="option" href="/en/index.html">English (EN)</a>
-    <a role="option" href="/fr/index.html">Français (FR)</a>
-    <a role="option" href="/es/index.html">Español (ES)</a>
-  </div>
-</div>
-
-
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+    <ul class="nav-links">
+      <li><a href="/en/index.html">Home</a></li>
+      <li><a href="/en/pages/solutions.html">Solutions</a></li>
+      <li><a href="/en/pages/products.html">Products</a></li>
+  <li><a href="/en/pages/about.html">About</a></li>
+      <li><a href="/en/pages/contact.html">Contact</a></li>
+      <li><a href="/en/pages/imprint.html">Imprint</a></li>
+      <li><a href="/en/pages/privacy-policy.html">Privacy</a></li>
+    </ul>
+    <div class="lang-dropdown">
+      <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">EN <span class="chev">▾</span></button>
+      <div class="lang-menu" role="listbox" aria-label="Language">
+        <a role="option" href="/en/index.html" aria-selected="true">English (EN)</a>
+        <a role="option" href="/de/index.html">Deutsch (DE)</a>
+        <a role="option" href="/fr/index.html">Français (FR)</a>
+        <a role="option" href="/es/index.html">Español (ES)</a>
+        <a role="option" href="/zh/index.html">中文 (ZH)</a>
+      </div>
+    </div>
   </nav>
 </header>
+

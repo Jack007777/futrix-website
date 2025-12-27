@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Root (default / EN) -->
@@ -14,16 +14,88 @@
     <loc>https://futrix.eu/en/pages/solutions.html</loc>
   </url>
   <url>
-    <loc>https://futrix.eu/en/pages/standardrobots.html</loc>
+    <loc>https://futrix.eu/en/pages/products.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/en/pages/contact.html</loc>
   </url>
   <url>
-    <loc>https://futrix.eu/en/pages/impressum.html</loc>
+    <loc>https://futrix.eu/en/pages/imprint.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/en/pages/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/about.html</loc>
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://futrix.eu/fr/</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/products.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/imprint.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/about.html</loc>
+  </url>
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://futrix.eu/es/</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/products.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/imprint.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/about.html</loc>
+  </url>
+
+  <!-- Chinese -->
+  <url>
+    <loc>https://futrix.eu/zh/</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/products.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/imprint.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/about.html</loc>
   </url>
 
   <!-- German -->
@@ -34,16 +106,24 @@
     <loc>https://futrix.eu/de/pages/solutions.html</loc>
   </url>
   <url>
-    <loc>https://futrix.eu/de/pages/standardrobots.html</loc>
+    <loc>https://futrix.eu/de/pages/products.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/de/pages/contact.html</loc>
   </url>
   <url>
-    <loc>https://futrix.eu/de/pages/impressum.html</loc>
-  </url>
-  <url>
     <loc>https://futrix.eu/de/pages/privacy-policy.html</loc>
   </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/imprint.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/about.html</loc>
+  </url>
+
 
 </urlset>
+
+
+
+

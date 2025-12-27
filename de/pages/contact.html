@@ -45,42 +45,48 @@
 </script>
 
   <section class="hero" id="hero">
-    <h1>Contact</h1>
-    <p class="tagline">Get in touch with Futrix</p>
+    <h1>Kontakt</h1>
+    <p class="tagline">Nehmen Sie Kontakt mit Futrix auf</p>
   </section>
 
   <section>
-    <h2>Contact Information</h2>
+    <h2>Kontakt Information</h2>
     <p>
       If you are interested in our robotic solutions or would like to discuss a potential
-      cooperation or pilot project, please feel free to contact us.
+      cooperation or pilot project, please feel free to Kontakt us.
     </p>
 
     <p>
-      <strong>Email:</strong> contact@futrix.com<br />
-      <strong>Phone:</strong> +49 (0) XXX XXXXXXX<br />
+      <strong>Email:</strong> Kontakt@futrix.com<br />
+      <strong>Phone:</strong> +49 01520 8288 583<br />
       <strong>Location:</strong> Germany
     </p>
   </section>
 
   <section>
-    <h2>Business Inquiries</h2>
+    <h2>Geschaeftliche Anfragen</h2>
     <p>
-      We focus on robotics solutions for healthcare, commercial services, and industrial
-      automation. We welcome inquiries from pharmacies, companies, partners, and institutions.
+      Wir fokussieren uns auf Robotikloesungen fuer Gesundheitswesen, kommerzielle Services
+      und industrielle Automatisierung. Wir freuen uns ueber Anfragen von Apotheken, Unternehmen,
+      Partnern und Institutionen.
     </p>
   </section>
 
   <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
 
   <div>
-    <label for="name">Name *</label>
+    <label for="name">Name <span class="required-star">*</span></label>
     <input id="name" name="name" type="text" required>
   </div>
 
   <div>
-    <label for="email">E-Mail *</label>
+    <label for="email">E-Mail <span class="required-star">*</span></label>
     <input id="email" name="email" type="email" required>
+  </div>
+
+  <div>
+    <label for="phone">Telefon</label>
+    <input id="phone" name="phone" type="tel">
   </div>
 
   <div>
@@ -89,16 +95,53 @@
   </div>
 
   <div>
-    <label for="message">Nachricht *</label>
+    <label for="request_type">Anfrageart <span class="required-star">*</span></label>
+    <select id="request_type" name="request_type" required>
+      <option value="">Bitte waehlen</option>
+      <option value="quote">Preisangebot anfordern</option>
+      <option value="demo">Produkte Vorfuehrung</option>
+      <option value="info">Allgemeine Anfrage</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="model">Modell <span class="required-star">*</span></label>
+    <select id="model" name="model" required>
+      <option value="">Bitte waehlen</option>
+      <option value="sr-1">SR-1</option>
+      <option value="lr-1">LR-1</option>
+      <option value="rr-1">RR-1</option>
+      <option value="other">Anderes / mehrere Modelle</option>
+    </select>
+  </div>
+
+  <div id="quantity-field">
+    <label for="quantity">Anzahl <span class="required-star">*</span></label>
+    <select id="quantity" name="quantity" required>
+      <option value="">Bitte waehlen</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+  </div>
+
+  <div class="full-row">
+    <label for="message">Nachricht <span class="required-star">*</span></label>
     <textarea id="message" name="message" rows="6" required></textarea>
   </div>
 
   <!-- GDPR 同意 -->
-  <div class="form-checkbox">
+  <div class="form-checkbox full-row">
   <input type="checkbox" id="consent" name="consent" required>
   <label for="consent">
     Ich stimme der Verarbeitung meiner Daten gemäß der
-    <a href="/de/pages/datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.
+    <a href="/de/pages/privacy-policy.html" target="_blank">Datenschutzerklärung</a> zu.
   </label>
 </div>
 
@@ -127,10 +170,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
+  const params = new URLSearchParams(window.location.search);
+  const topic = params.get("topic");
+  const modelSelect = document.getElementById("model");
+  const requestSelect = document.getElementById("request_type");
+  const quantitySelect = document.getElementById("quantity");
+  const quantityField = document.getElementById("quantity-field");
+
+  const updateQuantityVisibility = () => {
+    if (!quantitySelect || !quantityField || !requestSelect) return;
+    const isQuote = requestSelect.value === "quote";
+    quantityField.classList.toggle("form-hidden", !isQuote);
+    quantitySelect.required = isQuote;
+    if (isQuote && !quantitySelect.value) {
+      quantitySelect.value = "1";
+    }
+    if (!isQuote) {
+      quantitySelect.value = "";
+    }
+  };
+
+  if (topic && modelSelect) {
+    modelSelect.value = topic;
+  }
+  if (topic && requestSelect) {
+    requestSelect.value = "quote";
+  }
+  if (quantitySelect && !quantitySelect.value) {
+    quantitySelect.value = "1";
+  }
+
+  updateQuantityVisibility();
+  requestSelect?.addEventListener("change", updateQuantityVisibility);
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // 从 <html lang="de"> / <html lang="en"> 取语言
     const lang = document.documentElement.lang || "en";
     const formData = new FormData(form);
 
@@ -143,14 +218,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
 
       if (res.ok && data.ok) {
-        alert(data.message);   // ✅ Worker 返回的德/英提示
+        alert(data.message);
         form.reset();
+        updateQuantityVisibility();
       } else {
         alert(data.message || "Send failed");
       }
     } catch (err) {
       alert(lang === "de"
-        ? "Netzwerkfehler. Bitte später erneut versuchen."
+        ? "Netzwerkfehler. Bitte spaeter erneut versuchen."
         : "Network error. Please try again later."
       );
     }
@@ -159,3 +235,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
+
+
+
+
+

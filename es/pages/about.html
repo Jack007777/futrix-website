@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Futrix | Futrix Robotics</title>
+  <meta name="description" content="About Futrix, an engineering-driven robotics company in Europe.">
+  <link rel="canonical" href="https://www.futrix.eu/es/pages/about.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("/es/includes/header.html")
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section>
+      <h1>About Futrix</h1>
+      <p>
+        Futrix develops commercial service robots for practical, high-traffic environments in Europe.
+        We focus on reliability, clear system integration, and measurable outcomes for professional operators.
+        Our teams work with industrial clients, system integrators, and public facilities that need robots to
+        perform safely and consistently every day.
+      </p>
+      <p>
+        We build for real deployment conditions: mixed pedestrian flow, changing layouts, and long operating hours.
+        Our work starts with the engineering fundamentals and continues through commissioning, integration, and
+        ongoing support. The result is a robot system that can be deployed, monitored, and improved without
+        interrupting operations.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Focus</h2>
+      <p>
+        Our mission is to make robotic automation dependable and practical for commercial use. We design systems
+        that support daily workflows instead of adding complexity. Our vision is a European market where service
+        robots are adopted because they are reliable, compliant, and easy to integrate into existing processes.
+      </p>
+    </section>
+
+    <section>
+      <h2>Engineering &amp; Technology</h2>
+      <p>
+        Futrix is engineering-driven. We prioritize navigation stability, obstacle awareness, and predictable
+        behavior in dynamic spaces. Our robots are designed for indoor operations and can be connected to
+        dispatching or facility systems to support scheduling, reporting, and maintenance.
+      </p>
+      <p>
+        We value practical performance over marketing claims. That means clear specifications, verified operating
+        ranges, and straightforward serviceability. We also emphasize data security and European compliance
+        requirements when integrating systems in public and regulated environments.
+      </p>
+    </section>
+
+    <section>
+      <h2>Markets &amp; Applications</h2>
+      <p>
+        Futrix systems are used where reliability and safety are critical. Typical application areas include:
+      </p>
+      <ul>
+        <li>Airports with complex passenger flows and large operational zones</li>
+        <li>Hospitals that require quiet, consistent service support</li>
+        <li>Schools and campuses with daily, repeatable transport or cleaning needs</li>
+        <li>Commercial and industrial facilities that value efficiency and traceability</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Our Approach</h2>
+      <p>
+        We work closely with operators to understand routes, constraints, and integration points. Projects usually
+        include on-site assessment, deployment planning, integration with existing systems, and user training.
+        We provide documentation, remote support, and long-term maintenance options to keep systems running.
+      </p>
+      <p>
+        Futrix delivers engineering you can rely on: transparent specifications, predictable deployment, and
+        support aligned with European compliance expectations.
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("/es/includes/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>

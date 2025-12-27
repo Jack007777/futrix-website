@@ -1,41 +1,41 @@
 (function () {
 
-  // 下拉语言菜单***********************
-    function initLangDropdown() {
-    const dropdown = document.querySelector('.lang-dropdown');
-    const btn = dropdown ? dropdown.querySelector('.lang-btn') : null;
-    const menu = dropdown ? dropdown.querySelector('.lang-menu') : null;
-
-    if (!dropdown || !btn || !menu) {
+  function initLangDropdown() {
+    const dropdowns = document.querySelectorAll('.lang-dropdown');
+    if (!dropdowns.length) {
       console.warn('[lang] dropdown not found');
       return;
     }
 
-    // 防止重复绑定（如果你以后多次触发 header:loaded）
-    if (dropdown.dataset.bound === '1') return;
-    dropdown.dataset.bound = '1';
+    dropdowns.forEach((dropdown) => {
+      const btn = dropdown.querySelector('.lang-btn');
+      const menu = dropdown.querySelector('.lang-menu');
+      if (!btn || !menu) return;
 
-    function close() {
-      dropdown.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
+      if (dropdown.dataset.bound === '1') return;
+      dropdown.dataset.bound = '1';
 
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-      btn.setAttribute('aria-expanded', dropdown.classList.contains('open') ? 'true' : 'false');
-    });
+      function close() {
+        dropdown.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
 
-    document.addEventListener('click', close);
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', dropdown.classList.contains('open') ? 'true' : 'false');
+      });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
+      document.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
     });
 
     console.log('[lang] dropdown initialized');
   }
 
-    // 导航下标线-----------------------------
+  // Nav active
   function initNavActive() {
   const nav = document.querySelector('.nav-links');
   if (!nav) return;
@@ -80,6 +80,10 @@ document.addEventListener('header:loaded', () => {
   initNavActive();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  initLangDropdown();
+});
+
 // hash 改变时（例如点击 Solutions 这种锚点）也更新一次
 window.addEventListener('hashchange', initNavActive);
 window.addEventListener('popstate', initNavActive);
@@ -99,4 +103,9 @@ document.addEventListener('click', (e) => {
   const open = nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+
+
+
+
 

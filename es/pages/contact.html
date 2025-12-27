@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Futrix Robotics</title>
-  <meta name="description" content="Contact Futrix for robotics solutions and pricing.">
-  <link rel="canonical" href="https://www.futrix.eu/en/pages/contact.html">
+  <title>Contacto | Futrix Robotics</title>
+  <meta name="description" content="Contacto Futrix for robotics solutions and pricing.">
+  <link rel="canonical" href="https://www.futrix.eu/es/pages/Contacto.html">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
@@ -13,7 +13,7 @@
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/en/includes/header.html')
+    fetch('/es/includes/header.html')
       .then(r => r.text())
       .then(html => {
         document.getElementById('header-placeholder').innerHTML = html;
@@ -23,55 +23,55 @@
   </script>
 
   <section class="hero" id="hero">
-    <h1>Contact</h1>
+    <h1>Contacto</h1>
     <p class="tagline">Get in touch with Futrix</p>
   </section>
 
   <section>
-    <h2>Contact information</h2>
+    <h2>Información de Contactoo</h2>
     <p>If you are interested in our robotic solutions or would like to discuss a pilot, please reach out.</p>
     <p>
-      <strong>Email:</strong> contact@futrix.com<br />
-      <strong>Phone:</strong> +49 01520 8288 583<br />
+      <strong>Correo:</strong> Contacto@futrix.com<br />
+      <strong>Teléfono:</strong> +49 01520 8288 583<br />
       <strong>Location:</strong> Germany
     </p>
   </section>
 
   <section>
-    <h2>Business inquiries</h2>
+    <h2>Consultas comerciales</h2>
     <p>We serve healthcare, commercial services and industry with automation-ready robotics.</p>
   </section>
 
-  <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
+  <form id="Contacto-form" action="/api/Contacto" method="POST" class="Contacto-form">
     <div>
       <label for="name">Name <span class="required-star">*</span></label>
       <input id="name" name="name" type="text" required>
     </div>
     <div>
-      <label for="email">Email <span class="required-star">*</span></label>
-      <input id="email" name="email" type="email" required>
+      <label for="Correo">Correo <span class="required-star">*</span></label>
+      <input id="Correo" name="Correo" type="Correo" required>
     </div>
     <div>
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel">
+      <label for="Teléfono">Teléfono</label>
+      <input id="Teléfono" name="Teléfono" type="tel">
     </div>
     <div>
-      <label for="company">Company</label>
-      <input id="company" name="company" type="text">
+      <label for="Empresa">Empresa</label>
+      <input id="Empresa" name="Empresa" type="text">
     </div>
     <div>
-      <label for="request_type">Request type <span class="required-star">*</span></label>
+      <label for="request_type">Tipo de solicitud <span class="required-star">*</span></label>
       <select id="request_type" name="request_type" required>
-        <option value="">Please choose</option>
-        <option value="quote">Request a quote</option>
-        <option value="demo">Product demo</option>
-        <option value="info">General inquiry</option>
+        <option value="">Selecciona una opción</option>
+        <option value="quote">Solicitar presupuesto</option>
+        <option value="demo">Demostración del producto</option>
+        <option value="info">Consulta general</option>
       </select>
     </div>
     <div>
       <label for="model">Model <span class="required-star">*</span></label>
       <select id="model" name="model" required>
-        <option value="">Please choose</option>
+        <option value="">Selecciona una opción</option>
         <option value="sr-1">SR-1</option>
         <option value="lr-1">LR-1</option>
         <option value="rr-1">RR-1</option>
@@ -81,7 +81,7 @@
     <div id="quantity-field">
       <label for="quantity">Quantity <span class="required-star">*</span></label>
       <select id="quantity" name="quantity" required>
-        <option value="">Please choose</option>
+        <option value="">Selecciona una opción</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -94,20 +94,20 @@
       </select>
     </div>
     <div class="full-row">
-      <label for="message">Message <span class="required-star">*</span></label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+      <label for="Mensaje">Mensaje <span class="required-star">*</span></label>
+      <textarea id="Mensaje" name="Mensaje" rows="6" required></textarea>
     </div>
     <div class="form-checkbox full-row">
       <input type="checkbox" id="consent" name="consent" required>
-      <label for="consent">I agree to the processing of my data according to the <a href="/en/pages/privacy-policy.html" target="_blank">privacy policy</a>.</label>
+      <label for="consent">I agree to the processing of my data according to the <a href="/es/pages/privacy-policy.html" target="_blank">Política de privacidad</a>.</label>
     </div>
     <input type="text" name="_gotcha" style="display:none">
-    <button type="submit">Send</button>
+    <button type="submit">Enviar</button>
   </form>
 
   <div id="footer-placeholder"></div>
   <script>
-    fetch('/en/includes/footer.html')
+    fetch('/es/includes/footer.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('footer-placeholder').innerHTML = html;
@@ -118,7 +118,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contact-form");
+      const form = document.getElementById("Contacto-form");
       if (!form) return;
       const params = new URLSearchParams(window.location.search);
       const topic = params.get("topic");
@@ -144,10 +144,10 @@
         const lang = document.documentElement.lang || "en";
         const formData = new FormData(form);
         try {
-          const res = await fetch(`/api/contact?lang=${lang}`, { method: "POST", body: formData });
+          const res = await fetch(`/api/Contacto?lang=${lang}`, { method: "POST", body: formData });
           const data = await res.json();
-          if (res.ok && data.ok) { alert(data.message); form.reset(); updateQuantityVisibility(); }
-          else { alert(data.message || "Send failed"); }
+          if (res.ok && data.ok) { alert(data.Mensaje); form.reset(); updateQuantityVisibility(); }
+          else { alert(data.Mensaje || "Enviar failed"); }
         } catch (err) {
           alert("Network error. Please try again later.");
         }
@@ -156,3 +156,4 @@
   </script>
 </body>
 </html>
+

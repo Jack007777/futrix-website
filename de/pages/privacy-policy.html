@@ -3,61 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Futrix Group is a Germany-based robotics company delivering automation, service and industrial robotic solutions for professional environments." />
+  <meta name="description" content="Datenschutzerklaerung der Q-Sunergy GmbH (Futrix Team) gemaess DSGVO." />
 
-  <title>Datenschutzerklärung · Futrix Group</title>
-  <meta name="description" content="Datenschutzerklärung der Futrix Group gemäß DSGVO." />
+  <title>Datenschutzerklaerung | Q-Sunergy GmbH</title>
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script src="/assets/js/site.js" defer></script>
 </head>
 
 <body>
-   <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
   <script>
-  fetch('/de/includes/header.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('header-placeholder').innerHTML = html;
-
-      // ✅ 关键：通知 site.js 现在可以绑定事件了
-      document.dispatchEvent(new Event('header:loaded'));
-    })
-    .catch(err => console.error('Header load failed:', err));
-</script>
-
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
 
   <section class="hero" id="hero">
-    <h1>Datenschutzerklärung</h1>
-    <p class="tagline">Privacy Policy (DSGVO/GDPR)</p>
-    <p>Stand: [Datum eintragen, z. B. 16.12.2025]</p>
+    <h1>Datenschutzerklaerung</h1>
+    <p class="tagline">Datenschutz (DSGVO/GDPR)</p>
+    <p>Stand: 2025-12-27</p>
   </section>
 
   <section>
     <h2>1. Verantwortlicher</h2>
     <p>
-      Futrix Group<br />
-      [Rechtsform, z. B. GmbH]<br />
-      [Straße, Hausnummer]<br />
-      [PLZ, Ort], Deutschland<br />
+      Q-Sunergy GmbH<br />
+      Futrix Team (betrieben durch Q-Sunergy GmbH)<br />
+      Geschaeftsfuehrer: Zhuang Yang<br />
+      HRB 191449, Amtsgericht Hamburg<br />
+      USt-IdNr.: DE366513627<br />
       E-Mail: <a href="mailto:privacy@futrix.eu" style="color:#fff;">privacy@futrix.eu</a><br />
-      Telefon: [Telefonnummer optional]
+      Telefon: +49 01520 8288 583
     </p>
 
     <h2>2. Datenschutzbeauftragter</h2>
     <p>
-      Sofern ein Datenschutzbeauftragter bestellt ist:<br />
-      [Name / Kontakt]<br /><br />
-      Andernfalls:<br />
-      Wir haben derzeit keinen Datenschutzbeauftragten bestellt (sofern gesetzlich nicht erforderlich).
+      Derzeit ist kein Datenschutzbeauftragter bestellt, sofern gesetzlich nicht erforderlich.
     </p>
 
     <h2>3. Allgemeine Hinweise</h2>
     <p>
       Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. Personenbezogene Daten sind alle Daten,
-      mit denen Sie persönlich identifiziert werden können. Wir verarbeiten personenbezogene Daten gemäß
-      den Vorgaben der DSGVO und der einschlägigen nationalen Datenschutzvorschriften.
+      mit denen Sie persoenlich identifiziert werden koennen. Wir verarbeiten personenbezogene Daten gemaess
+      den Vorgaben der DSGVO und den einschlaegigen nationalen Datenschutzvorschriften.
     </p>
   </section>
 
@@ -65,134 +59,106 @@
     <h2>4. Hosting und Server-Logfiles</h2>
     <p>
       Unsere Website wird statisch gehostet. Beim Besuch unserer Website erhebt und speichert der Hosting-Provider
-      automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt.
+      automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch uebermittelt.
     </p>
     <p>
-      Dies sind insbesondere:
-      IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite/Datei, Referrer-URL,
+      Dies sind insbesondere: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite/Datei, Referrer-URL,
       Browsertyp/-version, Betriebssystem sowie HTTP-Statuscodes.
     </p>
     <p>
-      <strong>Zweck</strong>: technische Bereitstellung der Website, Sicherheit, Stabilität und Fehleranalyse.<br />
+      <strong>Zweck</strong>: technische Bereitstellung der Website, Sicherheit, Stabilitaet und Fehleranalyse.<br />
       <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).<br />
-      <strong>Speicherdauer</strong>: [z. B. 7–30 Tage, abhängig vom Provider].<br />
-      <strong>Hosting-Provider</strong>: [Name/Anschrift/Land des Hosters eintragen].
+      <strong>Speicherdauer</strong>: in der Regel 7-30 Tage (abhaengig vom Provider).
     </p>
 
     <h2>5. Kontaktaufnahme und Kontaktformular</h2>
     <p>
       Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, verarbeiten wir die von Ihnen gemachten Angaben
-      (z. B. Name, E-Mail-Adresse, Inhalt der Anfrage) ausschließlich zum Zwecke der Bearbeitung Ihrer Anfrage
-      sowie für mögliche Anschlussfragen.
+      (z. B. Name, E-Mail-Adresse, Inhalt der Anfrage) ausschliesslich zum Zwecke der Bearbeitung Ihrer Anfrage
+      sowie fuer moegliche Anschlussfragen.
     </p>
     <p>
-      <strong>Datenkategorien</strong>: Name (optional), E-Mail-Adresse, Nachrichtentext, ggf. Telefonnummer (optional).<br />
-      <strong>Zweck</strong>: Bearbeitung von Anfragen, Kommunikation, vorvertragliche Maßnahmen.<br />
+      <strong>Datenkategorien</strong>: Name, E-Mail-Adresse, Firma (optional), Anfrageart, Modell, Menge, Nachrichtentext,
+      ggf. Telefonnummer (optional).<br />
+      <strong>Zweck</strong>: Bearbeitung von Anfragen, Kommunikation, vorvertragliche Massnahmen.<br />
       <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. b DSGVO (vorvertraglich/vertraglich) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).<br />
-      <strong>Speicherdauer</strong>: bis Abschluss der Anfrage; ggf. länger bei gesetzlichen Aufbewahrungspflichten.
+      <strong>Speicherdauer</strong>: bis Abschluss der Anfrage; ggf. laenger bei gesetzlichen Aufbewahrungspflichten.
     </p>
     <p>
-      Hinweis: Bitte übermitteln Sie keine sensiblen Daten (z. B. Gesundheitsdaten) über das Kontaktformular,
-      sofern dies nicht ausdrücklich erforderlich ist.
+      Hinweis: Bitte uebermitteln Sie keine sensiblen Daten (z. B. Gesundheitsdaten) ueber das Kontaktformular,
+      sofern dies nicht ausdruecklich erforderlich ist.
     </p>
 
     <h2>6. Cookies</h2>
     <p>
-      Unsere Website kann technisch notwendige Cookies verwenden, die für den Betrieb und die Darstellung der Website
+      Unsere Website verwendet technisch notwendige Cookies, die fuer den Betrieb und die Darstellung der Website
       erforderlich sind. Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet.
     </p>
     <p>
-      <strong>Nicht technisch notwendige Cookies</strong> (z. B. für Analyse oder Marketing) werden – sofern eingesetzt –
-      ausschließlich nach Ihrer vorherigen Einwilligung über ein Cookie-Consent-Tool gesetzt.
-      <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
+      Nicht technisch notwendige Cookies (z. B. fuer Analyse oder Marketing) werden nur nach Ihrer vorherigen Einwilligung
+      ueber ein Cookie-Consent-Tool gesetzt. <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
     </p>
 
-    <h2>7. Webanalyse (geplant): Google Analytics</h2>
+    <h2>7. Webanalyse und Marketing</h2>
     <p>
-      Wir planen, künftig Google Analytics (GA4) einzusetzen, um die Nutzung unserer Website zu analysieren und unser Angebot zu verbessern.
-      Google Analytics wird – sofern aktiviert – nur nach Ihrer vorherigen Einwilligung über ein Cookie-Consent-Tool geladen.
-      Ohne Einwilligung findet keine Webanalyse über Google Analytics statt.
-    </p>
-    <p>
-      <strong>Zweck</strong>: Reichweitenmessung, Analyse der Website-Nutzung, Verbesserung von Inhalten und Benutzerführung.<br />
-      <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).<br />
-      <strong>Widerruf</strong>: Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (z. B. über Cookie-Einstellungen, sofern eingebunden).
+      Derzeit setzen wir keine Tools zur Webanalyse oder zum Marketing ein, die personenbezogene Daten verarbeiten.
+      Falls dies kuenftig erfolgt, informieren wir Sie vorab und holen erforderliche Einwilligungen ueber das Consent-Tool ein.
     </p>
 
-    <h2>8. Marketing (geplant): Meta Pixel</h2>
-    <p>
-      Wir planen, künftig das Meta Pixel (Facebook/Instagram) einzusetzen, um die Wirksamkeit von Marketingmaßnahmen zu messen
-      und ggf. zielgruppenbezogene Kampagnen (z. B. Retargeting) zu ermöglichen. Das Meta Pixel wird – sofern aktiviert –
-      ausschließlich nach Ihrer vorherigen Einwilligung über ein Cookie-Consent-Tool geladen.
-      Ohne Einwilligung findet keine Verarbeitung zu Marketingzwecken über das Meta Pixel statt.
-    </p>
-    <p>
-      <strong>Zweck</strong>: Erfolgsmessung von Kampagnen, Optimierung von Marketingmaßnahmen.<br />
-      <strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).<br />
-      <strong>Widerruf</strong>: jederzeit mit Wirkung für die Zukunft über Cookie-Einstellungen (sofern eingebunden).
-    </p>
-
-    <h2>9. Empfänger / Auftragsverarbeitung</h2>
+    <h2>8. Empfaenger / Auftragsverarbeitung</h2>
     <p>
       Wir setzen Dienstleister (Auftragsverarbeiter) ein, die personenbezogene Daten in unserem Auftrag verarbeiten
-      (z. B. Hosting-Provider, E-Mail-Dienstleister). Mit diesen Dienstleistern werden – sofern erforderlich –
-      Verträge zur Auftragsverarbeitung geschlossen.
+      (z. B. Hosting-Provider, E-Mail-Dienstleister). Mit diesen Dienstleistern werden, sofern erforderlich,
+      Vertraege zur Auftragsverarbeitung geschlossen.
     </p>
 
-    <h2>10. Drittlandübermittlung</h2>
+    <h2>9. Drittlanduebermittlung</h2>
     <p>
-      Sofern künftig Dienste von Anbietern mit Sitz außerhalb der EU/EWR (z. B. in den USA) eingesetzt werden,
-      erfolgt eine Übermittlung personenbezogener Daten nur unter Beachtung der gesetzlichen Vorgaben der DSGVO,
-      insbesondere durch geeignete Garantien (z. B. Angemessenheitsbeschluss oder Standardvertragsklauseln),
-      soweit erforderlich.
+      Sofern Dienste von Anbietern mit Sitz ausserhalb der EU/EWR eingesetzt werden, erfolgt eine Uebermittlung
+      personenbezogener Daten nur unter Beachtung der gesetzlichen Vorgaben der DSGVO, insbesondere durch geeignete
+      Garantien (z. B. Angemessenheitsbeschluss oder Standardvertragsklauseln), soweit erforderlich.
     </p>
   </section>
 
   <section>
-    <h2>11. Ihre Rechte</h2>
+    <h2>10. Ihre Rechte</h2>
     <p>
-      Sie haben im Rahmen der DSGVO grundsätzlich folgende Rechte:
+      Sie haben im Rahmen der DSGVO grundsaetzlich folgende Rechte:
     </p>
     <ul>
       <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
       <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Recht auf Loeschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschraenkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenuebertragbarkeit (Art. 20 DSGVO)</li>
       <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
       <li>Recht auf Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
-      <li>Beschwerderecht bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+      <li>Beschwerderecht bei einer Aufsichtsbehoerde (Art. 77 DSGVO)</li>
     </ul>
 
-    <h2>12. Zuständige Aufsichtsbehörde</h2>
+    <h2>11. Zustaendige Aufsichtsbehoerde</h2>
     <p>
-      Sie können sich bei einer Datenschutzaufsichtsbehörde beschweren. Zuständig ist in der Regel die Behörde
-      Ihres üblichen Aufenthaltsortes, Ihres Arbeitsplatzes oder unseres Unternehmenssitzes.<br />
-      [Optional: konkrete Behörde eintragen, z. B. Landesbeauftragte/r für Datenschutz ...]
+      Zustaendig ist die Datenschutzaufsichtsbehoerde des Bundeslandes Hamburg oder Ihres ueblichen Aufenthaltsortes.
     </p>
 
-    <h2>13. Änderungen dieser Datenschutzerklärung</h2>
+    <h2>12. Aenderungen dieser Datenschutzerklaerung</h2>
     <p>
-      Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht
-      oder um Änderungen unserer Leistungen umzusetzen (z. B. bei Einführung neuer Tools wie Google Analytics/Meta Pixel).
+      Wir behalten uns vor, diese Datenschutzerklaerung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht
+      oder um Aenderungen unserer Leistungen umzusetzen.
     </p>
-
-    <hr style="opacity:0.2;margin:32px 0;" />
-
-    
   </section>
 
   <div id="footer-placeholder"></div>
 
-<script>
-  fetch('/de/includes/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-       window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
-    });
-</script>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
 
-<script src="/assets/js/cookie-consent.js"></script>
+  <script src="/assets/js/cookie-consent.js"></script>
 </body>
 </html>

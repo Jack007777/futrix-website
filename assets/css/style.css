@@ -6,6 +6,18 @@ body {
   color: #ffffff;
 }
 
+a{
+  color: #5cc8ff;
+}
+
+a:visited{
+  color: #5cc8ff;
+}
+
+a:hover{
+  color: #7bd7ff;
+}
+
 
 
 header h1 {
@@ -30,6 +42,32 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+}
+
+.faq{
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item{
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 12px 16px;
+}
+
+.faq-item summary{
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker{ display: none; }
+
+.faq-item p{
+  margin: 10px 0 0;
+  opacity: 0.9;
 }
 
 .card {
@@ -228,6 +266,34 @@ nav .logo img{
   object-fit: contain;
 }
 
+
+/* ===== PNG soft edge ===== */
+.card-img.card-png{
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  object-fit: contain;
+
+  /* linear edge fade */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to top, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to left, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-composite: source-in, source-in, source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to top, transparent 0%, #000 18%, #000 82%, transparent 100%),
+    linear-gradient(to left, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-composite: intersect, intersect, intersect;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+}
+
 /* ===== Language dropdown ===== */
 .lang-dropdown {
   flex-shrink: 0;
@@ -339,8 +405,30 @@ nav .logo img{
 
 /* ===== Contact Form ===== */
 form{
-  max-width: 600px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+.contact-form{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 20px;
+}
+
+.contact-form > div{
+  margin: 0;
+}
+
+.contact-form .full-row{
+  grid-column: 1 / -1;
+}
+
+.contact-form > button{
+  grid-column: 1 / -1;
+}
+
+.form-hidden{
+  display: none;
 }
 
 form label{
@@ -350,11 +438,16 @@ form label{
   opacity: 0.9;
 }
 
+.required-star{
+  color: #ff5a5a;
+}
+
 form input,
-form textarea{
+form textarea,
+form select{
   width: 100%;
   padding: 12px 14px;
-  margin-bottom: 18px;
+  margin-bottom: 0;
 
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.2);
@@ -365,6 +458,11 @@ form textarea{
   box-sizing: border-box;
 }
 
+form select option{
+  color: #0f2027;
+  background: #ffffff;
+}
+
 form input::placeholder,
 form textarea::placeholder{
   color: rgba(255,255,255,0.6);
@@ -373,6 +471,18 @@ form textarea::placeholder{
 form textarea{
   resize: vertical;
   min-height: 120px;
+}
+
+@media (max-width: 1024px){
+  .contact-form{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px){
+  .contact-form{
+    grid-template-columns: 1fr;
+  }
 }
 
 form button,
@@ -461,6 +571,10 @@ form input[type="submit"]:hover{
 }
 
 /* Buttons */
+.btn{
+  text-decoration: underline;
+}
+
 .btn-primary {
   background: #5cc8ff;
   color: #081218;
@@ -615,5 +729,6 @@ a.card.card-click:hover .card-link {
   }
 
 }
+
 
 
