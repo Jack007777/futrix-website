@@ -142,12 +142,15 @@
       if (!btn) return;
       btn.classList.toggle('is-active', running);
       btn.setAttribute('aria-label', running ? 'Pause' : 'Run');
+      const label = btn.querySelector('span');
+      if (label) label.textContent = running ? 'Pause' : 'Run';
       const icon = btn.querySelector('svg');
       if (!icon) return;
       icon.innerHTML = running
         ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z"></path>'
         : '<path d="M8 5l11 7-11 7z"></path>';
     }
+
 
     function attachControls() {
       if (initialized) return;

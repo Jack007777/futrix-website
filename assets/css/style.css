@@ -481,6 +481,7 @@ nav .logo img{
   outline-offset: 2px;
 }
 
+
 @media (max-width: 900px){
   .bot-controls{
     top: 170px;
@@ -810,6 +811,16 @@ a.card.card-click:hover .card-link {
   .hero .tagline,
   .hero .slogan {
     font-size: 16px;
+  }
+
+  .bot-controls{
+    position: fixed;
+    top: 72px;
+    right: 12px;
+    left: auto;
+    flex-direction: row;
+    gap: 8px;
+    z-index: 1999;
   }
 
 }
