@@ -1,244 +1,244 @@
-﻿<!DOCTYPE html>
-<html lang="de">
-<head>
-  <!-- Basic -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
-  <title>Futrix – Commercial Service Robots für öffentliche und industrielle Umgebungen</title>
-  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter für Flughäfen, Schulen, Krankenhäuser und industrielle Anwendungen in Europa.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.futrix.eu/de/">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-
-  <!-- Open Graph (optional but recommended) -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Futrix">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Futrix - Commercial Service Robots">
-  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter für Flughäfen, Krankenhäuser, Schulen und Industrie.">
-  <meta property="og:url" content="https://www.futrix.eu/de/">
-  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
-  <script src="/assets/js/site.js" defer></script>
-
-</head>
-
-<body>
-  <div id="header-placeholder"></div>
- <script>
-  fetch('/de/includes/header.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('header-placeholder').innerHTML = html;
-
-      // ✅ 关键：通知 site.js 现在可以绑定事件了
-      document.dispatchEvent(new Event('header:loaded'));
-    })
-    .catch(err => console.error('Header load failed:', err));
-</script>
-
-  <section class="hero" id="hero">
-    <h1>Kontakt</h1>
-    <p class="tagline">Nehmen Sie Kontakt mit Futrix auf</p>
-  </section>
-
-  <section>
-    <h2>Kontakt Information</h2>
-    <p>
-      If you are interested in our robotic solutions or would like to discuss a potential
-      cooperation or pilot project, please feel free to Kontakt us.
-    </p>
-
-    <p>
-      <strong>Email:</strong> Kontakt@futrix.com<br />
-      <strong>Phone:</strong> +49 01520 8288 583<br />
-      <strong>Location:</strong> Germany
-    </p>
-  </section>
-
-  <section>
-    <h2>Gesch?ftliche Anfragen</h2>
-    <p>
-      Wir fokussieren uns auf Robotikl?sungen f?r Gesundheitswesen, kommerzielle Services
-      und industrielle Automatisierung. Wir fre?n uns ?ber Anfragen von Apotheken, Unternehmen,
-      Partnern und Institutionen.
-    </p>
-  </section>
-
-  <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
-
-  <div>
-    <label for="name">Name <span class="required-star">*</span></label>
-    <input id="name" name="name" type="text" required>
-  </div>
-
-  <div>
-    <label for="email">E-Mail <span class="required-star">*</span></label>
-    <input id="email" name="email" type="email" required>
-  </div>
-
-  <div>
-    <label for="phone">Telefon</label>
-    <input id="phone" name="phone" type="tel">
-  </div>
-
-  <div>
-    <label for="company">Firma</label>
-    <input id="company" name="company" type="text">
-  </div>
-
-  <div>
-    <label for="request_type">Anfrageart <span class="required-star">*</span></label>
-    <select id="request_type" name="request_type" required>
-      <option val?="">Bitte w?hlen</option>
-      <option val?="quote">Preisangebot anfordern</option>
-      <option val?="demo">Produkte Vorf?hrung</option>
-      <option val?="info">Allgemeine Anfrage</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="model">Modell <span class="required-star">*</span></label>
-    <select id="model" name="model" required>
-      <option val?="">Bitte w?hlen</option>
-      <option val?="sr-1">SR-1</option>
-      <option val?="lr-1">LR-1</option>
-      <option val?="rr-1">RR-1</option>
-      <option val?="other">Anderes / mehrere Modelle</option>
-    </select>
-  </div>
-
-  <div id="quantity-field" class="form-hidden">
-    <label for="quantity">Anzahl <span class="required-star">*</span></label>
-    <select id="quantity" name="quantity" required>
-      <option val?="">Bitte w?hlen</option>
-      <option val?="1">1</option>
-      <option val?="2">2</option>
-      <option val?="3">3</option>
-      <option val?="4">4</option>
-      <option val?="5">5</option>
-      <option val?="6">6</option>
-      <option val?="7">7</option>
-      <option val?="8">8</option>
-      <option val?="9">9</option>
-    </select>
-  </div>
-
-  <div class="full-row">
-    <label for="message">Nachricht <span class="required-star">*</span></label>
-    <textarea id="message" name="message" rows="6" required></textarea>
-  </div>
-
-  <!-- GDPR 同意 -->
-  <div class="form-checkbox full-row">
-  <input type="checkbox" id="consent" name="consent" required>
-  <label for="consent">
-    Ich stimme der Verarbeitung meiner Daten gemäß der
-    <a href="/de/pages/privacy-policy.html" target="_blank">Datenschutzerklärung</a> zu.
-  </label>
-</div>
-
-  <!-- 蜜罐字段（反垃圾） -->
-  <input type="text" name="_gotcha" style="display:none">
-
-  <button type="submit">Senden</button>
-</form>
-
-
- <div id="footer-placeholder"></div>
-
-<script>
-  fetch('/de/includes/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-       window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
-    });
-</script>
-<script src="/assets/js/cookie-consent.js"></script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const topic = params.get("topic");
-  const modelSelect = document.getElementById("model");
-  const requestSelect = document.getElementById("request_type");
-  const quantitySelect = document.getElementById("quantity");
-  const quantityField = document.getElementById("quantity-field");
-
-  const updateQuantityVisibility = () => {
-    if (!quantitySelect || !quantityField || !requestSelect) return;
-    const isQuote = requestSelect.value === "quote";
-    quantityField.classList.toggle("form-hidden", !isQuote);
-    quantitySelect.required = isQuote;
-    if (isQuote && !quantitySelect.value) {
-      quantitySelect.value = "1";
-    }
-    if (!isQuote) {
-      quantitySelect.value = "";
-    }
-  };
-
-  if (topic && modelSelect) {
-    modelSelect.value = topic;
-  }
-  if (topic && requestSelect) {
-    requestSelect.value = "quote";
-  }
-  if (quantitySelect && !quantitySelect.value) {
-    quantitySelect.value = "1";
-  }
-
-  updateQuantityVisibility();
-  requestSelect?.addEventListener("change", updateQuantityVisibility);
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const lang = document.documentElement.lang || "en";
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch(`/api/contact?lang=${lang}`, {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await res.json();
-
-      if (res.ok && data.ok) {
-        alert(data.message);
-        form.reset();
-        updateQuantityVisibility();
-      } else {
-        alert(data.message || "Send failed");
-      }
-    } catch (err) {
-      alert(lang === "de"
-        ? "Netzwerkfehler. Bitte spaeter erneut versuchen."
-        : "Network error. Please try again later."
-      );
-    }
-  });
-});
-</script>
-</body>
-</html>
-
-
-
-
-
-
-
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Futrix – Commercial Service Robots für öffentliche und industrielle Umgebungen</title>
+  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter für Flughäfen, Schulen, Krankenhäuser und industrielle Anwendungen in Europa.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.futrix.eu/de/">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Open Graph (optional but recommended) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Futrix">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Futrix - Commercial Service Robots">
+  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter für Flughäfen, Krankenhäuser, Schulen und Industrie.">
+  <meta property="og:url" content="https://www.futrix.eu/de/">
+  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
+  <script src="/assets/js/site.js" defer></script>
+
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+ <script>
+  fetch('/de/includes/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+
+      // ✅ 关键：通知 site.js 现在可以绑定事件了
+      document.dispatchEvent(new Event('header:loaded'));
+    })
+    .catch(err => console.error('Header load failed:', err));
+</script>
+
+  <section class="hero" id="hero">
+    <h1>Kontakt</h1>
+    <p class="tagline">Nehmen Sie Kontakt mit Futrix auf</p>
+  </section>
+
+  <section>
+    <h2>Kontakt Information</h2>
+    <p>
+      If you are interested in our robotic solutions or would like to discuss a potential
+      cooperation or pilot project, please feel free to Kontakt us.
+    </p>
+
+    <p>
+      <strong>Email:</strong> Kontakt@futrix.com<br />
+      <strong>Phone:</strong> +49 01520 8288 583<br />
+      <strong>Location:</strong> Germany
+    </p>
+  </section>
+
+  <section>
+    <h2>Gesch?ftliche Anfragen</h2>
+    <p>
+      Wir fokussieren uns auf Robotikl?sungen f?r Gesundheitswesen, kommerzielle Services
+      und industrielle Automatisierung. Wir fre?n uns ?ber Anfragen von Apotheken, Unternehmen,
+      Partnern und Institutionen.
+    </p>
+  </section>
+
+  <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
+
+  <div>
+    <label for="name">Name <span class="required-star">*</span></label>
+    <input id="name" name="name" type="text" required>
+  </div>
+
+  <div>
+    <label for="email">E-Mail <span class="required-star">*</span></label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div>
+    <label for="phone">Telefon</label>
+    <input id="phone" name="phone" type="tel">
+  </div>
+
+  <div>
+    <label for="company">Firma</label>
+    <input id="company" name="company" type="text">
+  </div>
+
+  <div>
+    <label for="request_type">Anfrageart <span class="required-star">*</span></label>
+    <select id="request_type" name="request_type" required>
+      <option val?="">Bitte w?hlen</option>
+      <option val?="quote">Preisangebot anfordern</option>
+      <option val?="demo">Produkte Vorf?hrung</option>
+      <option val?="info">Allgemeine Anfrage</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="model">Modell <span class="required-star">*</span></label>
+    <select id="model" name="model" required>
+      <option val?="">Bitte w?hlen</option>
+      <option val?="sr-1">SR-1</option>
+      <option val?="lr-1">LR-1</option>
+      <option val?="rr-1">RR-1</option>
+      <option val?="other">Anderes / mehrere Modelle</option>
+    </select>
+  </div>
+
+  <div id="quantity-field" class="form-hidden">
+    <label for="quantity">Anzahl <span class="required-star">*</span></label>
+    <select id="quantity" name="quantity" required>
+      <option val?="">Bitte w?hlen</option>
+      <option val?="1">1</option>
+      <option val?="2">2</option>
+      <option val?="3">3</option>
+      <option val?="4">4</option>
+      <option val?="5">5</option>
+      <option val?="6">6</option>
+      <option val?="7">7</option>
+      <option val?="8">8</option>
+      <option val?="9">9</option>
+    </select>
+  </div>
+
+  <div class="full-row">
+    <label for="message">Nachricht <span class="required-star">*</span></label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <!-- GDPR 同意 -->
+  <div class="form-checkbox full-row">
+  <input type="checkbox" id="consent" name="consent" required>
+  <label for="consent">
+    Ich stimme der Verarbeitung meiner Daten gemäß der
+    <a href="/de/pages/privacy-policy.html" target="_blank">Datenschutzerklärung</a> zu.
+  </label>
+</div>
+
+  <!-- 蜜罐字段（反垃圾） -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit">Senden</button>
+</form>
+
+
+ <div id="footer-placeholder"></div>
+
+<script>
+  fetch('/de/includes/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+       window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
+    });
+</script>
+<script src="/assets/js/cookie-consent.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const topic = params.get("topic");
+  const modelSelect = document.getElementById("model");
+  const requestSelect = document.getElementById("request_type");
+  const quantitySelect = document.getElementById("quantity");
+  const quantityField = document.getElementById("quantity-field");
+
+  const updateQuantityVisibility = () => {
+    if (!quantitySelect || !quantityField || !requestSelect) return;
+    const isQuote = requestSelect.value === "quote";
+    quantityField.classList.toggle("form-hidden", !isQuote);
+    quantitySelect.required = isQuote;
+    if (isQuote && !quantitySelect.value) {
+      quantitySelect.value = "1";
+    }
+    if (!isQuote) {
+      quantitySelect.value = "";
+    }
+  };
+
+  if (topic && modelSelect) {
+    modelSelect.value = topic;
+  }
+  if (topic && requestSelect) {
+    requestSelect.value = "quote";
+  }
+  if (quantitySelect && !quantitySelect.value) {
+    quantitySelect.value = "1";
+  }
+
+  updateQuantityVisibility();
+  requestSelect?.addEventListener("change", updateQuantityVisibility);
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const lang = document.documentElement.lang || "en";
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(`/api/contact?lang=${lang}`, {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        alert(data.message);
+        form.reset();
+        updateQuantityVisibility();
+      } else {
+        alert(data.message || "Send failed");
+      }
+    } catch (err) {
+      alert(lang === "de"
+        ? "Netzwerkfehler. Bitte spaeter erneut versuchen."
+        : "Network error. Please try again later."
+      );
+    }
+  });
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

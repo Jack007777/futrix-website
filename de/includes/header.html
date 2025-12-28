@@ -1,59 +1,48 @@
-﻿<!-- /includes/header.html -->
-
-<!-- 页面顶部可见区域：Logo / Navigation / Language Switch -->
-
-<!-- 不包含 <html> / <head> / <body> -->
-
-<header class="site-header">
-  <nav class="nav">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="/de/index.html" aria-label="Futrix Home">
-        <img src="/assets/images/logo.svg" alt="Futrix Logo">
-      </a>
-    </div>
-
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-      ☰
-    </button>
-
-
-<!-- Main navigation -->
-<ul class="nav-links">
-  <li><a href="/de/index.html">Startseite</a></li>
-  <li><a href="/de/index.html#solutions">Lösungen</a></li>
-  <li><a href="/de/pages/products.html">Produkte</a></li>
-  <li><a href="/de/pages/about.html">Über uns</a></li>
-  <li><a href="/de/pages/contact.html">Kontakt</a></li>
-  <li><a href="/de/pages/imprint.html">Impressum</a></li>
-  <li><a href="/de/pages/privacy-policy.html">Datenschutz</a></li>
-</ul>
-
-<!-- Language dropdown -->
-<div class="lang-dropdown">
-  <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
-    DE <span class="chev">▾</span>
-  </button>
-
-  <div class="lang-menu" role="listbox" aria-label="Sprache wählen">
-    <a role="option" href="/de/index.html" aria-selected="tr?">Deutsch (DE)</a>
-    <a role="option" href="/en/index.html">English (EN)</a>
-    <a role="option" href="/fr/index.html">Français (FR)</a>
-    <a role="option" href="/es/index.html">Español (ES)</a>
-    <a role="option" href="/zh/index.html">中文 (ZH)</a>
-  </div>
-</div>
-
-
-  </nav>
-
- 
-</header>
-
-
-
-
-
-
-
-
+<!-- /includes/header.html -->
+
+<!-- Logo / Navigation / Language Switch -->
+
+<header class="site-header">
+  <nav class="nav">
+    <div class="logo">
+      <a href="/de/index.html" aria-label="Futrix Home">
+        <img src="/assets/images/logo.svg" alt="Futrix Logo">
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      ?
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="/de/index.html">Startseite</a></li>
+      <li class="has-submenu">
+        <a href="/de/pages/solutions.html" aria-haspopup="true" aria-expanded="false">L?sungen</a>
+        <ul class="nav-submenu" aria-label="L?sungen">
+          <li><a href="/de/pages/solutions.html#pharmacy-robot-hero">Futrix Care</a></li>
+          <li><a href="/de/pages/solutions.html#service">Futrix Service</a></li>
+          <li><a href="/de/pages/solutions.html#industry">Futrix Industry</a></li>
+        </ul>
+      </li>
+      <li><a href="/de/pages/products.html">Produkte</a></li>
+      <li><a href="/de/pages/about.html">?ber uns</a></li>
+      <li><a href="/de/pages/contact.html">Kontakt</a></li>
+      <li><a href="/de/pages/imprint.html">Impressum</a></li>
+      <li><a href="/de/pages/privacy-policy.html">Datenschutz</a></li>
+    </ul>
+
+    <div class="lang-dropdown">
+      <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+        DE <span class="chev">?</span>
+      </button>
+
+      <div class="lang-menu" role="listbox" aria-label="Sprache w?hlen">
+        <a role="option" href="/de/index.html" aria-selected="true">Deutsch (DE)</a>
+        <a role="option" href="/en/index.html">English (EN)</a>
+        <a role="option" href="/fr/index.html">Fran?ais (FR)</a>
+        <a role="option" href="/es/index.html">Espa?ol (ES)</a>
+        <a role="option" href="/zh/index.html">?? (ZH)</a>
+      </div>
+    </div>
+  </nav>
+</header>

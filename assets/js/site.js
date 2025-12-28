@@ -104,6 +104,21 @@ document.addEventListener('click', (e) => {
   toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
+// ===== Mobile submenu toggle =====
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('.has-submenu > a');
+  if (!link) return;
+
+  const nav = link.closest('.nav');
+  if (!nav || !nav.classList.contains('open')) return;
+  if (!window.matchMedia || !window.matchMedia('(max-width: 768px)').matches) return;
+
+  e.preventDefault();
+  const item = link.parentElement;
+  const isOpen = item.classList.toggle('is-open');
+  link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
 
 
 

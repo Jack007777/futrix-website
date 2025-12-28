@@ -223,6 +223,58 @@ nav ul li a.active {
   font-weight: bold;
 }
 
+/* ===== Nav submenu ===== */
+.has-submenu{
+  position: relative;
+}
+
+.nav-submenu{
+  display: flex;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  background: rgba(15, 32, 39, 0.95);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  z-index: 1000;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.45s;
+}
+
+.nav-submenu a{
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.nav-submenu a:hover,
+.nav-submenu a:focus-visible{
+  background: rgba(255,255,255,0.08);
+  opacity: 1;
+}
+
+.has-submenu:hover .nav-submenu,
+.has-submenu:focus-within .nav-submenu{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
 nav .logo img{
   height: 42px;
   width: auto;
@@ -803,6 +855,33 @@ a.card.card-click:hover .card-link {
   /* 打开状态显示 */
   .nav.open .nav-links{
     display: flex !important;
+  }
+
+  .nav-submenu{
+    position: static;
+    display: none;
+    min-width: 0;
+    padding: 6px 0 0 12px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
+  }
+
+  .nav.open .has-submenu.is-open .nav-submenu{
+    display: flex;
+  }
+
+  .has-submenu.is-open .nav-submenu{
+    display: flex;
+  }
+
+  .nav-submenu a{
+    padding: 6px 8px;
   }
   
   form{

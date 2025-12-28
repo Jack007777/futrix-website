@@ -1,202 +1,202 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produits | Futrix Robotics</title>
-  <meta name="description" content="Robots standards de Futrix : SR-1, LR-1 et RR-1." />
-  <link rel="canonical" href="https://www.futrix.eu/fr/pages/Produits.html" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <script src="/assets/js/site.js" defer></script>
-</head>
-<body>
-  <div id="header-placeholder"></div>
-  <script>
-    fetch('/fr/includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-        document.dispatchEvent(new Event('header:loaded'));
-      })
-      .catch(err => console.error('Header load failed:', err));
-  </script>
-
-  <main>
-    <section class="hero" id="hero">
-      <h1>Produits</h1>
-      <p class="tagline">Robots standard pour des environnements réels.</p>
-      <p class="slogan">Futrix - inspir? de Future et Matrix.</p>
-    </section>
-
-    <section class="Produits" id="Produits">
-      <div class="container">
-        <h2>Nos modèles standard</h2>
-        <p class="section-intro">SR = Service Robot, RR = Restaurant Robot, LR = Logistic Robot.</p>
-
-        <div class="product-section" id="sr-1">
-          <div class="product-media">
-            <img class="card-img card-png" src="/assets/images/sr-1.png" alt="Futrix SR-1" />
-          </div>
-          <div class="product-details">
-            <h3>Futrix SR-1</h3>
-            <p class="product-subtitle">Robot de nettoyage 4-en-1</p>
-            <p>Un seul passage pour balayer, aspirer, r?curer et laver les sols dans les bureaux, h?pitaux et centres commerciaux.</p>
-            <table class="product-specs">
-              <tr class="spec-group"><th colspan="2">Base</th></tr>
-              <tr><th>Dimensions</th><td>580(L) x 500(l) x 600(H) mm</td></tr>
-              <tr><th>Poids</th><td>68.5 kg</td></tr>
-              <tr><th>Type de batterie</th><td>Lithium ternaire / LiFePO4</td></tr>
-              <tr><th>Tension nominale</th><td>25.9 V / 25.6 V</td></tr>
-              <tr><th>Bruit</th><td>&lt; 70 dB</td></tr>
-              <tr class="spec-group"><th colspan="2">Performances de nettoyage</th></tr>
-              <tr><th>Modes</th><td>R?curage, balayage, aspiration, d?poussi?rage</td></tr>
-              <tr><th>R?curage</th><td>350-500 m2/h</td></tr>
-              <tr><th>Balayage</th><td>400-600 m2/h</td></tr>
-              <tr><th>Aspiration</th><td>350-500 m2/h</td></tr>
-              <tr><th>D?poussi?rage</th><td>400-650 m2/h</td></tr>
-              <tr><th>Largeur de r?curage</th><td>370 mm</td></tr>
-              <tr><th>Largeur de nettoyage</th><td>490 mm</td></tr>
-              <tr><th>Vitesse max</th><td>0.8 m/s</td></tr>
-              <tr><th>Max slope</th><td>8°</td></tr>
-              <tr class="spec-group"><th colspan="2">Autonomie</th></tr>
-              <tr><th>Capacit?</th><td>46 Ah</td></tr>
-              <tr><th>Autonomie</th><td>2-3.5 h</td></tr>
-              <tr><th>Temps de charge</th><td>2.5 h / 2 h</td></tr>
-              <tr><th>Eau propre</th><td>8 L</td></tr>
-              <tr><th>Eaux us?es</th><td>6 L</td></tr>
-              <tr><th>Bac ? poussi?re</th><td>2 L</td></tr>
-              <tr class="spec-group"><th colspan="2">Station de base</th></tr>
-              <tr><th>Dimensions</th><td>528(L) x 300(l) x 700(H) mm</td></tr>
-              <tr><th>Poids</th><td>25 kg</td></tr>
-              <tr><th>Tension d?entr?e</th><td>AC 100-240 V</td></tr>
-              <tr><th>Tension de sortie</th><td>29.5 V</td></tr>
-              <tr><th>Puissance de sortie</th><td>700 W</td></tr>
-              <tr><th>Courant de charge max</th><td>20 A</td></tr>
-              <tr><th>Temp?rature de fonctionnement</th><td>0-40 C</td></tr>
-              <tr><th>Eau propre (station)</th><td>25 L</td></tr>
-              <tr><th>Eaux us?es (station)</th><td>25 L</td></tr>
-            </table>
-            <p><strong>R?sum? :</strong> Le SR-1 offre un nettoyage stable, un faible niveau sonore et une gestion cloud pour les op?rations quotidiennes.</p>
-            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=sr-1">Demander un devis</a></div>
-          </div>
-        </div>
-
-        <div class="product-section" id="lr-1">
-          <div class="product-media">
-            <img class="card-img card-png" src="/assets/images/lr-1.png" alt="Futrix LR-1" />
-            <div class="product-gallery">
-              <img class="card-img card-png" src="/assets/images/lr-1-1.png" alt="Futrix LR-1 application 1" />
-              <img class="card-img card-png" src="/assets/images/lr-1-2.png" alt="Futrix LR-1 application 2" />
-              <img class="card-img card-png" src="/assets/images/lr-1-3.png" alt="Futrix LR-1 application 3" />
-            </div>
-          </div>
-          <div class="product-details">
-            <h3>Futrix LR-1</h3>
-            <p class="product-subtitle">AGV logistique</p>
-            <p>AGV compact ? entra?nement diff?rentiel et SLAM laser pour la logistique int?rieure et le transport automatis?.</p>
-            <table class="product-specs">
-              <tr class="spec-group"><th colspan="2">Base</th></tr>
-              <tr><th>Mod?le</th><td>LR-1 (ZQ8104/A1)</td></tr>
-              <tr><th>Type</th><td>AGV de travail / robot de transport</td></tr>
-              <tr class="spec-group"><th colspan="2">Dimensions et charge</th></tr>
-              <tr><th>Dimensions</th><td>~ 810 x 540 x 270 mm</td></tr>
-              <tr><th>Poids</th><td>~ 45 kg</td></tr>
-              <tr><th>Charge max</th><td>100 kg</td></tr>
-              <tr class="spec-group"><th colspan="2">Mouvement</th></tr>
-              <tr><th>Vitesse max</th><td>1.2 m/s</td></tr>
-              <tr><th>Rayon de braquage</th><td>0 m (rotation sur place)</td></tr>
-              <tr><th>Max slope</th><td>5°</td></tr>
-              <tr><th>Traction</th><td>Entra?nement diff?rentiel</td></tr>
-              <tr class="spec-group"><th colspan="2">Batterie et charge</th></tr>
-              <tr><th>Type de batterie</th><td>Lithium</td></tr>
-              <tr><th>Capacit?</th><td>24 V / 20 Ah</td></tr>
-              <tr><th>Autonomie</th><td>6-8 h</td></tr>
-              <tr><th>Charge</th><td>Manuelle / automatique (dock)</td></tr>
-              <tr class="spec-group"><th colspan="2">Navigation et s?curit?</th></tr>
-              <tr><th>Navigation</th><td>Laser SLAM</td></tr>
-              <tr><th>Accuracy</th><td>±10 mm</td></tr>
-              <tr><th>Cartographie</th><td>Disponible</td></tr>
-              <tr><th>Multi-robots</th><td>Disponible</td></tr>
-              <tr><th>LiDAR de s?curit?</th><td>Oui</td></tr>
-              <tr><th>D?tection de collision</th><td>Oui</td></tr>
-              <tr><th>Arr?t d?urgence</th><td>Oui</td></tr>
-              <tr class="spec-group"><th colspan="2">Communication</th></tr>
-              <tr><th>Sans fil</th><td>Wi-Fi</td></tr>
-              <tr><th>Int?gration</th><td>Connexion dispatch / WMS</td></tr>
-            </table>
-            <p><strong>R?sum? :</strong> Le LR-1 est un AGV laser SLAM agile, avec une autonomie stable et une s?curit? industrielle.</p>
-            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=lr-1">Demander un devis</a></div>
-          </div>
-        </div>
-
-        <div class="product-section" id="rr-1">
-          <div class="product-media">
-            <img class="card-img card-png" src="/assets/images/rr-1.png" alt="Futrix RR-1" />
-          </div>
-          <div class="product-details">
-            <h3>Futrix RR-1</h3>
-            <p class="product-subtitle">Robot de restauration pour service et livraison</p>
-            <p>Navigation fiable, charge utile ?lev?e et d?ploiement rapide pour un service multi??tapes en restauration.</p>
-            <table class="product-specs">
-              <tr class="spec-group"><th colspan="2">Op?rations et navigation</th></tr>
-              <tr><th>Passage minimum</th><td>75 mm</td></tr>
-              <tr><th>Courbe en S 4,5 m</th><td>7 s</td></tr>
-              <tr><th>Vitesse</th><td>0.4-1.2 m/s</td></tr>
-              <tr><th>Seuil</th><td>10 mm</td></tr>
-              <tr><th>Slope</th><td>5°</td></tr>
-              <tr><th>Stabilit?</th><td>1.2 m/s ; perturbation de 2 mm sans basculement</td></tr>
-              <tr class="spec-group"><th colspan="2">Charge utile et autonomie</th></tr>
-              <tr><th>Charge totale</th><td>60 kg</td></tr>
-              <tr><th>Charge max</th><td>50 kg</td></tr>
-              <tr><th>Charge par plateau</th><td>10 kg</td></tr>
-              <tr><th>Plateaux</th><td>4</td></tr>
-              <tr><th>Autonomie</th><td>jusqu?? 15 h</td></tr>
-              <tr><th>Temps de charge</th><td>~ 5 h</td></tr>
-              <tr class="spec-group"><th colspan="2">Syst?me</th></tr>
-              <tr><th>Batterie</th><td>24 V, 35 Ah</td></tr>
-              <tr><th>Puissance</th><td>60 W</td></tr>
-              <tr><th>Veille</th><td>~ 1 A</td></tr>
-              <tr><th>Localisation</th><td>LiDAR + cam?ra 4K + IMU</td></tr>
-              <tr><th>Gestion cloud</th><td>Disponible</td></tr>
-              <tr><th>Capteurs</th><td>Temp?rature, odeur, lumi?re</td></tr>
-            </table>
-            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=rr-1">Demander un devis</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('/fr/includes/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-        window.initCookieConsent?.();
-      });
-  </script>
-  <script src="/assets/js/cookie-consent.js"></script>
-
-  <style>
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .Produits { padding: 28px 0 48px; }
-    .product-section { display: grid; grid-template-columns: minmax(240px, 420px) 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
-    .product-section:last-child { border-bottom: 0; }
-    .product-subtitle { opacity: .85; margin-top: -6px; }
-    .product-specs { width: 100%; border-collapse: collapse; margin: 12px 0 18px; }
-    .product-specs th { text-align: left; font-weight: 600; padding: 6px 10px 6px 0; vertical-align: top; width: 38%; }
-    .product-specs td { padding: 6px 0; opacity: 0.9; }
-    .product-specs tr + tr { border-top: 1px solid rgba(255,255,255,0.12); }
-    .product-specs .spec-group th { padding-top: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
-    .product-specs tr:not(.spec-group) th,
-    .product-specs tr:not(.spec-group) td { padding-left: 14px; }
-    .product-cta { margin-top: 10px; }
-    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; text-decoration: underline; }
-    .product-gallery { display: grid; gap: 10px; margin-top: 12px; }
-    @media (max-width: 900px) { .product-section { grid-template-columns: 1fr; } }
-  </style>
-</body>
-</html>
-
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produits | Futrix Robotics</title>
+  <meta name="description" content="Robots standards de Futrix : SR-1, LR-1 et RR-1." />
+  <link rel="canonical" href="https://www.futrix.eu/fr/pages/Produits.html" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/fr/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Produits</h1>
+      <p class="tagline">Robots standard pour des environnements réels.</p>
+      <p class="slogan">Futrix - inspir? de Future et Matrix.</p>
+    </section>
+
+    <section class="Produits" id="Produits">
+      <div class="container">
+        <h2>Nos modèles standard</h2>
+        <p class="section-intro">SR = Service Robot, RR = Restaurant Robot, LR = Logistic Robot.</p>
+
+        <div class="product-section" id="sr-1">
+          <div class="product-media">
+            <img class="card-img card-png" src="/assets/images/sr-1.png" alt="Futrix SR-1" />
+          </div>
+          <div class="product-details">
+            <h3>Futrix SR-1</h3>
+            <p class="product-subtitle">Robot de nettoyage 4-en-1</p>
+            <p>Un seul passage pour balayer, aspirer, r?curer et laver les sols dans les bureaux, h?pitaux et centres commerciaux.</p>
+            <table class="product-specs">
+              <tr class="spec-group"><th colspan="2">Base</th></tr>
+              <tr><th>Dimensions</th><td>580(L) x 500(l) x 600(H) mm</td></tr>
+              <tr><th>Poids</th><td>68.5 kg</td></tr>
+              <tr><th>Type de batterie</th><td>Lithium ternaire / LiFePO4</td></tr>
+              <tr><th>Tension nominale</th><td>25.9 V / 25.6 V</td></tr>
+              <tr><th>Bruit</th><td>&lt; 70 dB</td></tr>
+              <tr class="spec-group"><th colspan="2">Performances de nettoyage</th></tr>
+              <tr><th>Modes</th><td>R?curage, balayage, aspiration, d?poussi?rage</td></tr>
+              <tr><th>R?curage</th><td>350-500 m2/h</td></tr>
+              <tr><th>Balayage</th><td>400-600 m2/h</td></tr>
+              <tr><th>Aspiration</th><td>350-500 m2/h</td></tr>
+              <tr><th>D?poussi?rage</th><td>400-650 m2/h</td></tr>
+              <tr><th>Largeur de r?curage</th><td>370 mm</td></tr>
+              <tr><th>Largeur de nettoyage</th><td>490 mm</td></tr>
+              <tr><th>Vitesse max</th><td>0.8 m/s</td></tr>
+              <tr><th>Max slope</th><td>8°</td></tr>
+              <tr class="spec-group"><th colspan="2">Autonomie</th></tr>
+              <tr><th>Capacit?</th><td>46 Ah</td></tr>
+              <tr><th>Autonomie</th><td>2-3.5 h</td></tr>
+              <tr><th>Temps de charge</th><td>2.5 h / 2 h</td></tr>
+              <tr><th>Eau propre</th><td>8 L</td></tr>
+              <tr><th>Eaux us?es</th><td>6 L</td></tr>
+              <tr><th>Bac ? poussi?re</th><td>2 L</td></tr>
+              <tr class="spec-group"><th colspan="2">Station de base</th></tr>
+              <tr><th>Dimensions</th><td>528(L) x 300(l) x 700(H) mm</td></tr>
+              <tr><th>Poids</th><td>25 kg</td></tr>
+              <tr><th>Tension d?entr?e</th><td>AC 100-240 V</td></tr>
+              <tr><th>Tension de sortie</th><td>29.5 V</td></tr>
+              <tr><th>Puissance de sortie</th><td>700 W</td></tr>
+              <tr><th>Courant de charge max</th><td>20 A</td></tr>
+              <tr><th>Temp?rature de fonctionnement</th><td>0-40 C</td></tr>
+              <tr><th>Eau propre (station)</th><td>25 L</td></tr>
+              <tr><th>Eaux us?es (station)</th><td>25 L</td></tr>
+            </table>
+            <p><strong>R?sum? :</strong> Le SR-1 offre un nettoyage stable, un faible niveau sonore et une gestion cloud pour les op?rations quotidiennes.</p>
+            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=sr-1">Demander un devis</a></div>
+          </div>
+        </div>
+
+        <div class="product-section" id="lr-1">
+          <div class="product-media">
+            <img class="card-img card-png" src="/assets/images/lr-1.png" alt="Futrix LR-1" />
+            <div class="product-gallery">
+              <img class="card-img card-png" src="/assets/images/lr-1-1.png" alt="Futrix LR-1 application 1" />
+              <img class="card-img card-png" src="/assets/images/lr-1-2.png" alt="Futrix LR-1 application 2" />
+              <img class="card-img card-png" src="/assets/images/lr-1-3.png" alt="Futrix LR-1 application 3" />
+            </div>
+          </div>
+          <div class="product-details">
+            <h3>Futrix LR-1</h3>
+            <p class="product-subtitle">AGV logistique</p>
+            <p>AGV compact ? entra?nement diff?rentiel et SLAM laser pour la logistique int?rieure et le transport automatis?.</p>
+            <table class="product-specs">
+              <tr class="spec-group"><th colspan="2">Base</th></tr>
+              <tr><th>Mod?le</th><td>LR-1 (ZQ8104/A1)</td></tr>
+              <tr><th>Type</th><td>AGV de travail / robot de transport</td></tr>
+              <tr class="spec-group"><th colspan="2">Dimensions et charge</th></tr>
+              <tr><th>Dimensions</th><td>~ 810 x 540 x 270 mm</td></tr>
+              <tr><th>Poids</th><td>~ 45 kg</td></tr>
+              <tr><th>Charge max</th><td>100 kg</td></tr>
+              <tr class="spec-group"><th colspan="2">Mouvement</th></tr>
+              <tr><th>Vitesse max</th><td>1.2 m/s</td></tr>
+              <tr><th>Rayon de braquage</th><td>0 m (rotation sur place)</td></tr>
+              <tr><th>Max slope</th><td>5°</td></tr>
+              <tr><th>Traction</th><td>Entra?nement diff?rentiel</td></tr>
+              <tr class="spec-group"><th colspan="2">Batterie et charge</th></tr>
+              <tr><th>Type de batterie</th><td>Lithium</td></tr>
+              <tr><th>Capacit?</th><td>24 V / 20 Ah</td></tr>
+              <tr><th>Autonomie</th><td>6-8 h</td></tr>
+              <tr><th>Charge</th><td>Manuelle / automatique (dock)</td></tr>
+              <tr class="spec-group"><th colspan="2">Navigation et s?curit?</th></tr>
+              <tr><th>Navigation</th><td>Laser SLAM</td></tr>
+              <tr><th>Accuracy</th><td>±10 mm</td></tr>
+              <tr><th>Cartographie</th><td>Disponible</td></tr>
+              <tr><th>Multi-robots</th><td>Disponible</td></tr>
+              <tr><th>LiDAR de s?curit?</th><td>Oui</td></tr>
+              <tr><th>D?tection de collision</th><td>Oui</td></tr>
+              <tr><th>Arr?t d?urgence</th><td>Oui</td></tr>
+              <tr class="spec-group"><th colspan="2">Communication</th></tr>
+              <tr><th>Sans fil</th><td>Wi-Fi</td></tr>
+              <tr><th>Int?gration</th><td>Connexion dispatch / WMS</td></tr>
+            </table>
+            <p><strong>R?sum? :</strong> Le LR-1 est un AGV laser SLAM agile, avec une autonomie stable et une s?curit? industrielle.</p>
+            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=lr-1">Demander un devis</a></div>
+          </div>
+        </div>
+
+        <div class="product-section" id="rr-1">
+          <div class="product-media">
+            <img class="card-img card-png" src="/assets/images/rr-1.png" alt="Futrix RR-1" />
+          </div>
+          <div class="product-details">
+            <h3>Futrix RR-1</h3>
+            <p class="product-subtitle">Robot de restauration pour service et livraison</p>
+            <p>Navigation fiable, charge utile ?lev?e et d?ploiement rapide pour un service multi??tapes en restauration.</p>
+            <table class="product-specs">
+              <tr class="spec-group"><th colspan="2">Op?rations et navigation</th></tr>
+              <tr><th>Passage minimum</th><td>75 mm</td></tr>
+              <tr><th>Courbe en S 4,5 m</th><td>7 s</td></tr>
+              <tr><th>Vitesse</th><td>0.4-1.2 m/s</td></tr>
+              <tr><th>Seuil</th><td>10 mm</td></tr>
+              <tr><th>Slope</th><td>5°</td></tr>
+              <tr><th>Stabilit?</th><td>1.2 m/s ; perturbation de 2 mm sans basculement</td></tr>
+              <tr class="spec-group"><th colspan="2">Charge utile et autonomie</th></tr>
+              <tr><th>Charge totale</th><td>60 kg</td></tr>
+              <tr><th>Charge max</th><td>50 kg</td></tr>
+              <tr><th>Charge par plateau</th><td>10 kg</td></tr>
+              <tr><th>Plateaux</th><td>4</td></tr>
+              <tr><th>Autonomie</th><td>jusqu?? 15 h</td></tr>
+              <tr><th>Temps de charge</th><td>~ 5 h</td></tr>
+              <tr class="spec-group"><th colspan="2">Syst?me</th></tr>
+              <tr><th>Batterie</th><td>24 V, 35 Ah</td></tr>
+              <tr><th>Puissance</th><td>60 W</td></tr>
+              <tr><th>Veille</th><td>~ 1 A</td></tr>
+              <tr><th>Localisation</th><td>LiDAR + cam?ra 4K + IMU</td></tr>
+              <tr><th>Gestion cloud</th><td>Disponible</td></tr>
+              <tr><th>Capteurs</th><td>Temp?rature, odeur, lumi?re</td></tr>
+            </table>
+            <div class="product-cta"><a class="btn" href="/fr/pages/Contact.html?topic=rr-1">Demander un devis</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/fr/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+
+  <style>
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .Produits { padding: 28px 0 48px; }
+    .product-section { display: grid; grid-template-columns: minmax(240px, 420px) 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .product-section:last-child { border-bottom: 0; }
+    .product-subtitle { opacity: .85; margin-top: -6px; }
+    .product-specs { width: 100%; border-collapse: collapse; margin: 12px 0 18px; }
+    .product-specs th { text-align: left; font-weight: 600; padding: 6px 10px 6px 0; vertical-align: top; width: 38%; }
+    .product-specs td { padding: 6px 0; opacity: 0.9; }
+    .product-specs tr + tr { border-top: 1px solid rgba(255,255,255,0.12); }
+    .product-specs .spec-group th { padding-top: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .product-specs tr:not(.spec-group) th,
+    .product-specs tr:not(.spec-group) td { padding-left: 14px; }
+    .product-cta { margin-top: 10px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; text-decoration: underline; }
+    .product-gallery { display: grid; gap: 10px; margin-top: 12px; }
+    @media (max-width: 900px) { .product-section { grid-template-columns: 1fr; } }
+  </style>
+</body>
+</html>
+
