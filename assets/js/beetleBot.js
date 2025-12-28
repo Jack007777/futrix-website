@@ -2,7 +2,10 @@
   let rafId = null;
   let initialized = false;
   let running = true;
-  let speed = 220;
+  const baseSpeed = 220;
+  const baseMinSpeed = 80;
+  const baseMaxSpeed = 420;
+  let speed = baseSpeed;
   let dir = -1;
   let s = 0;
   let last = 0;
@@ -22,8 +25,8 @@
   let homeActive = false;
   let stationAligned = false;
 
-  const minSpeed = 80;
-  const maxSpeed = 420;
+  let minSpeed = baseMinSpeed;
+  let maxSpeed = baseMaxSpeed;
   const homeSpeed = 120;
   const backSpeed = 50;
   const baseTurnSpeed = 90;
@@ -45,6 +48,12 @@
     const padding = 42;
     const R = 80;
     const baseRotation = 180;
+
+    const speedScale = isMobile() ? 0.85 : 1;
+    speed = Math.round(baseSpeed * speedScale);
+    minSpeed = Math.round(baseMinSpeed * speedScale);
+    maxSpeed = Math.round(baseMaxSpeed * speedScale);
+    maxTurnSpeed = baseTurnSpeed * (speed / maxSpeed);
     function unionRect(a, b) {
       return {
         left: Math.min(a.left, b.left),
@@ -225,8 +234,12 @@
       return headingNow;
     }
 
+    function isMobile() {
+      return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    }
+
     function getTurnThreshold() {
-      if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+      if (isMobile()) {
         return turnThresholdMobile;
       }
       return turnThreshold;
