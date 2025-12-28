@@ -366,6 +366,7 @@ nav .logo img{
   height: 64px;
   will-change: transform;
   z-index: 999;
+  transform-origin: 50% 50%;
 }
 .botBody{
   width: 100%;
@@ -413,17 +414,18 @@ nav .logo img{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(16,28,36,0.9);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(16,28,36,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   z-index: 998;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  opacity: 0.35;
 }
 
 .charging-station svg{
   width: 30px;
   height: 30px;
-  stroke: rgba(125,211,255,0.9);
+  stroke: rgba(125,211,255,0.4);
   stroke-width: 1.8;
   fill: none;
 }
@@ -474,6 +476,18 @@ nav .logo img{
 .bot-control-btn.is-active{
   background: rgba(30,60,75,0.95);
   border-color: rgba(125,211,255,0.7);
+}
+
+.bot-control-btn.is-pressed{
+  background: rgba(30,60,75,0.95);
+  border-color: rgba(125,211,255,0.7);
+}
+
+.bot-control-btn.is-disabled,
+.bot-control-btn:disabled{
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: rgba(255,255,255,0.18);
 }
 
 .bot-control-btn:focus-visible{
@@ -814,13 +828,23 @@ a.card.card-click:hover .card-link {
   }
 
   .bot-controls{
-    position: fixed;
-    top: 72px;
-    right: 12px;
-    left: auto;
+    position: absolute;
+    top: 120px;
+    right: 8px;
+    left: 8px;
+    max-width: calc(100vw - 16px);
     flex-direction: row;
-    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px 8px;
     z-index: 1999;
+  }
+
+  .bot-control-btn{
+    width: 44px;
+    height: 44px;
+    font-size: 9px;
+    padding: 4px;
   }
 
 }
