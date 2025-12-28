@@ -185,6 +185,48 @@
       </div>
     </section>
 
+    <div id="chargingStation" class="charging-station" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="2.5" width="16" height="19" rx="3"></rect>
+        <path d="M13 4.5l-5 8h4l-1 7 5-8h-4l1-7z"></path>
+      </svg>
+    </div>
+    <div id="bot-controls" class="bot-controls" aria-label="Robot controls">
+      <button type="button" class="bot-control-btn is-active" data-action="run" aria-label="Run">
+        <svg class="icon-fill" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5l11 7-11 7z"></path>
+        </svg>
+        <span>Run</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="turn" aria-label="Turn around">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 7h6a4 4 0 1 1 0 8h-5"></path>
+          <path d="M7 11l-3-3 3-3"></path>
+        </svg>
+        <span>Turn</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="speed-up" aria-label="Speed up">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M12 8v8M8 12h8"></path>
+        </svg>
+        <span>Faster</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="speed-down" aria-label="Speed down">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M8 12h8"></path>
+        </svg>
+        <span>Slower</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="home" aria-label="Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 11l8-6 8 6"></path>
+          <path d="M7 10v8h10v-8"></path>
+        </svg>
+        <span>Home</span>
+      </button>
+    </div>
     <div id="beetleBot" class="active">
       <!-- 外链机器人 SVG -->
       <img class="botBody" src="/assets/robots/beetle-top.svg" alt="robot">

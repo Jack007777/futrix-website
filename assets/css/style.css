@@ -403,6 +403,94 @@ nav .logo img{
   to   { transform: rotate(45deg); }
 }
 
+.charging-station{
+  position: fixed;
+  top: 110px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16,28,36,0.9);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  z-index: 998;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.charging-station svg{
+  width: 30px;
+  height: 30px;
+  stroke: rgba(125,211,255,0.9);
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.bot-controls{
+  position: fixed;
+  top: 176px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 998;
+}
+
+.bot-control-btn{
+  width: 56px;
+  height: 56px;
+  padding: 6px;
+  background: rgba(16,28,36,0.9);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  color: #e8f6ff;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.bot-control-btn svg{
+  width: 20px;
+  height: 20px;
+  stroke: rgba(125,211,255,0.9);
+  stroke-width: 2;
+  fill: none;
+}
+
+.bot-control-btn .icon-fill{
+  fill: rgba(125,211,255,0.9);
+  stroke: none;
+}
+
+.bot-control-btn.is-active{
+  background: rgba(30,60,75,0.95);
+  border-color: rgba(125,211,255,0.7);
+}
+
+.bot-control-btn:focus-visible{
+  outline: 2px solid rgba(125,211,255,0.8);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px){
+  .charging-station,
+  .bot-controls{
+    left: auto;
+    right: 14px;
+  }
+
+  .bot-controls{
+    top: 170px;
+  }
+}
+
 /* ===== Contact Form ===== */
 form{
   max-width: 1100px;
