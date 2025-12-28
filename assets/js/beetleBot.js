@@ -151,6 +151,16 @@
       station.style.left = `${snappedX}px`;
       station.style.right = 'auto';
       stationAligned = true;
+      if (parkedAtLogo && freePos) {
+        const logoRect = getLogoRect();
+        const center = getLogoCenterX();
+        const size = getBotSize();
+        if (logoRect && center !== null) {
+          const contactY = logoRect.bottom + size.h * (logoContactRatio - 1);
+          freePos.x = center;
+          freePos.y = contactY + size.h / 2;
+        }
+      }
     }
 
     function getLogoRect() {
@@ -165,6 +175,14 @@
         right: r.right + scrollX,
         bottom: r.bottom + scrollY,
       };
+    }
+
+    function getLogoCenterX() {
+      const logo = document.querySelector('.logo img');
+      if (!logo) return null;
+      const r = logo.getBoundingClientRect();
+      const scrollX = window.scrollX || window.pageXOffset || 0;
+      return r.left + r.width * logoHexCenterRatio + scrollX;
     }
 
     function getLogoPoint() {
