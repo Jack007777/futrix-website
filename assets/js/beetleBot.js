@@ -8,6 +8,7 @@
   let last = 0;
   let homeStage = null;
   let homeTargetS = null;
+  let homeTrack = null;
   let freePos = null;
 
   const minSpeed = 80;
@@ -171,9 +172,11 @@
         if (action === 'home' && track) {
           const station = getStationPoint();
           if (!station) return;
-          homeTargetS = closestSOnTrack(track, station);
-          const forwardDist = ((homeTargetS - s) % track.L + track.L) % track.L;
-          const backwardDist = track.L - forwardDist;
+          homeTrack = track;
+          homeTargetS = closestSOnTrack(homeTrack, station);
+          s = ((s % homeTrack.L) + homeTrack.L) % homeTrack.L;
+          const forwardDist = ((homeTargetS - s) % homeTrack.L + homeTrack.L) % homeTrack.L;
+          const backwardDist = homeTrack.L - forwardDist;
           dir = forwardDist <= backwardDist ? 1 : -1;
           homeStage = 'toTrack';
           freePos = null;
@@ -192,7 +195,8 @@
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
 
-      const track = getTrack();
+      const liveTrack = getTrack();
+      const track = homeStage && homeTrack ? homeTrack : liveTrack;
       if (!track) {
         rafId = requestAnimationFrame(step);
         return;
@@ -208,9 +212,8 @@
 
       if (homeStage === 'toTrack') {
         s += dir * speed * dt;
-        const L = track.L;
-        const dist = Math.abs(((s - homeTargetS + L / 2) % L) - L / 2);
-        if (dist < speed * dt * 1.2) {
+        const distanceToTarget = ((homeTargetS - s) * dir + track.L) % track.L;
+        if (distanceToTarget <= speed * dt * 1.2) {
           s = homeTargetS;
           homeStage = 'toStation';
           freePos = null;
