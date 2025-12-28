@@ -359,7 +359,7 @@ nav .logo img{
 
 
 #beetleBot{
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 64px;
@@ -404,9 +404,10 @@ nav .logo img{
 }
 
 .charging-station{
-  position: fixed;
-  top: 110px;
-  right: 24px;
+  position: absolute;
+  top: 106px;
+  left: 24px;
+  right: auto;
   width: 56px;
   height: 56px;
   display: flex;
@@ -428,9 +429,10 @@ nav .logo img{
 }
 
 .bot-controls{
-  position: fixed;
+  position: absolute;
   top: 176px;
   right: 24px;
+  left: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -480,12 +482,6 @@ nav .logo img{
 }
 
 @media (max-width: 900px){
-  .charging-station,
-  .bot-controls{
-    left: auto;
-    right: 14px;
-  }
-
   .bot-controls{
     top: 170px;
   }

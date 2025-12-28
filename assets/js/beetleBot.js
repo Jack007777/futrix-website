@@ -10,6 +10,7 @@
   let homeTargetS = null;
   let homeTrack = null;
   let freePos = null;
+  let docked = false;
 
   const minSpeed = 80;
   const maxSpeed = 420;
@@ -60,10 +61,12 @@
         const r0 = getTextRect(el);
         u = u ? unionRect(u, r0) : r0;
       }
-      const left = u.left - padding;
-      const top = u.top - padding;
-      const right = u.right + padding;
-      const bottom = u.bottom + padding;
+      const scrollX = window.scrollX || window.pageXOffset || 0;
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const left = u.left - padding + scrollX;
+      const top = u.top - padding + scrollY;
+      const right = u.right + padding + scrollX;
+      const bottom = u.bottom + padding + scrollY;
       const w = right - left;
       const h = bottom - top;
       const r = clamp(R, 0, Math.min(w, h) / 2 - 1);
@@ -111,7 +114,9 @@
       const station = document.getElementById('chargingStation');
       if (!station) return null;
       const r = station.getBoundingClientRect();
-      return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+      const scrollX = window.scrollX || window.pageXOffset || 0;
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      return { x: r.left + r.width / 2 + scrollX, y: r.top + r.height / 2 + scrollY };
     }
 
     function closestSOnTrack(track, target) {
@@ -136,6 +141,12 @@
       const btn = document.querySelector('#bot-controls [data-action="run"]');
       if (!btn) return;
       btn.classList.toggle('is-active', running);
+      btn.setAttribute('aria-label', running ? 'Pause' : 'Run');
+      const icon = btn.querySelector('svg');
+      if (!icon) return;
+      icon.innerHTML = running
+        ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z"></path>'
+        : '<path d="M8 5l11 7-11 7z"></path>';
     }
 
     function attachControls() {
@@ -152,6 +163,17 @@
         const track = getTrack();
         if (action === 'run') {
           running = !running;
+          if (running && docked && track) {
+            const station = getStationPoint();
+            if (station) {
+              homeTrack = track;
+              homeTargetS = closestSOnTrack(homeTrack, station);
+              s = ((s % homeTrack.L) + homeTrack.L) % homeTrack.L;
+              homeStage = 'fromStation';
+              freePos = { x: station.x, y: station.y };
+              docked = false;
+            }
+          }
           updateRunButton();
           return;
         }
@@ -210,6 +232,33 @@
       let pose = null;
       let heading = 0;
 
+      if (homeStage === 'fromStation') {
+        if (!freePos) {
+          const station = getStationPoint();
+          if (station) freePos = { x: station.x, y: station.y };
+        }
+        const targetPose = poseOnRoundedRect(track, homeTargetS);
+        const dx = targetPose.x - freePos.x;
+        const dy = targetPose.y - freePos.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist <= speed * dt) {
+          freePos.x = targetPose.x;
+          freePos.y = targetPose.y;
+          s = homeTargetS;
+          homeStage = null;
+        } else {
+          freePos.x += (dx / dist) * speed * dt;
+          freePos.y += (dy / dist) * speed * dt;
+        }
+        const br = bot.getBoundingClientRect();
+        const px = freePos.x - br.width / 2;
+        const py = freePos.y - br.height / 2;
+        heading = (Math.atan2(dy, dx) * 180) / Math.PI + 90 + baseRotation;
+        bot.style.transform = `translate3d(${px}px, ${py}px, 0) rotate(${heading}deg)`;
+        rafId = requestAnimationFrame(step);
+        return;
+      }
+
       if (homeStage === 'toTrack') {
         s += dir * speed * dt;
         const distanceToTarget = ((homeTargetS - s) * dir + track.L) % track.L;
@@ -239,6 +288,7 @@
           freePos.y = station.y;
           homeStage = null;
           running = false;
+          docked = true;
           updateRunButton();
         } else {
           freePos.x += (dx / dist) * speed * dt;
