@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Futrix Robotics</title>
-  <meta name="description" content="Contact Futrix for robotics solutions and pricing.">
+  <meta name="description" content="Contactez Futrix pour des solutions robotiques et des informations de prix.">
   <link rel="canonical" href="https://www.futrix.eu/fr/pages/Contact.html">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -24,27 +24,27 @@
 
   <section class="hero" id="hero">
     <h1>Contact</h1>
-    <p class="tagline">Get in touch with Futrix</p>
+    <p class="tagline">Contactez Futrix</p>
   </section>
 
   <section>
     <h2>Informations de Contact</h2>
-    <p>If you are interested in our robotic solutions or would like to discuss a pilot, please reach out.</p>
+    <p>Si vous ?tes int?ress? par nos solutions robotiques ou souhaitez discuter d?un projet pilote, contactez-nous.</p>
     <p>
       <strong>E-mail:</strong> Contact@futrix.com<br />
       <strong>Téléphone:</strong> +49 01520 8288 583<br />
-      <strong>Location:</strong> Germany
+      <strong>Localisation:</strong> Allemagne
     </p>
   </section>
 
   <section>
     <h2>Demandes professionnelles</h2>
-    <p>We serve healthcare, commercial services and industry with automation-ready robotics.</p>
+    <p>Nous accompagnons la sant?, les services commerciaux et l?industrie avec des solutions robotiques pr?tes ? l?automatisation.</p>
   </section>
 
   <form id="Contact-form" action="/api/Contact" method="POST" class="Contact-form">
     <div>
-      <label for="name">Name <span class="required-star">*</span></label>
+      <label for="name">Nom <span class="required-star">*</span></label>
       <input id="name" name="name" type="text" required>
     </div>
     <div>
@@ -69,17 +69,17 @@
       </select>
     </div>
     <div>
-      <label for="model">Model <span class="required-star">*</span></label>
+      <label for="model">Mod?le <span class="required-star">*</span></label>
       <select id="model" name="model" required>
         <option value="">Veuillez choisir</option>
         <option value="sr-1">SR-1</option>
         <option value="lr-1">LR-1</option>
         <option value="rr-1">RR-1</option>
-        <option value="other">Other / multiple</option>
+        <option value="other">Autre / multiple</option>
       </select>
     </div>
     <div id="quantity-field">
-      <label for="quantity">Quantity <span class="required-star">*</span></label>
+      <label for="quantity">Quantit? <span class="required-star">*</span></label>
       <select id="quantity" name="quantity" required>
         <option value="">Veuillez choisir</option>
         <option value="1">1</option>
@@ -99,7 +99,7 @@
     </div>
     <div class="form-checkbox full-row">
       <input type="checkbox" id="consent" name="consent" required>
-      <label for="consent">I agree to the processing of my data according to the <a href="/fr/pages/privacy-policy.html" target="_blank">Politique de confidentialité</a>.</label>
+      <label for="consent">J'accepte le traitement de mes donn?es conform?ment ? la <a href="/fr/pages/privacy-policy.html" target="_blank">Politique de confidentialit?</a>.</label>
     </div>
     <input type="text" name="_gotcha" style="display:none">
     <button type="submit">Envoyer</button>
@@ -147,9 +147,9 @@
           const res = await fetch(`/api/Contact?lang=${lang}`, { method: "POST", body: formData });
           const data = await res.json();
           if (res.ok && data.ok) { alert(data.Message); form.reset(); updateQuantityVisibility(); }
-          else { alert(data.Message || "Envoyer failed"); }
+          else { alert(data.Message || "?chec de l'envoi."); }
         } catch (err) {
-          alert("Network error. Please try again later.");
+          alert("Erreur r?seau. Veuillez r?essayer plus tard.");
         }
       });
     });
