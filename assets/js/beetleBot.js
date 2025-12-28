@@ -30,7 +30,8 @@
   let maxTurnSpeed = baseTurnSpeed;
   const turnThreshold = 3;
   const turnThresholdMobile = 8;
-  const logoHexCenterRatio = 0.125;
+  const logoHexCenterRatio = 0.1285;
+  const logoContactRatio = 0.90;
 
   function initBeetleBot() {
     const hero = document.querySelector('#hero');
@@ -143,11 +144,11 @@
       const logoImg = document.querySelector('.logo img');
       if (!station || (!logoHex && !logoImg)) return;
       const logoRect = (logoHex || logoImg).getBoundingClientRect();
-      const stationRect = station.getBoundingClientRect();
       const scrollX = window.scrollX || window.pageXOffset || 0;
       const centerX = logoRect.left + logoRect.width * logoHexCenterRatio + scrollX;
-      const left = centerX - stationRect.width / 2;
-      station.style.left = `${left}px`;
+      const ratio = window.devicePixelRatio || 1;
+      const snappedX = Math.round(centerX * ratio) / ratio;
+      station.style.left = `${snappedX}px`;
       station.style.right = 'auto';
       stationAligned = true;
     }
@@ -270,6 +271,11 @@
     document.addEventListener('header:loaded', bindStationAlignment);
     window.addEventListener('load', alignChargingStation);
     window.addEventListener('resize', alignChargingStation);
+    window.addEventListener('scroll', alignChargingStation, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', alignChargingStation);
+      window.visualViewport.addEventListener('scroll', alignChargingStation, { passive: true });
+    }
 
     function attachControls() {
       if (initialized) return;
@@ -618,8 +624,9 @@
         freePos.y -= backSpeed * dt;
         const logoRect = getLogoRect();
         if (logoRect) {
-          const targetY = logoRect.bottom + size.h / 2;
-          if (freePos.y - size.h / 2 <= logoRect.bottom) {
+          const contactY = logoRect.bottom + size.h * (logoContactRatio - 1);
+          const targetY = contactY + size.h / 2;
+          if (freePos.y - size.h / 2 <= contactY) {
             freePos.y = targetY;
             const snapPy = freePos.y - size.h / 2;
             bot.style.transform = `translate3d(${px}px, ${snapPy}px, 0) rotate(${easedHeading}deg)`;
