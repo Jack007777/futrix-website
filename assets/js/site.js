@@ -1,3 +1,15 @@
+function closeMobileNav(nav) {
+  if (!nav) return;
+  nav.classList.remove('open');
+  const toggle = nav.querySelector('.nav-toggle');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  nav.querySelectorAll('.has-submenu.is-open').forEach((item) => {
+    item.classList.remove('is-open');
+    const btn = item.querySelector('a, button');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  });
+}
+
 (function () {
 
   function initLangDropdown() {
@@ -21,6 +33,11 @@
       }
 
       btn.addEventListener('click', (e) => {
+        const nav = dropdown.closest('.nav');
+        const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+        if (nav && nav.classList.contains('open') && isMobile) {
+          closeMobileNav(nav);
+        }
         e.stopPropagation();
         dropdown.classList.toggle('open');
         btn.setAttribute('aria-expanded', dropdown.classList.contains('open') ? 'true' : 'false');
@@ -102,6 +119,19 @@ document.addEventListener('click', (e) => {
 
   const open = nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+document.addEventListener('click', (e) => {
+  const openNavs = document.querySelectorAll('.nav.open');
+  if (!openNavs.length) return;
+
+  openNavs.forEach((nav) => {
+    const clickedInsideNav = nav.contains(e.target);
+    const clickedLang = e.target.closest('.lang-dropdown');
+    if (!clickedInsideNav || clickedLang) {
+      closeMobileNav(nav);
+    }
+  });
 });
 
 // ===== Mobile submenu toggle =====

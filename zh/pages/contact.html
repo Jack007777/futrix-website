@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联系 | Futrix 机器人</title>
+  <meta name="description" content="联系 Futrix 获取机器人解决方案与报价。">
+  <link rel="canonical" href="https://www.futrix.eu/zh/pages/contact.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/zh/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <section class="hero" id="hero">
+    <h1>联系</h1>
+    <p class="tagline">与 Futrix 取得联系</p>
+  </section>
+
+  <section>
+    <h2>联系方式</h2>
+    <p>如果您对我们的机器人解决方案感兴趣或希望讨论试点项目，请与我们联系。</p>
+    <p>
+      <strong>电子邮箱:</strong> contact@futrix.com<br />
+      <strong>电话:</strong> +49 01520 8288 583<br />
+      <strong>地点:</strong> 德国
+    </p>
+  </section>
+
+  <section>
+    <h2>商务咨询</h2>
+    <p>我们为医疗、商业服务与工业领域提供可落地的机器人自动化方案。</p>
+  </section>
+
+  <form id="contact-form" action="/api/contact" method="POST" class="contact-form">
+    <div>
+      <label for="name">姓名 <span class="required-star">*</span></label>
+      <input id="name" name="name" type="text" required>
+    </div>
+    <div>
+      <label for="email">邮箱 <span class="required-star">*</span></label>
+      <input id="email" name="email" type="email" required>
+    </div>
+    <div>
+      <label for="phone">电话</label>
+      <input id="phone" name="phone" type="tel">
+    </div>
+    <div>
+      <label for="company">公司</label>
+      <input id="company" name="company" type="text">
+    </div>
+    <div>
+      <label for="request_type">需求类型 <span class="required-star">*</span></label>
+      <select id="request_type" name="request_type" required>
+        <option value="">请选择</option>
+        <option value="quote">获取报价</option>
+        <option value="demo">产品演示</option>
+        <option value="info">一般咨询</option>
+      </select>
+    </div>
+    <div>
+      <label for="model">型号 <span class="required-star">*</span></label>
+      <select id="model" name="model" required>
+        <option value="">请选择</option>
+        <option value="sr-1">SR-1</option>
+        <option value="lr-1">LR-1</option>
+        <option value="rr-1">RR-1</option>
+        <option value="other">其他 / 多型号</option>
+      </select>
+    </div>
+    <div id="quantity-field">
+      <label for="quantity">数量 <span class="required-star">*</span></label>
+      <select id="quantity" name="quantity" required>
+        <option value="">请选择</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <div class="full-row">
+      <label for="message">留言 <span class="required-star">*</span></label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+    </div>
+    <div class="form-checkbox full-row">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">我同意按照 <a href="/zh/pages/privacy-policy.html" target="_blank">隐私政策</a> 处理我的数据。</label>
+    </div>
+    <input type="text" name="_gotcha" style="display:none">
+    <button type="submit">发送</button>
+  </form>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/zh/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact-form");
+      if (!form) return;
+      const params = new URLSearchParams(window.location.search);
+      const topic = params.get("topic");
+      const modelSelect = document.getElementById("model");
+      const requestSelect = document.getElementById("request_type");
+      const quantitySelect = document.getElementById("quantity");
+      const quantityField = document.getElementById("quantity-field");
+      const updateQuantityVisibility = () => {
+        if (!quantitySelect || !quantityField || !requestSelect) return;
+        const isQuote = requestSelect.value === "quote";
+        quantityField.classList.toggle("form-hidden", !isQuote);
+        quantitySelect.required = isQuote;
+        if (isQuote && !quantitySelect.value) { quantitySelect.value = "1"; }
+        if (!isQuote) { quantitySelect.value = ""; }
+      };
+      if (topic && modelSelect) { modelSelect.value = topic; }
+      if (topic && requestSelect) { requestSelect.value = "quote"; }
+      if (quantitySelect && !quantitySelect.value) { quantitySelect.value = "1"; }
+      updateQuantityVisibility();
+      requestSelect?.addEventListener("change", updateQuantityVisibility);
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const lang = document.documentElement.lang || "zh";
+        const formData = new FormData(form);
+        try {
+          const res = await fetch(`/api/contact?lang=${lang}`, { method: "POST", body: formData });
+          const data = await res.json();
+          if (res.ok && data.ok) { alert(data.message); form.reset(); updateQuantityVisibility(); }
+          else { alert(data.message || "发送失败"); }
+        } catch (err) {
+          alert("网络错误，请稍后再试。");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

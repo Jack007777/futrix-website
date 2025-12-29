@@ -878,13 +878,19 @@ a.card.card-click:hover .card-link {
   }
 
   .nav-submenu{
-    position: static;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    left: auto;
     display: none;
-    min-width: 0;
-    padding: 6px 0 0 12px;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
+    min-width: 220px;
+    padding: 8px;
+    margin-right: 12px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(15, 32, 39, 0.95);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    border-radius: 12px;
+    z-index: 2100;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
