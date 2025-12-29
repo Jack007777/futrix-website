@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Futrix LR-1 | Futrix Robotics</title>
+  <meta name="description" content="Standard robots from Futrix: SR-1, LR-1 and RR-1." />
+  <link rel="canonical" href="https://www.futrix.eu/zh/pages/products-lr-1.html" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/zh/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Products</h1>
+      <p class="tagline">Standard robots for real-world environments.</p>
+      <p class="slogan">Futrix - inspired by Future and Matrix.</p>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <h2>Our Standard Models</h2>
+        <p class="section-intro">SR = Service Robot, RR = Restaurant Robot, LR = Logistic Robot.</p>
+
+        <div class="product-section" id="lr-1">
+          <div class="product-media">
+            <img class="card-img card-png" src="/assets/images/lr-1.png" alt="Futrix LR-1" />
+            <div class="product-gallery">
+              <img class="card-img card-png" src="/assets/images/lr-1-1.png" alt="Futrix LR-1 application 1" />
+              <img class="card-img card-png" src="/assets/images/lr-1-2.png" alt="Futrix LR-1 application 2" />
+              <img class="card-img card-png" src="/assets/images/lr-1-3.png" alt="Futrix LR-1 application 3" />
+            </div>
+          </div>
+          <div class="product-details">
+            <h3>Futrix LR-1</h3>
+            <p class="product-subtitle">Logistics AGV</p>
+            <p>Compact, differential-drive laser SLAM AGV for indoor logistics and automated transport.</p>
+            <table class="product-specs">
+              <tr class="spec-group"><th colspan="2">Basic</th></tr>
+              <tr><th>Model</th><td>LR-1 (ZQ8104/A1)</td></tr>
+              <tr><th>Type</th><td>Working AGV / transport robot</td></tr>
+              <tr class="spec-group"><th colspan="2">Dimensions & load</th></tr>
+              <tr><th>Size</th><td>~ 810 x 540 x 270 mm</td></tr>
+              <tr><th>Weight</th><td>~ 45 kg</td></tr>
+              <tr><th>Max load</th><td>100 kg</td></tr>
+              <tr class="spec-group"><th colspan="2">Motion</th></tr>
+              <tr><th>Max speed</th><td>1.2 m/s</td></tr>
+              <tr><th>Turning radius</th><td>0 m (in-place rotation)</td></tr>
+              <tr><th>Max slope</th><td>5°</td></tr>
+              <tr><th>Drive</th><td>Differential drive</td></tr>
+              <tr class="spec-group"><th colspan="2">Battery & charging</th></tr>
+              <tr><th>Battery type</th><td>Lithium</td></tr>
+              <tr><th>Capacity</th><td>24 V / 20 Ah</td></tr>
+              <tr><th>Runtime</th><td>6-8 h</td></tr>
+              <tr><th>Charging</th><td>Manual / automatic (dock)</td></tr>
+              <tr class="spec-group"><th colspan="2">Navigation & safety</th></tr>
+              <tr><th>Navigation</th><td>Laser SLAM</td></tr>
+              <tr><th>Accuracy</th><td>±10 mm</td></tr>
+              <tr><th>Mapping</th><td>Supported</td></tr>
+              <tr><th>Multi-robot</th><td>Supported</td></tr>
+              <tr><th>Safety LiDAR</th><td>Yes</td></tr>
+              <tr><th>Collision detection</th><td>Yes</td></tr>
+              <tr><th>Emergency stop</th><td>Yes</td></tr>
+              <tr class="spec-group"><th colspan="2">Communication</th></tr>
+              <tr><th>Wireless</th><td>Wi-Fi</td></tr>
+              <tr><th>Integration</th><td>Dispatch / WMS connection</td></tr>
+            </table>
+            <p><strong>Summary:</strong> LR-1 is a nimble laser SLAM AGV with stable endurance and industrial safety.</p>
+            <div class="product-cta"><a class="btn" href="/zh/pages/contact.html?topic=lr-1">Request a quote</a></div>
+          </div>
+        </div>
+
+        </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/zh/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+
+  <style>
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .products { padding: 28px 0 48px; }
+    .product-section { display: grid; grid-template-columns: minmax(240px, 420px) 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .product-section:last-child { border-bottom: 0; }
+    .product-subtitle { opacity: .85; margin-top: -6px; }
+    .product-specs { width: 100%; border-collapse: collapse; margin: 12px 0 18px; }
+    .product-specs th { text-align: left; font-weight: 600; padding: 6px 10px 6px 0; vertical-align: top; width: 38%; }
+    .product-specs td { padding: 6px 0; opacity: 0.9; }
+    .product-specs tr + tr { border-top: 1px solid rgba(255,255,255,0.12); }
+    .product-specs .spec-group th { padding-top: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .product-specs tr:not(.spec-group) th,
+    .product-specs tr:not(.spec-group) td { padding-left: 14px; }
+    .product-cta { margin-top: 10px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 10px; text-decoration: underline; }
+    .product-gallery { display: grid; gap: 10px; margin-top: 12px; }
+    @media (max-width: 900px) { .product-section { grid-template-columns: 1fr; } }
+  </style>
+</body>
+</html>
+
+

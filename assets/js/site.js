@@ -148,6 +148,13 @@ document.addEventListener('click', (e) => {
   if (!nav || !nav.classList.contains('open') || !isMobile) return;
 
   const item = link.parentElement;
+  // Close other open submenus before toggling this one.
+  nav.querySelectorAll('.has-submenu.is-open').forEach((openItem) => {
+    if (openItem === item) return;
+    openItem.classList.remove('is-open');
+    const openBtn = openItem.querySelector('a, button');
+    if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+  });
   const isOpen = item.classList.toggle('is-open');
   link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 });

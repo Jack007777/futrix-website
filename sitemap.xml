@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Root (default / EN) -->
@@ -16,8 +16,14 @@
   <url>
     <loc>https://futrix.eu/en/pages/solutions.html</loc>
   </url>
+    <url>
+    <loc>https://futrix.eu/en/pages/products-sr-1.html</loc>
+  </url>
   <url>
-    <loc>https://futrix.eu/en/pages/products.html</loc>
+    <loc>https://futrix.eu/en/pages/products-lr-1.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/en/pages/products-rr-1.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/en/pages/contact.html</loc>
@@ -39,8 +45,14 @@
   <url>
     <loc>https://futrix.eu/fr/pages/solutions.html</loc>
   </url>
+    <url>
+    <loc>https://futrix.eu/fr/pages/products-sr-1.html</loc>
+  </url>
   <url>
-    <loc>https://futrix.eu/fr/pages/products.html</loc>
+    <loc>https://futrix.eu/fr/pages/products-lr-1.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/fr/pages/products-rr-1.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/fr/pages/contact.html</loc>
@@ -62,8 +74,14 @@
   <url>
     <loc>https://futrix.eu/es/pages/solutions.html</loc>
   </url>
+    <url>
+    <loc>https://futrix.eu/es/pages/products-sr-1.html</loc>
+  </url>
   <url>
-    <loc>https://futrix.eu/es/pages/products.html</loc>
+    <loc>https://futrix.eu/es/pages/products-lr-1.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/es/pages/products-rr-1.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/es/pages/contact.html</loc>
@@ -85,8 +103,14 @@
   <url>
     <loc>https://futrix.eu/zh/pages/solutions.html</loc>
   </url>
+    <url>
+    <loc>https://futrix.eu/zh/pages/products-sr-1.html</loc>
+  </url>
   <url>
-    <loc>https://futrix.eu/zh/pages/products.html</loc>
+    <loc>https://futrix.eu/zh/pages/products-lr-1.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/zh/pages/products-rr-1.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/zh/pages/contact.html</loc>
@@ -108,8 +132,14 @@
   <url>
     <loc>https://futrix.eu/de/pages/solutions.html</loc>
   </url>
+    <url>
+    <loc>https://futrix.eu/de/pages/products-sr-1.html</loc>
+  </url>
   <url>
-    <loc>https://futrix.eu/de/pages/products.html</loc>
+    <loc>https://futrix.eu/de/pages/products-lr-1.html</loc>
+  </url>
+  <url>
+    <loc>https://futrix.eu/de/pages/products-rr-1.html</loc>
   </url>
   <url>
     <loc>https://futrix.eu/de/pages/contact.html</loc>
@@ -126,6 +156,7 @@
 
 
 </urlset>
+
 
 
 
