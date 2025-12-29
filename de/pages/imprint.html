@@ -1,82 +1,72 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Impressum der Q-Sunergy GmbH (Futrix Team)." />
-
-  <title>Impressum | Q-Sunergy GmbH</title>
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="/assets/js/site.js" defer></script>
-</head>
-
-<body>
-  <div id="header-placeholder"></div>
-  <script>
-    fetch('/de/includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-        document.dispatchEvent(new Event('header:loaded'));
-      })
-      .catch(err => console.error('Header load failed:', err));
-  </script>
-
-  <section class="hero" id="hero">
-    <h1>Impressum</h1>
-    <p class="tagline">Rechtliche Angaben</p>
-  </section>
-
-  <section>
-    <h2>Unternehmen</h2>
-    <p>
-      Q-Sunergy GmbH<br />
-      Futrix Team (betrieben durch Q-Sunergy GmbH)<br />
-      Deutschland
-    </p>
-  </section>
-
-  <section>
-    <h2>Vertretungsberechtigt</h2>
-    <p>
-      Gesch?ftsf?hrer: Zhuang Yang
-    </p>
-  </section>
-
-  <section>
-    <h2>Registereintrag</h2>
-    <p>
-      Handelsregister: HRB 191449<br />
-      Registergericht: Amtsgericht Hamburg
-    </p>
-  </section>
-
-  <section>
-    <h2>Umsatzste?r-ID</h2>
-    <p>
-      USt-IdNr.: DE366513627
-    </p>
-  </section>
-
-  <section>
-    <h2>Kontakt</h2>
-    <p>
-      E-Mail: contact@futrix.com<br />
-      Telefon: +49 01520 8288 583
-    </p>
-  </section>
-
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch('/de/includes/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-        window.initCookieConsent?.();
-      });
-  </script>
-
-  <script src="/assets/js/cookie-consent.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Impressum der Q-Sunergy GmbH (Futrix Team)." />
+  <title>Impressum | Q-Sunergy GmbH</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+  <section class="hero" id="hero">
+    <h1>Impressum</h1>
+    <p class="tagline">Rechtliche Angaben</p>
+  </section>
+  <section>
+    <h2>Unternehmen</h2>
+    <p>
+      Q-Sunergy GmbH<br />
+      Futrix Team (betrieben durch Q-Sunergy GmbH)<br />
+      Deutschland
+    </p>
+  </section>
+  <section>
+    <h2>Vertretungsberechtigt</h2>
+    <p>
+      Gesch&auml;ftsf&uuml;hrer: Zhuang Yang
+    </p>
+  </section>
+  <section>
+    <h2>Registereintrag</h2>
+    <p>
+      Handelsregister: HRB 191449<br />
+      Registergericht: Amtsgericht Hamburg
+    </p>
+  </section>
+  <section>
+    <h2>Umsatzsteuer-ID</h2>
+    <p>
+      USt-IdNr.: DE366513627
+    </p>
+  </section>
+  <section>
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: contact@futrix.com<br />
+      Telefon: +49 01520 8288 583
+    </p>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>

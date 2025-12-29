@@ -1,300 +1,216 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <!-- Basic -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
-  <title>Futrix – Commercial Service Robots für öffentliche und industrielle Umgebungen</title>
-  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter für Flughäfen, Schulen, Krankenhäuser und industrielle Anwendungen in Europa.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.futrix.eu/de/">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-
-  <!-- Open Graph (optional but recommended) -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Futrix">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Futrix - Commercial Service Robots">
-  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter für Flughäfen, Krankenhäuser, Schulen und Industrie.">
-  <meta property="og:url" content="https://www.futrix.eu/de/">
-  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
-
-  <!-- JS -->
-  <script src="/assets/js/beetleBot.js" defer></script>
-  <script src="/assets/js/site.js" defer></script>
-</head>
-
-<body>
-
-  <div id="header-placeholder"></div>
-
-  <script>
-    fetch('/de/includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-
-        // ✅ 关键：通知 site.js 现在可以绑定事件了
-        document.dispatchEvent(new Event('header:loaded'));
-      })
-      .catch(err => console.error('Header load failed:', err));
-  </script>
-
-  <main>
-
-   <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-          <h1>Futrix Robotics - Engineering in Deutschland.</h1>
-          <p class="tagline">
-            Professionelle Robotiklösungen
-            für reale Einsatzumgebungen.
-          </p>
-          <p class="slogan">
-            Futrix - inspiriert von Future und Matrix.
-          </p>
-        </div>
-      </div>  
-  </section>
-
-    <section id="solutions">
-      <div class="container">
-      <h2>Unsere Lösungen</h2>
-      <div class="grid">
-        <a class="card card-click" href="pages/solutions.html#care">
-          <img class="card-img card-svg" src="../assets/images/robot-care.svg" alt="Apothekenroboter" loading="lazy" decoding="async">
-          <h3>Futrix Care</h3>
-          <p>
-            Roboterlösungen für Apotheke und Gesundheitswesen - für automatisierte Zustellung,
-            Nachtservice-Unterstützung und die ferngestützte Medikamentenübergabe.
-          </p>
-          <span class="card-link">Mehr erfahren →</span>
-        </a>
-
-        <a class="card card-click" href="pages/solutions.html#service">
-          <img class="card-img card-svg" src="../assets/images/robot-service.svg" alt="Serviceroboter" loading="lazy" decoding="async">
-          <h3>Futrix Service</h3>
-          <p>
-            Kommerzielle Serviceroboter für Logistik, Reinigung und autonomen Transport – kombiniert mit
-            KI-gestützter Navigation, Begleitung sowie interaktiven Kundenservice-Lösungen für Flughäfen,
-            Krankenhäuser, Schulen, Campusgelände und weitere große öffentliche und private Einrichtungen.
-          </p>
-          <span class="card-link">Mehr erfahren →</span>
-        </a>
-
-        <a class="card card-click" href="pages/solutions.html#industry">
-          <img class="card-img card-svg" src="../assets/images/robot-industry.svg" alt="Industrieller Spezialroboter" loading="lazy" decoding="async">
-          <h3>Futrix Industry</h3>
-          <p>
-            Industrielle Robotiklösungen für Automatisierung, Inspektion und intelligentes Materialhandling.
-          </p>
-          <span class="card-link">Mehr erfahren →</span>
-        </a>
-
-      </div>
-      </div>
-    </section>
-
-    <section id="standard-robots">
-        <div class="container">
-        <h2>Standardroboter</h2>
-
-        <p class="section-intro">
-          Neben individ?llen Lösungen entwickeln und vertreiben wir auch
-          standardisierte Robotiksysteme unter eigener Marke.
-        </p>
-        <p class="section-intro">SR steht f?r Service Robot, RR f?r Restaurant Robot und LR f?r Logistic Robot.</p>
-
-        <div class="grid">
-          <!-- Standard Robot 1 -->
-          <a class="card card-click" href="/de/pages/products.html#sr-1">
-            <img class="card-img card-png" src="/assets/images/sr-1.png" alt="Futrix SR-1" loading="lazy" decoding="async">
-            <h3>Futrix SR-1</h3>
-            <p>
-              4-in-1 Reinigung (Kehren, Saugen, Schrubben, Wischen) f?r B?ros, Kliniken,
-              Schulen und Einkaufszentren.
-            </p>
-            
-            <span class="card-link">Details ansehen →</span>
-          </a>
-
-          <!-- Standard Robot 2 -->
-          <a class="card card-click" href="/de/pages/products.html#lr-1">
-            <img class="card-img card-png" src="/assets/images/lr-1.png" alt="Futrix LR-1" loading="lazy" decoding="async">
-            <h3>Futrix LR-1</h3>
-            <p>
-              Logistik- und Transportroboter für Materialfluss, Übergabepunkte und Flottenbetrieb.
-            </p>
-            <span class="card-link">Details ansehen →</span>
-          </a>
-
-          <!-- Standard Robot 3 -->
-          <a class="card card-click" href="/de/pages/products.html#rr-1">
-            <img class="card-img card-png" src="/assets/images/rr-1.png" alt="Futrix RR-1" loading="lazy" decoding="async">
-            <h3>Futrix RR-1</h3>
-            <p>
-              Restaurant-Roboter f?r Lieferservice, Abr?umen und mehrere Stationen.
-            </p>
-            <span class="card-link">Details ansehen →</span>
-          </a>
-        </div>
-        </div>
-  </section>
-
-  
-
-    <section class="trust">
-  <div class="container">
-    <h2>Warum Futrix</h2>
-
-    <div class="faq">
-      <details class="faq-item">
-        <summary>Welche Branchen bedienen wir?</summary>
-        <p>Gesundheitswesen, Gewerbe und Industrie.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Welchen Beitrag leisten wir im Projekt?</summary>
-        <p>Systemintegration, Inbetriebnahme und langfristiger Support.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Warum Standort Deutschland?</summary>
-        <p>Engineering-getrieben, EU-Fokus und compliance-bewusst.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-    <section class="trust">
-  <div class="container">
-    <h2>FAQ</h2>
-
-    <div class="faq">
-      <details class="faq-item">
-        <summary>Ist die Bedienung der Roboter kompliziert?</summary>
-        <p>Nein. Unsere Systeme sind bewusst intuitiv gestaltet, sodass die Bedienung schnell erlernt werden kann – so einfach wie die Ste?rung des Roboters oben auf der Startseite.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Wie stellen Sie Datenschutz und Datensicherheit sicher?</summary>
-        <p>Wir nehmen Datenschutz sehr ernst. Die Hardware wird zwar in China montiert, die Softwareentwicklung erfolgt jedoch in Deutschland durch ein deutsches Unternehmen. Unsere Lösungen unterliegen damit den strengen Anforderungen der EU-Datenschutzregulierung.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-    <section>
-       <div class="container">
-      <h2>Vision</h2>
-      <p>
-        Wir sind überzeugt, dass Robotik der Schlüssel zur Zukunft der Produktivität ist. Futrix verbindet
-        moderne Robotertechnologie mit den Anforderungen realer Einsatzumgebungen – für zuverlässige,
-        skalierbare und zukunftssichere Systeme.
-      </p>
-      </div>
-    </section>
-
-    <div id="chargingStation" class="charging-station" aria-hidden="tr?">
-      <svg viewBox="0 0 24 24" aria-hidden="tr?">
-        <rect x="4" y="2.5" width="16" height="19" rx="3"></rect>
-        <path d="M13 4.5l-5 8h4l-1 7 5-8h-4l1-7z"></path>
-      </svg>
-    </div>
-    <div id="bot-controls" class="bot-controls" aria-label="Robot controls">
-      <button type="button" class="bot-control-btn is-active" data-action="run" aria-label="Run">
-        <svg class="icon-fill" viewBox="0 0 24 24" aria-hidden="tr?">
-          <path d="M8 5l11 7-11 7z"></path>
-        </svg>
-        <span>Run</span>
-      </button>      <button type="button" class="bot-control-btn" data-action="turn" aria-label="Turn around">
-        <svg viewBox="0 0 24 24" aria-hidden="tr?">
-          <path d="M7 7h6a4 4 0 1 1 0 8h-5"></path>
-          <path d="M7 11l-3-3 3-3"></path>
-        </svg>
-        <span>Turn</span>
-      </button>
-      <button type="button" class="bot-control-btn" data-action="speed-up" aria-label="Speed up">
-        <svg viewBox="0 0 24 24" aria-hidden="tr?">
-          <circle cx="12" cy="12" r="8"></circle>
-          <path d="M12 8v8M8 12h8"></path>
-        </svg>
-        <span>Faster</span>
-      </button>
-      <button type="button" class="bot-control-btn" data-action="speed-down" aria-label="Speed down">
-        <svg viewBox="0 0 24 24" aria-hidden="tr?">
-          <circle cx="12" cy="12" r="8"></circle>
-          <path d="M8 12h8"></path>
-        </svg>
-        <span>Slower</span>
-      </button>
-      <button type="button" class="bot-control-btn" data-action="home" aria-label="Home">
-        <svg viewBox="0 0 24 24" aria-hidden="tr?">
-          <path d="M4 11l8-6 8 6"></path>
-          <path d="M7 10v8h10v-8"></path>
-        </svg>
-        <span>Home</span>
-      </button>
-    </div>
-    <div id="beetleBot" class="active">
-      <!-- 外链机器人 SVG -->
-      <img class="botBody" loading="eager" decoding="async" fetchpriority="high" src="/assets/robots/beetle-top.svg" alt="robot">
-
-      <!-- 扇形扫描（inline SVG） -->
-      <svg class="botScan" viewBox="0 0 120 120">
-        <defs>
-          <radialGradient id="scanGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"  stop-color="rgba(120,200,255,0.55)"/>
-            <stop offset="65%" stop-color="rgba(120,200,255,0.22)"/>
-            <stop offset="100%" stop-color="rgba(120,200,255,0)"/>
-          </radialGradient>
-
-          <mask id="sectorMask">
-            <rect width="120" height="120" fill="black"/>
-            <path d="
-              M60 60
-              L60 10
-              A50 50 0 0 1 95 25
-              Z" fill="white"/>
-          </mask>
-        </defs>
-
-        <g mask="url(#sectorMask)">
-          <circle cx="60" cy="60" r="50" fill="url(#scanGrad)"/>
-          <rect class="scanLine" x="58" y="10" width="4" height="50"
-                fill="rgba(120,200,255,0.9)"/>
-        </g>
-      </svg>
-    </div>
-  </main>
-
-  <div id="footer-placeholder"></div>
-
-  <script>
-    fetch('/de/includes/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-        window.initCookieConsent?.(); // 👈 footer 插入后立刻初始化
-      });
-  </script>
-
-  <script src="/assets/js/cookie-consent.js"></script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futrix - Commercial Service Robots f&uuml;r &ouml;ffentliche und industrielle Umgebungen</title>
+  <meta name="description" content="Futrix entwickelt und integriert kommerzielle Service- und Reinigungsroboter f&uuml;r Flugh&auml;fen, Schulen, Krankenh&auml;user und industrielle Anwendungen in Europa.">
+  <link rel="canonical" href="https://www.futrix.eu/de/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Futrix">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Futrix - Commercial Service Robots">
+  <meta property="og:description" content="Kommerzielle Service- und Reinigungsroboter f&uuml;r Flugh&auml;fen, Krankenh&auml;user, Schulen und Industrie.">
+  <meta property="og:url" content="https://www.futrix.eu/de/">
+  <meta property="og:image" content="https://www.futrix.eu/assets/images/og-futrix.png">
+  <script src="/assets/js/beetleBot.js" defer></script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Futrix Robotics - Engineering in Deutschland.</h1>
+          <p class="tagline">Professionelle Robotikl&ouml;sungen f&uuml;r reale Einsatzumgebungen.</p>
+          <p class="slogan">Futrix - inspiriert von Future und Matrix.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="container">
+        <h2>Unsere L&ouml;sungen</h2>
+        <div class="grid">
+          <a class="card card-click" href="/de/pages/solutions-care.html">
+            <img class="card-img card-svg" src="/assets/images/robot-care.svg" alt="Apothekenroboter" loading="lazy" decoding="async">
+            <h3>Futrix Care</h3>
+            <p>Robotik f&uuml;r Apotheke und Gesundheitswesen - automatisierte Zustellung und sichere &Uuml;bergabe.</p>
+            <span class="card-link">Mehr erfahren &#8594;</span>
+          </a>
+          <a class="card card-click" href="/de/pages/solutions-service.html">
+            <img class="card-img card-svg" src="/assets/images/robot-service.svg" alt="Serviceroboter" loading="lazy" decoding="async">
+            <h3>Futrix Service</h3>
+            <p>Service- und Reinigungsroboter f&uuml;r Logistik, Reinigung und autonomen Transport.</p>
+            <span class="card-link">Mehr erfahren &#8594;</span>
+          </a>
+          <a class="card card-click" href="/de/pages/solutions-industry.html">
+            <img class="card-img card-svg" src="/assets/images/robot-industry.svg" alt="Industrieroboter" loading="lazy" decoding="async">
+            <h3>Futrix Industry</h3>
+            <p>Industrielle Robotikl&ouml;sungen f&uuml;r Automatisierung, Inspektion und Materialhandling.</p>
+            <span class="card-link">Mehr erfahren &#8594;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="standard-robots">
+      <div class="container">
+        <h2>Standardroboter</h2>
+        <p class="section-intro">Neben individuellen L&ouml;sungen entwickeln und vertreiben wir standardisierte Robotiksysteme unter eigener Marke.</p>
+        <p class="section-intro">SR = Service Robot, RR = Restaurant Robot, LR = Logistic Robot.</p>
+        <div class="grid">
+          <a class="card card-click" href="/de/pages/products.html#sr-1">
+            <img class="card-img card-png" src="/assets/images/sr-1.png" alt="Futrix SR-1" loading="lazy" decoding="async">
+            <h3>Futrix SR-1</h3>
+            <p>4-in-1 Reinigung (Kehren, Saugen, Schrubben, Wischen) f&uuml;r B&uuml;ros, Kliniken und Einkaufszentren.</p>
+            <span class="card-link">Details ansehen &#8594;</span>
+          </a>
+          <a class="card card-click" href="/de/pages/products.html#lr-1">
+            <img class="card-img card-png" src="/assets/images/lr-1.png" alt="Futrix LR-1" loading="lazy" decoding="async">
+            <h3>Futrix LR-1</h3>
+            <p>Logistik- und Transportroboter f&uuml;r Materialfluss, &Uuml;bergabepunkte und Flottenbetrieb.</p>
+            <span class="card-link">Details ansehen &#8594;</span>
+          </a>
+          <a class="card card-click" href="/de/pages/products.html#rr-1">
+            <img class="card-img card-png" src="/assets/images/rr-1.png" alt="Futrix RR-1" loading="lazy" decoding="async">
+            <h3>Futrix RR-1</h3>
+            <p>Restaurant-Roboter f&uuml;r Lieferservice, Abr&auml;umen und mehrere Stationen.</p>
+            <span class="card-link">Details ansehen &#8594;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <h2>Warum Futrix</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Welche Branchen bedienen wir?</summary>
+            <p>Gesundheitswesen, Gewerbe und Industrie.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Welchen Beitrag leisten wir im Projekt?</summary>
+            <p>Systemintegration, Inbetriebnahme und langfristiger Support.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Warum Standort Deutschland?</summary>
+            <p>Engineering-getrieben, EU-Fokus und compliance-bewusst.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Ist die Bedienung der Roboter kompliziert?</summary>
+            <p>Nein. Unsere Systeme sind bewusst intuitiv gestaltet, sodass die Bedienung schnell erlernt werden kann - so einfach wie die Steuerung des Roboters oben auf der Startseite.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wie stellen Sie Datenschutz und Datensicherheit sicher?</summary>
+            <p>Wir nehmen Datenschutz sehr ernst. Die Hardware wird zwar in China montiert, die Softwareentwicklung erfolgt jedoch in Deutschland durch ein deutsches Unternehmen. Unsere L&ouml;sungen unterliegen damit den strengen Anforderungen der EU-Datenschutzregulierung.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Vision</h2>
+        <p>Wir sind &uuml;berzeugt, dass Robotik der Schl&uuml;ssel zur Zukunft der Produktivit&auml;t ist. Futrix verbindet moderne Robotertechnologie mit den Anforderungen realer Einsatzumgebungen - f&uuml;r zuverl&auml;ssige, skalierbare und zukunftssichere Systeme.</p>
+      </div>
+    </section>
+
+    <div id="chargingStation" class="charging-station" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="2.5" width="16" height="19" rx="3"></rect>
+        <path d="M13 4.5l-5 8h4l-1 7 5-8h-4l1-7z"></path>
+      </svg>
+    </div>
+    <div id="bot-controls" class="bot-controls" aria-label="Robot controls">
+      <button type="button" class="bot-control-btn is-active" data-action="run" aria-label="Run">
+        <svg class="icon-fill" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5l11 7-11 7z"></path>
+        </svg>
+        <span>Run</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="turn" aria-label="Turn around">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 7h6a4 4 0 1 1 0 8h-5"></path>
+          <path d="M7 11l-3-3 3-3"></path>
+        </svg>
+        <span>Turn</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="speed-up" aria-label="Speed up">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M12 8v8M8 12h8"></path>
+        </svg>
+        <span>Faster</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="speed-down" aria-label="Speed down">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M8 12h8"></path>
+        </svg>
+        <span>Slower</span>
+      </button>
+      <button type="button" class="bot-control-btn" data-action="home" aria-label="Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 11l8-6 8 6"></path>
+          <path d="M7 10v8h10v-8"></path>
+        </svg>
+        <span>Home</span>
+      </button>
+    </div>
+    <div id="beetleBot" class="active">
+      <img class="botBody" loading="eager" decoding="async" fetchpriority="high" src="/assets/robots/beetle-top.svg" alt="robot">
+      <svg class="botScan" viewBox="0 0 120 120">
+        <defs>
+          <radialGradient id="scanGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(120,200,255,0.55)"/>
+            <stop offset="65%" stop-color="rgba(120,200,255,0.22)"/>
+            <stop offset="100%" stop-color="rgba(120,200,255,0)"/>
+          </radialGradient>
+          <mask id="sectorMask">
+            <rect width="120" height="120" fill="black"/>
+            <path d="M60 60 L60 10 A50 50 0 0 1 95 25 Z" fill="white"/>
+          </mask>
+        </defs>
+        <g mask="url(#sectorMask)">
+          <circle cx="60" cy="60" r="50" fill="url(#scanGrad)"/>
+          <rect class="scanLine" x="58" y="10" width="4" height="50" fill="rgba(120,200,255,0.9)"/>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>

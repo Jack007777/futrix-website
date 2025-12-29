@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futrix Industry | Lösungen</title>
+  <meta name="description" content="Futrix Industry: robuste Industrieautomation mit lokaler KI, Integration und Schutz von Prozessdaten.">
+  <link rel="canonical" href="https://www.futrix.eu/de/pages/solutions-industry.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Futrix Industry</h1>
+      <p class="tagline">Industrieautomation mit Fokus auf Integration und Datensouveränität.</p>
+    </section>
+
+    <section class="container" id="industry">
+      <h2>Industriebedarf ist selten Standard</h2>
+      <p>Industrielle Umgebungen verlangen oft mehr als Standardfunktionen. Sicherheit, Taktzeiten, Traceability und Schnittstellen sind je nach Anlage unterschiedlich.</p>
+      <p>Unser europäisches Engineering fokussiert auf robuste Integration, verifizierbare Abläufe und anwendungsspezifische Automatisierung.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Anlagenspezifische Integration</h3>
+          <p>Schnittstellen zu MES/WMS, Anlagensteuerungen und vorhandenen Sensorsystemen.</p>
+        </div>
+        <div class="card">
+          <h3>Lokale KI-Modelle</h3>
+          <p>Gemeinsam mit lokalen Partnern bauen wir Modelle für Inspektion, Navigation und Reporting.</p>
+        </div>
+        <div class="card">
+          <h3>Know-how-Schutz</h3>
+          <p>On-Premise oder lokal gehostete Infrastruktur zum Schutz von Prozess- und Produktionsdaten.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>

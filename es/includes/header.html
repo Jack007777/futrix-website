@@ -1,31 +1,48 @@
-﻿<!-- /includes/header.html -->
+<!-- /includes/header.html -->
+
+<!-- Logo / Navigation / Language Switch -->
+
 <header class="site-header">
   <nav class="nav">
     <div class="logo">
-      <a href="/es/index.html" aria-label="Futrix Inicio"><img src="/assets/images/logo.svg" alt="Futrix Logo"></a>
+      <a href="/es/index.html" aria-label="Futrix Home">
+        <img src="/assets/images/logo.svg" alt="Futrix Logo">
+      </a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">≡</button>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      &#9776;
+    </button>
+
     <ul class="nav-links">
       <li><a href="/es/index.html">Inicio</a></li>
-      <li><a href="/es/pages/solutions.html">Soluciones</a></li>
-      <li><a href="/es/pages/products.html">Productos</a></li>
-  <li><a href="/es/pages/about.html">Sobre nosotros</a></li>
+      <li class="has-submenu">
+        <button type="button" class="nav-link-btn" aria-haspopup="true" aria-expanded="false">Soluciones</button>
+        <ul class="nav-submenu" aria-label="Soluciones">
+          <li><a href="/es/pages/solutions-care.html">Futrix Care</a></li>
+          <li><a href="/es/pages/solutions-service.html">Futrix Service</a></li>
+          <li><a href="/es/pages/solutions-industry.html">Futrix Industry</a></li>
+        </ul>
+      </li>
+      <li><a href="/es/pages/products.html">Productos</a></li>
+      <li><a href="/es/pages/about.html">Sobre nosotros</a></li>
       <li><a href="/es/pages/contact.html">Contacto</a></li>
       <li><a href="/es/pages/imprint.html">Aviso legal</a></li>
       <li><a href="/es/pages/privacy-policy.html">Privacidad</a></li>
     </ul>
+
     <div class="lang-dropdown">
-      <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">ES <span class="chev">▾</span></button>
+      <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+        ES <span class="chev">&#9662;</span>
+      </button>
+
       <div class="lang-menu" role="listbox" aria-label="Idioma">
-        <a role="option" href="/es/index.html" aria-selected="true">Español (ES)</a>
-        <a role="option" href="/en/index.html">English (EN)</a>
-        <a role="option" href="/de/index.html">Deutsch (DE)</a>
-        <a role="option" href="/fr/index.html">Français (FR)</a>
-        <a role="option" href="/zh/index.html">中文 (ZH)</a>
+        <a role="option" href="/de/index.html" aria-selected="false">Deutsch (DE)</a>
+        <a role="option" href="/en/index.html" aria-selected="false">English (EN)</a>
+        <a role="option" href="/fr/index.html" aria-selected="false">Fran&ccedil;ais (FR)</a>
+        <a role="option" href="/es/index.html" aria-selected="true">Espa&ntilde;ol (ES)</a>
+        <a role="option" href="/zh/index.html" aria-selected="false">&#20013;&#25991; (ZH)</a>
       </div>
     </div>
   </nav>
-</header>
-
-
-
+</header>

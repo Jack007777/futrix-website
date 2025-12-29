@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futrix Care | Lösungen</title>
+  <meta name="description" content="Apothekenausgabe- und Zustellroboter mit Schubladenlagerung, Schwerkraftabgabe und Schließfach-Übergabe.">
+  <link rel="canonical" href="https://www.futrix.eu/de/pages/solutions-care.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Futrix Care</h1>
+      <p class="tagline">Apothekenausgabe und Zustellung mit klarer Prozesskette.</p>
+    </section>
+
+    <section id="pharmacy-robot-hero" aria-label="Apothekenausgabe- und Zustellroboter">
+      <div class="container">
+        <div class="badge" aria-label="Lösungsbereich">Apothekenausgabe- und Zustellroboter</div>
+        <h2>Schubladenlagerung + Schwerkraftabgabe + Schließfach-Zustellung</h2>
+        <p class="muted">Ohne automatisches Lager: vereinfachte Mechanik für stabile Entnahme und nachvollziehbare Übergabe.</p>
+        <div class="kpi">
+          <div class="card">
+            <strong>Einführungszeit</strong>
+            <div class="muted">Bereitstellung in Wochen (konfigurierbar)</div>
+          </div>
+          <div class="card">
+            <strong>Umrüstaufwand</strong>
+            <div class="muted">Geringe Umrüstung, kompatibel mit vorhandenen Regalen</div>
+          </div>
+          <div class="card">
+            <strong>Übergabeart</strong>
+            <div class="muted">Freigabe per Scan und Entsperrung</div>
+          </div>
+        </div>
+        <div class="grid" aria-label="Aktionen">
+          <a class="btn btn-primary" href="/de/pages/contact.html" aria-label="Demo vereinbaren">Demo vereinbaren</a>
+          <a class="btn btn-secondary" href="/assets/downloads/pharmacy-robot-overview.pdf" aria-label="Kurzprofil-PDF herunterladen">Kurzprofil-PDF herunterladen</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-overview" aria-label="Lösungsübersicht">
+      <div class="container">
+        <h3>Lösungsübersicht</h3>
+        <p>Die Lösung richtet sich an Apotheken und Kettenbetriebe für die Entnahme und Zustellung von Medikamenten.</p>
+        <p>Sie benötigt kein automatisches Lager und nutzt vorhandene Schubladensysteme mit minimalen Anpassungen.</p>
+        <p>Ein Dreiachs-Mechanismus übernimmt die Entnahme und reduziert mechanische Komplexität.</p>
+        <p>Die Einzelabgabe per Schwerkraft minimiert Verklemmungen und verbessert die Kontrolle.</p>
+        <p>Die Übergabe erfolgt über ein elektronisch verriegeltes Schließfach mit Scan-Verifikation.</p>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-core" aria-label="Kernmechanik">
+      <div class="container">
+        <h3>Kernmechanik</h3>
+        <div class="grid">
+          <article class="card" aria-label="Dreiachs-Antrieb">
+            <h4>Dreiachs-Antrieb (X/Z/Y)</h4>
+            <p>X-Auszug, Z-Hub und Y-Feinjustage für präzise Ausrichtung an verschiedenen Schubladenpositionen.</p>
+          </article>
+          <article class="card" aria-label="Magnetisches Öffnen">
+            <h4>Magnetisches Öffnen der Schublade</h4>
+            <p>Magnetkopf mit Führungsnase gegen Seitenschlupf, optionaler Entriegelungshebel.</p>
+          </article>
+          <article class="card" aria-label="Schwerkraftabgabe">
+            <h4>Schwerkraftabgabe mit Einzelentnahme</h4>
+            <p>Führung/Schräge, singulation gate und Trichter sorgen für kontrollierte Einzelabgabe.</p>
+          </article>
+          <article class="card" aria-label="Schließfach-Übergabe">
+            <h4>Schließfach-Übergabe</h4>
+            <p>Packung fällt in ein elektronisch verriegeltes Fach und wird am Ausgabepunkt verifiziert.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-workflow" aria-label="Arbeitsablauf">
+      <div class="container">
+        <h3>Arbeitsablauf</h3>
+        <ol class="grid" aria-label="Arbeitsschritte">
+          <li class="card">Rezeptprüfung abgeschlossen</li>
+          <li class="card">Roboter navigiert zur Position</li>
+          <li class="card">Magnet öffnet die Schublade</li>
+          <li class="card">Einzelentnahme gibt 1 Packung frei</li>
+          <li class="card">Packung fällt in das Schließfach</li>
+          <li class="card">Zustellung zum Ausgabepunkt</li>
+          <li class="card">Scan/Verifikation entsperrt Übergabe</li>
+          <li class="card">Protokollierung und Rückverfolgung</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-safety" aria-label="Sicherheit und Compliance">
+      <div class="container">
+        <h3>Sicherheit und Compliance</h3>
+        <ul class="grid">
+          <li class="card">Geschwindigkeitsbegrenzung und Sicherheitszonen.</li>
+          <li class="card">Mehrsensorik zur Hinderniserkennung und Umfahrung.</li>
+          <li class="card">Not-Aus und Fern-Not-Aus für den Betrieb vor Ort.</li>
+          <li class="card">Schubladenstatus-Erkennung zur Prozesssicherung.</li>
+          <li class="card">Erkennung von Verklemmungen mit Rückzugslogik.</li>
+          <li class="card">Datensparsamkeit und rollenbasierte Protokolle.</li>
+          <li class="card">Manuelle Übernahme mit definierten Rechten.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-advantages" aria-label="Vorteile">
+      <div class="container">
+        <h3>Vorteile</h3>
+        <div class="grid">
+          <article class="card"><h4>Kein automatisches Lager</h4><p>Schubladenlagerung bleibt bestehen, Umbau gering.</p></article>
+          <article class="card"><h4>Einfachere Mechanik</h4><p>Dreiachs-System statt komplexer Roboterarme.</p></article>
+          <article class="card"><h4>Stabile Einzelabgabe</h4><p>Gate + Schwerkraft reduzieren Fehlentnahmen.</p></article>
+          <article class="card"><h4>Schnelle Umsetzung</h4><p>Kurze Einführungszeit, geringe Eingriffe.</p></article>
+          <article class="card"><h4>Sicheres Schließfach</h4><p>Elektronisch verriegelt, Übergabe per Verifikation.</p></article>
+          <article class="card"><h4>Durchgängige Rückverfolgung</h4><p>Entnahme, Abgabe und Übergabe werden protokolliert.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-usecases" aria-label="Einsatzszenarien">
+      <div class="container">
+        <h3>Einsatzszenarien</h3>
+        <ul class="grid">
+          <li class="card">Tagesbetrieb: Nachschub für Ausgabeschalter.</li>
+          <li class="card">Nachtschicht: Entlastung des Personals.</li>
+          <li class="card">Mehrere Schalter: zentrale Koordination.</li>
+          <li class="card">Backoffice zu Frontdesk: kurze Wege, weniger Laufaufwand.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-faq" aria-label="FAQ">
+      <div class="container">
+        <h3>FAQ</h3>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Benötigt die Lösung ein automatisches Lager?</summary>
+            <p>Nein. Die Lösung nutzt Schubladenlagerung und Schwerkraftabgabe.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Passt der Dreiachs-Antrieb zu unterschiedlichen Schubladenhöhen?</summary>
+            <p>X-Auszug, Z-Hub und Y-Feinjustage werden für gängige Regalsysteme parametriert.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wie stabil ist das magnetische Öffnen?</summary>
+            <p>Magnetkopf und Führungsnase stabilisieren den Zug, optionaler Entriegelungshebel.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wie wird die Einzelabgabe sichergestellt?</summary>
+            <p>Führung/Schräge, singulation gate und Trichter steuern die Abgabe.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Wie erfolgt die Übergabe an Kundinnen und Kunden?</summary>
+            <p>Die Packung liegt im Schließfach und wird am Ausgabepunkt per Scan freigegeben.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Was passiert bei Verklemmungen?</summary>
+            <p>Sensorik erkennt Störungen und löst eine sichere Rückzugslogik aus.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Ist die Lieferung nachvollziehbar?</summary>
+            <p>Alle Schritte werden protokolliert und sind nachvollziehbar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-diagram" aria-label="Prinzipdiagramm">
+      <div class="container">
+        <h3>Prinzipdiagramm</h3>
+        <div class="card" aria-label="Ablauf von Schublade bis Ausgabepunkt">
+          <svg viewBox="0 0 720 220" role="img" aria-label="Schublade bis Ausgabepunkt">
+            <defs>
+              <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z"></path>
+              </marker>
+            </defs>
+            <rect x="20" y="70" width="120" height="80" rx="8"></rect>
+            <text x="80" y="110" text-anchor="middle">Schublade</text>
+            <line x1="140" y1="110" x2="240" y2="110" marker-end="url(#arrow)"></line>
+
+            <rect x="240" y="70" width="120" height="80" rx="8"></rect>
+            <text x="300" y="110" text-anchor="middle">Auslass</text>
+            <line x1="360" y1="110" x2="460" y2="110" marker-end="url(#arrow)"></line>
+
+            <rect x="460" y="70" width="120" height="80" rx="8"></rect>
+            <text x="520" y="110" text-anchor="middle">Trichter</text>
+            <line x1="580" y1="110" x2="660" y2="110" marker-end="url(#arrow)"></line>
+
+            <rect x="660" y="40" width="120" height="80" rx="8"></rect>
+            <text x="720" y="80" text-anchor="middle">Schließfach</text>
+            <line x1="720" y1="120" x2="720" y2="180" marker-end="url(#arrow)"></line>
+
+            <rect x="660" y="180" width="120" height="60" rx="8"></rect>
+            <text x="720" y="215" text-anchor="middle">Ausgabe</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="pharmacy-robot-cta" aria-label="Abschluss-CTA">
+      <div class="container">
+        <h3>Ausgabe und Zustellung einfacher und kontrollierbar</h3>
+        <p class="muted">Vereinbaren Sie eine Demo und erhalten Sie eine passende Empfehlung für Ihren Standort.</p>
+        <a class="btn btn-primary" href="/de/pages/contact.html" aria-label="Demo vereinbaren">Demo vereinbaren</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>

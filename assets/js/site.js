@@ -106,14 +106,17 @@ document.addEventListener('click', (e) => {
 
 // ===== Mobile submenu toggle =====
 document.addEventListener('click', (e) => {
-  const link = e.target.closest('.has-submenu > a');
+  const link = e.target.closest('.has-submenu > a, .has-submenu > button');
   if (!link) return;
 
-  const nav = link.closest('.nav');
-  if (!nav || !nav.classList.contains('open')) return;
-  if (!window.matchMedia || !window.matchMedia('(max-width: 768px)').matches) return;
+  if (link.tagName.toLowerCase() === 'a') {
+    e.preventDefault();
+  }
 
-  e.preventDefault();
+  const nav = link.closest('.nav');
+  const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+  if (!nav || !nav.classList.contains('open') || !isMobile) return;
+
   const item = link.parentElement;
   const isOpen = item.classList.toggle('is-open');
   link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');

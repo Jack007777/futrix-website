@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futrix Service | Lösungen</title>
+  <meta name="description" content="Futrix Service: kundenspezifische Service-Robotik mit lokaler KI-Infrastruktur und IP-Schutz.">
+  <link rel="canonical" href="https://www.futrix.eu/de/pages/solutions-service.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1>Futrix Service</h1>
+      <p class="tagline">Service-Robotik, die sich an reale Abläufe anpasst.</p>
+    </section>
+
+    <section class="container" id="service">
+      <h2>Individuelle Lösungen statt Standardpakete</h2>
+      <p>Standardroboter vom Markt decken meist nur allgemeine Branchenlösungen ab. In der Praxis haben einzelne Segmente jedoch spezifische Anforderungen, die mit Standardprodukten nicht vollständig adressiert werden.</p>
+      <p>Unser Entwicklungsteam in Europa kennt die lokalen Prozesse und Schmerzpunkte. Auf dieser Basis passen wir Systeme an reale Einsatzbedingungen an und entwickeln kundenspezifische Lösungen.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Individuelle Anpassung</h3>
+          <p>Prozessanalyse, Funktionsanpassung und Integration in bestehende Abläufe.</p>
+        </div>
+        <div class="card">
+          <h3>Lokale KI-Infrastruktur</h3>
+          <p>Kooperation mit lokalen KI-Serveranbietern für kundenspezifische Modelle und Datenhoheit.</p>
+        </div>
+        <div class="card">
+          <h3>Schutz von IP</h3>
+          <p>Modelle und Workflows bleiben beim Kunden, mit klaren Zugriffs- und Eigentumsregeln.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
+</html>
