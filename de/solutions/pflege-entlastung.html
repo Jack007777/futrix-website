@@ -17,6 +17,9 @@
       name="keywords"
       content="Pflege, Personalvermittlung, Robotik, KI, Entlastung, Pflegeeinrichtungen, Krankenhaus"
     />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <script src="/assets/js/site.js" defer></script>
     <style>
       :root {
         color-scheme: light;
@@ -313,7 +316,16 @@
     </style>
   </head>
   <body>
-    <!--#include virtual="/includes/header.html" -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('/de/includes/header.html')
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById('header-placeholder').innerHTML = html;
+          document.dispatchEvent(new Event('header:loaded'));
+        })
+        .catch((err) => console.error('Header load failed:', err));
+    </script>
     <main class="page">
       <section class="section hero">
         <header class="hero-card">
@@ -591,6 +603,15 @@
         </div>
       </section>
     </main>
-    <!--#include virtual="/includes/footer.html" -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('/de/includes/footer.html')
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById('footer-placeholder').innerHTML = html;
+          window.initCookieConsent?.();
+        });
+    </script>
+    <script src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>
