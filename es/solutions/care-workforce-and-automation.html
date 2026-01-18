@@ -16,8 +16,19 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
   <style>
+    .page-narrow .site-header .nav {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .page-narrow .hero .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
     .hero-cards {
-      max-width: 980px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .profile-preview {
@@ -33,9 +44,16 @@
       border-radius: 12px;
       display: block;
     }
+    @media (max-width: 768px) {
+      .page-narrow .site-header .nav,
+      .page-narrow .hero .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="page-narrow">
   <div id="header-placeholder"></div>
   <script>
     fetch('/es/includes/header.html')
@@ -49,30 +67,32 @@
 
   <main>
     <section class="hero" id="hero">
-      <h1>Alivio en cuidados con selecci&oacute;n, rob&oacute;tica e IA</h1>
-      <p class="tagline">
-        Conectamos centros de cuidados con personal cualificado y reducimos la presi&oacute;n diaria
-        con rob&oacute;tica, IA y sistemas digitales - para procesos estables y cuidado predecible.
-      </p>
-      <div class="hero-cards">
-        <div class="grid" aria-label="Ventajas clave">
-          <div class="card">
-            <h3>Selecci&oacute;n de personal</h3>
-            <p>Selecci&oacute;n directa con cumplimiento claro - sin cesi&oacute;n de personal.</p>
-          </div>
-          <div class="card">
-            <h3>Rob&oacute;tica e IA</h3>
-            <p>Recepci&oacute;n, transporte, rondas e informaci&oacute;n para aliviar equipos.</p>
-          </div>
-          <div class="card">
-            <h3>Sistemas digitales</h3>
-            <p>Planificaci&oacute;n, gesti&oacute;n de tareas y paneles de control.</p>
+      <div class="hero-inner">
+        <h1>Alivio en cuidados con selecci&oacute;n, rob&oacute;tica e IA</h1>
+        <p class="tagline">
+          Conectamos centros de cuidados con personal cualificado y reducimos la presi&oacute;n diaria
+          con rob&oacute;tica, IA y sistemas digitales - para procesos estables y cuidado predecible.
+        </p>
+        <div class="hero-cards">
+          <div class="grid" aria-label="Ventajas clave">
+            <div class="card">
+              <h3>Selecci&oacute;n de personal</h3>
+              <p>Selecci&oacute;n directa con cumplimiento claro - sin cesi&oacute;n de personal.</p>
+            </div>
+            <div class="card">
+              <h3>Rob&oacute;tica e IA</h3>
+              <p>Recepci&oacute;n, transporte, rondas e informaci&oacute;n para aliviar equipos.</p>
+            </div>
+            <div class="card">
+              <h3>Sistemas digitales</h3>
+              <p>Planificaci&oacute;n, gesti&oacute;n de tareas y paneles de control.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid" aria-label="Acciones">
-        <a class="btn btn-primary" href="#contact">Reservar 30 min</a>
-        <a class="btn btn-secondary" href="#pilot">Solicitar piloto</a>
+        <div class="grid" aria-label="Acciones">
+          <a class="btn btn-primary" href="#contact">Reservar 30 min</a>
+          <a class="btn btn-secondary" href="#pilot">Solicitar piloto</a>
+        </div>
       </div>
     </section>
 

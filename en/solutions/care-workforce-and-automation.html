@@ -16,8 +16,19 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
   <style>
+    .page-narrow .site-header .nav {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .page-narrow .hero .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
     .hero-cards {
-      max-width: 980px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .profile-preview {
@@ -33,9 +44,16 @@
       border-radius: 12px;
       display: block;
     }
+    @media (max-width: 768px) {
+      .page-narrow .site-header .nav,
+      .page-narrow .hero .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="page-narrow">
   <div id="header-placeholder"></div>
   <script>
     fetch('/en/includes/header.html')
@@ -49,30 +67,32 @@
 
   <main>
     <section class="hero" id="hero">
-      <h1>Care Relief with Placement, Robotics &amp; AI</h1>
-      <p class="tagline">
-        We connect care providers with qualified staff and reduce daily pressure through robotics,
-        AI and digital systems - so operations stay stable and care remains predictable.
-      </p>
-      <div class="hero-cards">
-        <div class="grid" aria-label="Key advantages">
-          <div class="card">
-            <h3>Workforce Placement</h3>
-            <p>Direct placement with clear compliance - no labor leasing.</p>
-          </div>
-          <div class="card">
-            <h3>Robotics &amp; AI</h3>
-            <p>Relief for reception, transport, rounds, and information guidance.</p>
-          </div>
-          <div class="card">
-            <h3>Digital Systems</h3>
-            <p>Planning, task orchestration, and dashboards for transparency.</p>
+      <div class="hero-inner">
+        <h1>Care Relief with Placement, Robotics &amp; AI</h1>
+        <p class="tagline">
+          We connect care providers with qualified staff and reduce daily pressure through robotics,
+          AI and digital systems - so operations stay stable and care remains predictable.
+        </p>
+        <div class="hero-cards">
+          <div class="grid" aria-label="Key advantages">
+            <div class="card">
+              <h3>Workforce Placement</h3>
+              <p>Direct placement with clear compliance - no labor leasing.</p>
+            </div>
+            <div class="card">
+              <h3>Robotics &amp; AI</h3>
+              <p>Relief for reception, transport, rounds, and information guidance.</p>
+            </div>
+            <div class="card">
+              <h3>Digital Systems</h3>
+              <p>Planning, task orchestration, and dashboards for transparency.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid" aria-label="Actions">
-        <a class="btn btn-primary" href="#contact">Book a 30-min call</a>
-        <a class="btn btn-secondary" href="#pilot">Request a pilot</a>
+        <div class="grid" aria-label="Actions">
+          <a class="btn btn-primary" href="#contact">Book a 30-min call</a>
+          <a class="btn btn-secondary" href="#pilot">Request a pilot</a>
+        </div>
       </div>
     </section>
 

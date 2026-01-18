@@ -16,8 +16,19 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
   <style>
+    .page-narrow .site-header .nav {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .page-narrow .hero .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
     .hero-cards {
-      max-width: 980px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .profile-preview {
@@ -33,9 +44,16 @@
       border-radius: 12px;
       display: block;
     }
+    @media (max-width: 768px) {
+      .page-narrow .site-header .nav,
+      .page-narrow .hero .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="page-narrow">
   <div id="header-placeholder"></div>
   <script>
     fetch('/de/includes/header.html')
@@ -49,30 +67,32 @@
 
   <main>
     <section class="hero" id="hero">
-      <h1>Pflege-Entlastung mit Vermittlung, Robotik &amp; KI</h1>
-      <p class="tagline">
-        Wir verbinden Pflegeeinrichtungen mit qualifizierten Fachkr&auml;ften und reduzieren den operativen Druck
-        durch Robotik, KI und digitale Systeme - f&uuml;r stabile Prozesse und planbare Versorgung.
-      </p>
-      <div class="hero-cards">
-        <div class="grid" aria-label="Kernvorteile">
-          <div class="card">
-            <h3>Personalvermittlung</h3>
-            <p>Vermittlung statt Leasing, direkte Vertr&auml;ge zwischen Einrichtung und Pflegekraft.</p>
-          </div>
-          <div class="card">
-            <h3>Robotik &amp; KI</h3>
-            <p>Entlastung im Alltag: Empfang, Transport, Rundg&auml;nge, Infof&uuml;hrung.</p>
-          </div>
-          <div class="card">
-            <h3>Digitale Systeme</h3>
-            <p>Planung, Aufgabensteuerung und Transparenz &uuml;ber Dashboards und Schnittstellen.</p>
+      <div class="hero-inner">
+        <h1>Pflege-Entlastung mit Vermittlung, Robotik &amp; KI</h1>
+        <p class="tagline">
+          Wir verbinden Pflegeeinrichtungen mit qualifizierten Fachkr&auml;ften und reduzieren den operativen Druck
+          durch Robotik, KI und digitale Systeme - f&uuml;r stabile Prozesse und planbare Versorgung.
+        </p>
+        <div class="hero-cards">
+          <div class="grid" aria-label="Kernvorteile">
+            <div class="card">
+              <h3>Personalvermittlung</h3>
+              <p>Vermittlung statt Leasing, direkte Vertr&auml;ge zwischen Einrichtung und Pflegekraft.</p>
+            </div>
+            <div class="card">
+              <h3>Robotik &amp; KI</h3>
+              <p>Entlastung im Alltag: Empfang, Transport, Rundg&auml;nge, Infof&uuml;hrung.</p>
+            </div>
+            <div class="card">
+              <h3>Digitale Systeme</h3>
+              <p>Planung, Aufgabensteuerung und Transparenz &uuml;ber Dashboards und Schnittstellen.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid" aria-label="Aktionen">
-        <a class="btn btn-primary" href="#kontakt">30-min Termin buchen</a>
-        <a class="btn btn-secondary" href="#pilot">Pilotprojekt anfragen</a>
+        <div class="grid" aria-label="Aktionen">
+          <a class="btn btn-primary" href="#kontakt">30-min Termin buchen</a>
+          <a class="btn btn-secondary" href="#pilot">Pilotprojekt anfragen</a>
+        </div>
       </div>
     </section>
 

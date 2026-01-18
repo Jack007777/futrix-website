@@ -16,8 +16,19 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
   <style>
+    .page-narrow .site-header .nav {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .page-narrow .hero .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
     .hero-cards {
-      max-width: 980px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .profile-preview {
@@ -33,9 +44,16 @@
       border-radius: 12px;
       display: block;
     }
+    @media (max-width: 768px) {
+      .page-narrow .site-header .nav,
+      .page-narrow .hero .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="page-narrow">
   <div id="header-placeholder"></div>
   <script>
     fetch('/fr/includes/header.html')
@@ -49,30 +67,32 @@
 
   <main>
     <section class="hero" id="hero">
-      <h1>All&eacute;gement des soins par placement, robotique &amp; IA</h1>
-      <p class="tagline">
-        Nous mettons en relation les &eacute;tablissements de soins avec des professionnels qualifi&eacute;s et
-        r&eacute;duisons la pression quotidienne gr&acirc;ce &agrave; la robotique, &agrave; l'IA et aux syst&egrave;mes num&eacute;riques.
-      </p>
-      <div class="hero-cards">
-        <div class="grid" aria-label="Points cl&eacute;s">
-          <div class="card">
-            <h3>Placement de personnel</h3>
-            <p>Placement direct et conforme - pas de mise &agrave; disposition de personnel.</p>
-          </div>
-          <div class="card">
-            <h3>Robotique &amp; IA</h3>
-            <p>Accueil, transport, rondes et orientation pour soulager les &eacute;quipes.</p>
-          </div>
-          <div class="card">
-            <h3>Syst&egrave;mes num&eacute;riques</h3>
-            <p>Planification, r&eacute;partition des t&acirc;ches et tableaux de bord.</p>
+      <div class="hero-inner">
+        <h1>All&eacute;gement des soins par placement, robotique &amp; IA</h1>
+        <p class="tagline">
+          Nous mettons en relation les &eacute;tablissements de soins avec des professionnels qualifi&eacute;s et
+          r&eacute;duisons la pression quotidienne gr&acirc;ce &agrave; la robotique, &agrave; l'IA et aux syst&egrave;mes num&eacute;riques.
+        </p>
+        <div class="hero-cards">
+          <div class="grid" aria-label="Points cl&eacute;s">
+            <div class="card">
+              <h3>Placement de personnel</h3>
+              <p>Placement direct et conforme - pas de mise &agrave; disposition de personnel.</p>
+            </div>
+            <div class="card">
+              <h3>Robotique &amp; IA</h3>
+              <p>Accueil, transport, rondes et orientation pour soulager les &eacute;quipes.</p>
+            </div>
+            <div class="card">
+              <h3>Syst&egrave;mes num&eacute;riques</h3>
+              <p>Planification, r&eacute;partition des t&acirc;ches et tableaux de bord.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid" aria-label="Actions">
-        <a class="btn btn-primary" href="#contact">R&eacute;server un rendez-vous</a>
-        <a class="btn btn-secondary" href="#pilot">Demander un pilote</a>
+        <div class="grid" aria-label="Actions">
+          <a class="btn btn-primary" href="#contact">R&eacute;server un rendez-vous</a>
+          <a class="btn btn-secondary" href="#pilot">Demander un pilote</a>
+        </div>
       </div>
     </section>
 
