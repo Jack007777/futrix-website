@@ -15,6 +15,21 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <script src="/assets/js/site.js" defer></script>
+  <style>
+    .profile-preview {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .profile-preview a {
+      display: block;
+    }
+    .profile-preview img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -118,10 +133,18 @@
       <h2>Beispielprofile aus der Talent-Pipeline</h2>
       <div class="grid">
         <div class="card">
-          <img src="/assets/images/nurse1.jpg" alt="Profilkarte Pflegekraft" style="width: 100%; border-radius: 12px; display: block;">
+          <div class="profile-preview">
+            <a href="/assets/images/nurse1.jpg" target="_blank" rel="noopener">
+              <img src="/assets/images/nurse1.jpg" alt="Profilkarte Pflegekraft" loading="lazy">
+            </a>
+          </div>
         </div>
         <div class="card">
-          <img src="/assets/images/physiotherapist1.png" alt="Profilkarte Physiotherapie" style="width: 100%; border-radius: 12px; display: block;">
+          <div class="profile-preview">
+            <a href="/assets/images/physiotherapist1.png" target="_blank" rel="noopener">
+              <img src="/assets/images/physiotherapist1.png" alt="Profilkarte Physiotherapie" loading="lazy">
+            </a>
+          </div>
         </div>
       </div>
     </section>
