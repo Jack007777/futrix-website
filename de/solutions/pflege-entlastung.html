@@ -3,615 +3,257 @@
   Last Modified: 2026-01-18
   Language: de
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pflege-Entlastung durch Personalvermittlung, Robotik & KI | Futrix</title>
-    <meta
-      name="description"
-      content="Futrix verbindet Pflegeeinrichtungen mit qualifiziertem Personal, entlastet Teams durch Robotik & KI und stabilisiert Prozesse mit digitalen Systemen. Vermittlung statt Leasing, compliance-first."
-    />
-    <meta
-      name="keywords"
-      content="Pflege, Personalvermittlung, Robotik, KI, Entlastung, Pflegeeinrichtungen, Krankenhaus"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-    <script src="/assets/js/site.js" defer></script>
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f6f7f9;
-        --surface: #ffffff;
-        --text: #1c2430;
-        --muted: #586170;
-        --accent: #0e4a8a;
-        --accent-2: #0b3a6b;
-        --line: #e3e7ee;
-        --shadow: 0 10px 30px rgba(14, 32, 60, 0.12);
-        --radius: 14px;
-        --maxw: 1140px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pflege-Entlastung durch Personalvermittlung, Robotik &amp; KI | Futrix</title>
+  <meta name="description" content="Futrix vermittelt Pflegepersonal, entlastet Teams mit Robotik &amp; KI und stabilisiert Prozesse durch digitale Systeme. Vermittlung statt Leasing, compliance-first.">
+  <meta name="keywords" content="Pflege, Personalvermittlung, Robotik, KI, Entlastung, Pflegeeinrichtungen, Krankenhaus">
+  <link rel="canonical" href="https://www.futrix.eu/de/solutions/pflege-entlastung.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('/de/includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.dispatchEvent(new Event('header:loaded'));
+      })
+      .catch(err => console.error('Header load failed:', err));
+  </script>
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-        color: var(--text);
-        background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .page {
-        max-width: var(--maxw);
-        margin: 0 auto;
-        padding: 0 24px 80px;
-      }
-
-      .section {
-        padding: 64px 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .section:last-of-type {
-        border-bottom: 0;
-      }
-
-      .eyebrow {
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 12px;
-        color: var(--muted);
-        font-weight: 600;
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 16px 0 12px;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-
-      h1 {
-        font-size: clamp(32px, 4vw, 44px);
-      }
-
-      h2 {
-        font-size: clamp(24px, 3vw, 32px);
-      }
-
-      p {
-        margin: 0 0 12px;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-
-      .hero {
-        padding-top: 56px;
-      }
-
-      .hero-card {
-        background: var(--surface);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        padding: 40px;
-        display: grid;
-        gap: 24px;
-      }
-
-      .hero-points {
-        display: grid;
-        gap: 12px;
-      }
-
-      .hero-points li {
-        list-style: none;
-        padding-left: 24px;
-        position: relative;
-        color: var(--text);
-      }
-
-      .hero-points li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-        font-size: 18px;
-        line-height: 1;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 8px;
-      }
-
-      .btn {
-        padding: 12px 20px;
-        border-radius: 999px;
-        font-weight: 600;
-        border: 1px solid transparent;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: #fff;
-        box-shadow: 0 8px 20px rgba(14, 74, 138, 0.25);
-      }
-
-      .btn-secondary {
-        background: #fff;
-        border-color: var(--line);
-        color: var(--accent-2);
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .grid-3 {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      }
-
-      .card {
-        background: var(--surface);
-        border-radius: var(--radius);
-        padding: 24px;
-        box-shadow: var(--shadow);
-        border: 1px solid rgba(14, 32, 60, 0.05);
-      }
-
-      .card h3 {
-        margin-top: 0;
-      }
-
-      .steps {
-        display: grid;
-        gap: 16px;
-      }
-
-      .step {
-        display: grid;
-        gap: 8px;
-        padding: 18px 20px;
-        border-radius: 12px;
-        background: #f3f6fb;
-        border: 1px solid var(--line);
-      }
-
-      .step strong {
-        color: var(--accent-2);
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 12px;
-        border-radius: 999px;
-        background: rgba(14, 74, 138, 0.08);
-        color: var(--accent-2);
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 16px;
-      }
-
-      .timeline-item {
-        border-left: 3px solid var(--accent);
-        padding: 12px 16px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: var(--shadow);
-      }
-
-      .association {
-        background: linear-gradient(135deg, #0e4a8a 0%, #0b3a6b 100%);
-        color: #fff;
-        border-radius: var(--radius);
-        padding: 32px;
-        box-shadow: var(--shadow);
-      }
-
-      .association p {
-        color: rgba(255, 255, 255, 0.85);
-      }
-
-      .compliance {
-        background: #fffaf4;
-        border: 1px solid #f1e2cc;
-        padding: 24px;
-        border-radius: var(--radius);
-      }
-
-      .faq details {
-        background: var(--surface);
-        border-radius: 12px;
-        padding: 16px 18px;
-        border: 1px solid var(--line);
-        box-shadow: 0 8px 18px rgba(14, 32, 60, 0.08);
-      }
-
-      .faq details + details {
-        margin-top: 12px;
-      }
-
-      .faq summary {
-        cursor: pointer;
-        font-weight: 600;
-        color: var(--accent-2);
-      }
-
-      .contact-grid {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        align-items: start;
-      }
-
-      form {
-        display: grid;
-        gap: 12px;
-      }
-
-      label {
-        font-weight: 600;
-        font-size: 14px;
-      }
-
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px 12px;
-        border-radius: 10px;
-        border: 1px solid var(--line);
-        font: inherit;
-        background: #fff;
-      }
-
-      textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-
-      .english-block {
-        margin-top: 24px;
-        background: #f4f6fb;
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-      }
-
-      @media (max-width: 720px) {
-        .hero-card {
-          padding: 28px;
-        }
-
-        .section {
-          padding: 48px 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="header-placeholder"></div>
-    <script>
-      fetch('/de/includes/header.html')
-        .then((r) => r.text())
-        .then((html) => {
-          document.getElementById('header-placeholder').innerHTML = html;
-          document.dispatchEvent(new Event('header:loaded'));
-        })
-        .catch((err) => console.error('Header load failed:', err));
-    </script>
-    <main class="page">
-      <section class="section hero">
-        <header class="hero-card">
-          <div>
-            <div class="eyebrow">Futrix | Pflege & Klinik</div>
-            <h1>Pflege-Entlastung mit Vermittlung, Robotik & KI</h1>
-            <p>
-              Wir verbinden Pflegeeinrichtungen mit qualifizierten Fachkräften und
-              reduzieren den operativen Druck durch Robotik, KI und digitale Systeme
-              - für stabile Prozesse und planbare Versorgung.
-            </p>
-          </div>
-          <ul class="hero-points">
-            <li>Personalvermittlung mit klarer Compliance - keine Arbeitnehmerüberlassung.</li>
-            <li>Robotik & KI für Entlastung im Alltag: Empfang, Transport, Rundgänge, Infoführung.</li>
-            <li>Digitale Systeme für Planung, Aufgabensteuerung und Transparenz.</li>
-          </ul>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#kontakt">30-min Termin buchen</a>
-            <a class="btn btn-secondary" href="#pilot">Pilotprojekt anfragen</a>
-          </div>
-        </header>
-      </section>
-
-      <section class="section">
-        <div class="eyebrow">Pain Points</div>
-        <h2>Was Pflegeeinrichtungen und Kliniken heute ausbremst</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Personallücken & kurzfristige Ausfälle</h3>
-            <p>Hoher Koordinationsaufwand, teure Ad-hoc-Lösungen und sinkende Qualität.</p>
-          </div>
-          <div class="card">
-            <h3>Überlastete Teams</h3>
-            <p>Administrative Aufgaben und Transportwege binden Zeit, die für Pflege fehlt.</p>
-          </div>
-          <div class="card">
-            <h3>Fehlende Prozessstabilität</h3>
-            <p>Uneinheitliche Abläufe erschweren Einarbeitung, Qualitätssicherung und Steuerung.</p>
-          </div>
-          <div class="card">
-            <h3>Digitalisierung ohne Wirkung</h3>
-            <p>Tools sind nicht integriert, Daten fehlen, echte Entlastung bleibt aus.</p>
-          </div>
+  <main>
+    <section class="hero" id="hero">
+      <h1>Pflege-Entlastung mit Vermittlung, Robotik &amp; KI</h1>
+      <p class="tagline">
+        Wir verbinden Pflegeeinrichtungen mit qualifizierten Fachkr&auml;ften und reduzieren den operativen Druck
+        durch Robotik, KI und digitale Systeme - f&uuml;r stabile Prozesse und planbare Versorgung.
+      </p>
+      <div class="grid" aria-label="Kernvorteile">
+        <div class="card">
+          <h3>Personalvermittlung</h3>
+          <p>Vermittlung statt Leasing, direkte Vertr&auml;ge zwischen Einrichtung und Pflegekraft.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="eyebrow">Our Approach</div>
-        <h2>Unser 3-Schritte-Ansatz</h2>
-        <div class="steps">
-          <div class="step">
-            <span class="badge">Find</span>
-            <strong>Vermittlung qualifizierter Pflegekräfte</strong>
-            <p>
-              Passgenaue Personalvermittlung mit Fokus auf Fachlichkeit, Kulturfit und
-              langfristige Bindung - die Verträge schließen Einrichtung und Fachkraft direkt.
-            </p>
-          </div>
-          <div class="step">
-            <span class="badge">Reduce</span>
-            <strong>Robotik & KI zur Entlastung</strong>
-            <p>
-              Entlastung bei Empfang, Orientierung, Materialtransport, Rundgängen und
-              Informationsarbeit - abgestimmt auf Ihre Prozesse.
-            </p>
-          </div>
-          <div class="step">
-            <span class="badge">Stabilize</span>
-            <strong>Digitale Systeme für stabile Abläufe</strong>
-            <p>
-              Digitale Planung, Aufgabensteuerung und Dashboarding sorgen für messbare
-              Transparenz, bessere Übergaben und stabile Qualität.
-            </p>
-          </div>
+        <div class="card">
+          <h3>Robotik &amp; KI</h3>
+          <p>Entlastung im Alltag: Empfang, Transport, Rundg&auml;nge, Infof&uuml;hrung.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="eyebrow">Services</div>
-        <h2>Leistungspaket für nachhaltige Entlastung</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Personalvermittlung</h3>
-            <p><strong>Vermittlung, kein Leasing:</strong> Wir führen zusammen - Sie schließen direkt ab.</p>
-            <p>
-              Fokus auf Pflegefachkräfte, Servicekräfte und spezialisierte Profile
-              mit transparentem Prozess und schnelleren Besetzungen.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Robotik & KI zur Entlastung</h3>
-            <p>
-              Empfang, Orientierung, Materialtransport, Routengänge, Infoführung,
-              Routine-Checks - mit klarer Einsatzplanung und Change-Management.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Digitale Systeme</h3>
-            <p>
-              Schichtplanung, Aufgaben-Dispatch, digitale Übergaben, Daten-Dashboards
-              und Schnittstellenfähigkeit zu vorhandenen Systemen.
-            </p>
-          </article>
+        <div class="card">
+          <h3>Digitale Systeme</h3>
+          <p>Planung, Aufgabensteuerung und Transparenz &uuml;ber Dashboards und Schnittstellen.</p>
         </div>
-      </section>
+      </div>
+      <div class="grid" aria-label="Aktionen">
+        <a class="btn btn-primary" href="#kontakt">30-min Termin buchen</a>
+        <a class="btn btn-secondary" href="#pilot">Pilotprojekt anfragen</a>
+      </div>
+    </section>
 
-      <section class="section" id="pilot">
-        <div class="eyebrow">Pilot Project</div>
-        <h2>Strukturierte Pilotprojekte mit klaren Ergebnissen</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>4 Wochen - Schnellstart</h3>
-            <p>
-              Ist-Analyse, Prozess-Workshop, Auswahl passender Robotik/KI-Use-Cases,
-              erster Vermittlungs-Pool, Roadmap und KPI-Set.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>8 Wochen - Umsetzung & Validierung</h3>
-            <p>
-              Pilotbetrieb im Alltag, Schulungen, Prozess-Feinschliff,
-              Ergebnisbericht inkl. Skalierungsplan und Investitionsabschätzung.
-            </p>
-          </div>
+    <section class="container" id="pain-points">
+      <h2>Was Pflegeeinrichtungen und Kliniken heute ausbremst</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Personall&uuml;cken &amp; kurzfristige Ausf&auml;lle</h3>
+          <p>Hoher Koordinationsaufwand, teure Ad-hoc-L&ouml;sungen und sinkende Qualit&auml;t.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="eyebrow">Netzwerk & Plattform</div>
-        <h2>Initiative fur ein offenes Forum fur Gesundheits-AI</h2>
-        <div class="association">
-          <h3>Futrix als Initiator, Trager und Koordinator einer e.V.-Plattform</h3>
-          <p>
-            Futrix kann die Grundung eines unabhangigen, offenen Vereins fur
-            medizinische KI und intelligente Versorgung in Deutschland koordinieren
-            - als neutraler Rahmen fur Austausch, Bildung, Forschung, Standards und
-            Pilotprojekte.
-          </p>
-          <p>
-            Wichtig: Die Plattform ist kein Vertriebskanal. Sie ist offen,
-            nicht-exklusiv, gemeinnutzig orientiert und folgt klaren Compliance- und
-            Governance-Regeln.
-          </p>
+        <div class="card">
+          <h3>&Uuml;berlastete Teams</h3>
+          <p>Administrative Aufgaben und Transportwege binden Zeit, die f&uuml;r Pflege fehlt.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="eyebrow">Compliance / Rechtliches</div>
-        <h2>Klare rechtliche Einordnung und Compliance</h2>
-        <div class="compliance">
-          <p>
-            Futrix bietet keine medizinische Diagnose, Behandlung oder Verschreibung an.
-            Wir sind kein medizinischer Leistungserbringer.
-          </p>
-          <p>
-            Futrix betreibt keine Arbeitnehmeruberlassung. Wir bieten ausschliesslich
-            Personalvermittlung: Pflegekrafte und Einrichtungen schliessen direkt
-            miteinander ab.
-          </p>
-          <p>
-            Sollte in Zukunft eine Arbeitnehmeruberlassung erforderlich sein, wird diese
-            nur nach Erteilung der notwendigen Erlaubnisse und in voller gesetzlicher
-            Konformitat angeboten.
-          </p>
+        <div class="card">
+          <h3>Fehlende Prozessstabilit&auml;t</h3>
+          <p>Uneinheitliche Abl&auml;ufe erschweren Einarbeitung, Qualit&auml;tssicherung und Steuerung.</p>
         </div>
-      </section>
+        <div class="card">
+          <h3>Digitalisierung ohne Wirkung</h3>
+          <p>Tools sind nicht integriert, Daten fehlen, echte Entlastung bleibt aus.</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="section faq">
-        <div class="eyebrow">FAQ</div>
-        <h2>Haufige Fragen</h2>
-        <details>
+    <section class="container" id="approach">
+      <h2>Unser 3-Schritte-Ansatz</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Find - Vermittlung</h3>
+          <p>Passgenaue Personalvermittlung mit Fokus auf Kulturfit und langfristige Bindung.</p>
+        </div>
+        <div class="card">
+          <h3>Reduce - Robotik &amp; KI</h3>
+          <p>Gezielte Entlastung bei Empfang, Orientierung, Transport und Routineaufgaben.</p>
+        </div>
+        <div class="card">
+          <h3>Stabilize - Systeme</h3>
+          <p>Digitale Planung, Aufgabensteuerung und Dashboards f&uuml;r klare Verantwortung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="services">
+      <h2>Leistungspaket f&uuml;r nachhaltige Entlastung</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Personalvermittlung</h3>
+          <p><strong>Vermittlung, kein Leasing:</strong> Wir f&uuml;hren zusammen - Sie schlie&szlig;en direkt ab.</p>
+          <p>Fokus auf Pflegefachkr&auml;fte, Servicekr&auml;fte und spezialisierte Profile.</p>
+        </div>
+        <div class="card">
+          <h3>Robotik &amp; KI zur Entlastung</h3>
+          <p>Empfang, Orientierung, Materialtransport, Routeng&auml;nge und Informationsservices.</p>
+        </div>
+        <div class="card">
+          <h3>Digitale Systeme</h3>
+          <p>Schichtplanung, Aufgaben-Dispatch, digitale &Uuml;bergaben und Daten-Dashboards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="pilot">
+      <h2>Pilotprojekte mit klaren Ergebnissen</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>4 Wochen - Schnellstart</h3>
+          <p>Ist-Analyse, Prozess-Workshop, Auswahl passender Use-Cases, KPI-Set und Roadmap.</p>
+        </div>
+        <div class="card">
+          <h3>8 Wochen - Umsetzung &amp; Validierung</h3>
+          <p>Pilotbetrieb, Schulungen, Prozess-Feinschliff, Ergebnisbericht und Skalierungsplan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="association">
+      <h2>Offene Plattform f&uuml;r Gesundheits-AI (e.V. i.Gr.)</h2>
+      <div class="card">
+        <p>
+          Futrix kann die Gr&uuml;ndung eines unabh&auml;ngigen, offenen Vereins f&uuml;r medizinische KI und
+          intelligente Versorgung in Deutschland koordinieren - als neutraler Rahmen f&uuml;r Austausch,
+          Bildung, Forschung, Standards und Pilotprojekte.
+        </p>
+        <p>
+          Wichtig: Die Plattform ist kein Vertriebskanal. Sie ist offen, nicht-exklusiv, unabh&auml;ngig
+          und folgt klaren Compliance- und Governance-Regeln.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" id="compliance">
+      <h2>Compliance / Rechtliches</h2>
+      <div class="card">
+        <p>Keine medizinische Diagnose, Behandlung oder Verschreibung. Wir sind kein Leistungserbringer.</p>
+        <p>
+          Keine Arbeitnehmer&uuml;berlassung: Futrix bietet ausschlie&szlig;lich Personalvermittlung,
+          Pflegekr&auml;fte und Einrichtungen schlie&szlig;en direkt miteinander ab.
+        </p>
+        <p>
+          Sollte in Zukunft Arbeitnehmer&uuml;berlassung erforderlich sein, erfolgt diese nur mit
+          den notwendigen Erlaubnissen und in voller gesetzlicher Konformit&auml;t.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" id="faq">
+      <h2>H&auml;ufige Fragen</h2>
+      <div class="faq">
+        <details class="faq-item">
           <summary>Sind Sie eine Zeitarbeitsfirma?</summary>
-          <p>
-            Nein. Futrix arbeitet ausschliesslich mit Personalvermittlung.
-            Es findet keine Arbeitnehmeruberlassung statt.
-          </p>
+          <p>Nein. Wir arbeiten ausschlie&szlig;lich mit Personalvermittlung, nicht mit Arbeitnehmer&uuml;berlassung.</p>
         </details>
-        <details>
-          <summary>Welche Robotik-Losungen bieten Sie an?</summary>
-          <p>
-            Wir wahlen passende Use-Cases: Empfang, Orientierung, Materialtransport,
-            Routengange und Informationsservices - abgestimmt auf Ihr Haus.
-          </p>
+        <details class="faq-item">
+          <summary>Welche Robotik-L&ouml;sungen bieten Sie an?</summary>
+          <p>Empfang, Orientierung, Materialtransport, Routeng&auml;nge und Informationsservices.</p>
         </details>
-        <details>
-          <summary>Benotigen wir grosse IT-Umstellungen?</summary>
-          <p>
-            Nicht zwingend. Wir integrieren uns pragmatisch in vorhandene Systeme
-            und schaffen klare Schnittstellen, wo sie sinnvoll sind.
-          </p>
+        <details class="faq-item">
+          <summary>Ben&ouml;tigen wir gro&szlig;e IT-Umstellungen?</summary>
+          <p>Nein. Wir integrieren uns pragmatisch in vorhandene Systeme und schaffen klare Schnittstellen.</p>
         </details>
-        <details>
+        <details class="faq-item">
           <summary>Wie gehen Sie mit Datenschutz um?</summary>
-          <p>
-            Datenschutz nach DSGVO ist Standard. Wir definieren Datenflusse transparent
-            und minimieren personenbezogene Daten auf das notwendige Mass.
-          </p>
+          <p>DSGVO-Konformit&auml;t ist Standard. Wir minimieren Daten und definieren Datenfl&uuml;sse transparent.</p>
         </details>
-        <details>
-          <summary>Fur welche Einrichtungen ist das geeignet?</summary>
-          <p>
-            Pflegeheime, ambulante Dienste, Reha- und Akutkliniken sowie
-            spezialisierte medizinische Einrichtungen.
-          </p>
+        <details class="faq-item">
+          <summary>F&uuml;r welche Einrichtungen ist das geeignet?</summary>
+          <p>Pflegeheime, ambulante Dienste, Reha- und Akutkliniken sowie spezialisierte Einrichtungen.</p>
         </details>
-        <details>
-          <summary>Wie schnell konnen wir starten?</summary>
-          <p>
-            Erste Analysen und Vermittlungsvorschlage sind innerhalb weniger Wochen
-            moglich. Pilotprojekte starten typischerweise nach 4-8 Wochen.
-          </p>
+        <details class="faq-item">
+          <summary>Wie schnell k&ouml;nnen wir starten?</summary>
+          <p>Erste Analysen und Vermittlungsvorschl&auml;ge sind in wenigen Wochen m&ouml;glich.</p>
         </details>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="kontakt">
-        <div class="eyebrow">Contact</div>
-        <h2>Jetzt starten - Beratung und Pilot anfragen</h2>
-        <div class="contact-grid">
-          <div class="card">
-            <h3>Kontakt aufnehmen</h3>
-            <p>Email: kontakt@futrix.eu</p>
-            <p>Telefon: +49 (0) 000 000000</p>
-            <p>
-              Oder buchen Sie direkt einen Termin:
-              <a class="btn btn-secondary" href="https://calendly.com/placeholder" target="_blank" rel="noopener">
-                Meeting buchen
-              </a>
-            </p>
-          </div>
-          <div class="card">
-            <form action="/api/contact" method="post">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
-              <label for="email">E-Mail</label>
-              <input id="email" name="email" type="email" required />
-              <label for="org">Organisation</label>
-              <input id="org" name="organization" type="text" />
-              <label for="message">Nachricht</label>
-              <textarea id="message" name="message" required></textarea>
-              <button class="btn btn-primary" type="submit">Anfrage senden</button>
-            </form>
-          </div>
+    <section class="container" id="kontakt">
+      <h2>Jetzt starten - Beratung und Pilot anfragen</h2>
+      <p>Kl&auml;ren Sie Bedarf, Zeitplan und erste Use-Cases in einem kurzen Austausch.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Direkter Kontakt</h3>
+          <p><strong>Email:</strong> kontakt@futrix.eu</p>
+          <p><strong>Telefon:</strong> +49 (0) 000 000000</p>
+          <p>
+            <a class="btn btn-secondary" href="https://calendly.com/placeholder" target="_blank" rel="noopener">
+              Meeting buchen
+            </a>
+          </p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="english-block">
-          <details>
-            <summary>English version (summary)</summary>
+        <div class="card">
+          <form action="/api/contact" method="post" class="contact-form">
             <div>
-              <h2>Care Workforce Matching + Robotics & AI Relief</h2>
-              <p>
-                Futrix connects care providers with qualified talent via direct
-                placement (no labor leasing), reduces daily workload with robotics
-                and AI, and stabilizes operations through digital planning systems.
-              </p>
-              <p>
-                We can initiate and coordinate an independent German association
-                for healthcare AI and smart automation (e.V.). The platform is
-                open, non-exclusive, not a sales channel, and governed by strict
-                compliance rules.
-              </p>
-              <p>
-                Compliance: No diagnosis, treatment, or prescriptions. No labor
-                leasing; only placement with direct contracts. If leasing becomes
-                necessary, it will be offered only with proper legal permits.
-              </p>
-              <p>
-                Suggested English page path:
-                <strong>/en/solutions/care-workforce-and-automation.html</strong>
-              </p>
+              <label for="name">Name <span class="required-star">*</span></label>
+              <input id="name" name="name" type="text" required>
             </div>
-          </details>
+            <div>
+              <label for="email">E-Mail <span class="required-star">*</span></label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div>
+              <label for="org">Organisation</label>
+              <input id="org" name="organization" type="text">
+            </div>
+            <div class="full-row">
+              <label for="message">Nachricht <span class="required-star">*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Anfrage senden</button>
+          </form>
         </div>
-      </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script>
-      fetch('/de/includes/footer.html')
-        .then((res) => res.text())
-        .then((html) => {
-          document.getElementById('footer-placeholder').innerHTML = html;
-          window.initCookieConsent?.();
-        });
-    </script>
-    <script src="/assets/js/cookie-consent.js"></script>
-  </body>
+      </div>
+    </section>
+
+    <section class="container" id="english">
+      <details class="faq-item">
+        <summary>English version (summary)</summary>
+        <p>
+          Futrix connects care providers with qualified talent via direct placement (no labor leasing),
+          reduces daily workload with robotics and AI, and stabilizes operations through digital planning systems.
+        </p>
+        <p>
+          We can initiate and coordinate an independent German association for healthcare AI and smart automation
+          (e.V. pending). The platform is open, non-exclusive, not a sales channel, and governed by strict compliance rules.
+        </p>
+        <p>
+          Suggested English page path:
+          <strong>/en/solutions/care-workforce-and-automation.html</strong>
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('/de/includes/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        window.initCookieConsent?.();
+      });
+  </script>
+  <script src="/assets/js/cookie-consent.js"></script>
+</body>
 </html>
